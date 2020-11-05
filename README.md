@@ -1,2 +1,2 @@
 # bella-ciao
-Aquí iremos colocando los avances de nuestra propuesta, por ahora, el sistema de creación de personajes.
+Repositorio de el juego Bella Ciao, ficción interactiva para el Game-Off 2020.
