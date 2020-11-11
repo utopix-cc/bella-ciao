@@ -100,14 +100,16 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Bella Ciao" startnode="1" creator="Twine" creator-version="2.3.9" ifid="9DCEC893-8FFD-463D-ABB7-A916C31EABB6" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Portada" tags="" position="332,172" size="100,100">&#39;&#39;Bella Ciao&#39;&#39;
+	<tw-storydata name="Bella Ciao" startnode="1" creator="Twine" creator-version="2.3.9" ifid="9DCEC893-8FFD-463D-ABB7-A916C31EABB6" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Portada" tags="" position="732,352" size="100,100">&#39;&#39;Bella Ciao&#39;&#39;
 //Saudade en el hiperespacio//
-[[Comenzar|inicio]]</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="498,42" size="100,100">[[Portada]]</tw-passagedata><tw-passagedata pid="3" name="StoryCaption" tags="" position="628,41" size="100,100">
+[[Comenzar|inicio]]</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="734,198" size="100,100">&lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
+	&lt;&lt;run Engine.restart()&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="StoryCaption" tags="" position="864,197" size="100,100">
 &lt;&lt;if $ss is 0&gt;&gt;&lt;&lt;else&gt;&gt;&#39;&#39;Datos personales&#39;&#39;
 Nombre: $persona.nm
-Planeta: $personadata.plnt
+Origen: $personadata.orgn
 Género: $personadata.gen / $personadata.gene
-Orientación: $personadata.os
+&lt;&lt;if $persona.com is 0&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $persona.mn += 2&gt;&gt;&lt;&lt;/if&gt;&gt;
 &#39;&#39;Características&#39;&#39;
 Cuerpo: $persona.cp
 Mente: $persona.mn
@@ -115,46 +117,42 @@ Espíritu: $persona.sp
 &#39;&#39;Historia&#39;&#39;
 $personadata.pr / $personadata.pq&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $ssa is 0&gt;&gt;&lt;&lt;else&gt;&gt;&#39;&#39;Alineamiento&#39;&#39;
-Neo: $persona.neo / Con: $persona.con
-Anarc: $persona.anr / Comun: $persona.com
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="" position="464,338" size="100,100">¡Hola! Soy la asistente de tu nuevo &#39;&#39;D&#39;&#39;ispositivo de &#39;&#39;S&#39;&#39;oporte &#39;&#39;P&#39;&#39;ersonal (DSP).
+Neo Neoliberal: $persona.neo / Facista: $persona.con
+Anarquista: $persona.anr / Comunista: $persona.com
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="" position="748,526" size="100,100">¡Hola! Soy la asistente de tu nuevo &#39;&#39;D&#39;&#39;ispositivo de &#39;&#39;S&#39;&#39;oporte &#39;&#39;P&#39;&#39;ersonal (DSP).
 &lt;label&gt;Introduce tu nombre: &lt;&lt;textbox &quot;$persona.nm&quot; &quot;Josi&quot;&gt;&gt; &lt;/label&gt;
-[[Aceptar|cr1]]</tw-passagedata><tw-passagedata pid="5" name="cr1" tags="" position="607,338" size="100,100">¡Muy bien $persona.nm! Un placer, ¿Cuál es tu planeta de origen?
-[[Tierra|cr2][$persona.plnt to &quot;tr&quot;]]
-[[Venus|cr2][$persona.plnt to &quot;vn&quot;]]
-[[Marte|cr2][$persona.plnt to &quot;mr&quot;]]
-[[Satélite|cr2][$persona.plnt to &quot;st&quot;]]</tw-passagedata><tw-passagedata pid="6" name="cr2" tags="" position="757,329" size="100,100">&lt;&lt;if $persona.plnt is &quot;tr&quot;&gt;&gt;Así que eres de la tierra, el planeta madre, ya no queda mucha gente que sea de allí&lt;&lt;set $personadata.plnt to &quot;Tierra&quot;&gt;&gt;&lt;&lt;elseif $persona.plnt is &quot;vn&quot;&gt;&gt;¡Venus! el primer planeta colonizado, dicen que después de la terraformación quedó muy bonito&lt;&lt;set $personadata.plnt to &quot;Venus&quot;&gt;&gt;&lt;&lt;elseif $persona.plnt is &quot;mr&quot;&gt;&gt;Naciste en Marte, ¿sabías que fue el segundo planeta en ser terraformado? He escuchado que sus playas artificales son hermosas.&lt;&lt;set $personadata.plnt to &quot;Marte&quot;&gt;&gt;&lt;&lt;elseif $persona.plnt is &quot;sat&quot;&gt;&gt;Provienes de una colonia en un satélite natural ¿quizá la misma Luna?&lt;&lt;set $personadata.plnt to &quot;Satélite&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+[[Aceptar|cr1]]</tw-passagedata><tw-passagedata pid="5" name="cr1" tags="" position="891,526" size="100,100">¡Muy bien $persona.nm! Un placer, ¿Cuál es tu planeta de origen?
+Dialog.wiki(&quot;Cry &#39;Havoc!&#39;, and let slip the //ponies// of &#39;&#39;friendship&#39;&#39;.&quot;);
+[[Tierra|cr2][$persona.orgn to &quot;tr&quot;]]
+[[Venus|cr2][$persona.orgn to &quot;vn&quot;]]
+[[Marte|cr2][$persona.orgn to &quot;mr&quot;]]
+[[Satélite|cr2][$persona.orgn to &quot;st&quot;]]</tw-passagedata><tw-passagedata pid="6" name="cr2" tags="" position="1041,517" size="100,100">&lt;&lt;if $persona.orgn is &quot;tr&quot;&gt;&gt;Así que eres de la tierra, el planeta madre, ya no queda mucha gente que sea de allí&lt;&lt;set $personadata.orgn to &quot;Tierra&quot;&gt;&gt;&lt;&lt;elseif $persona.orgn is &quot;vn&quot;&gt;&gt;¡Venus! el primer planeta colonizado, dicen que después de la terraformación quedó muy bonito&lt;&lt;set $personadata.orgn to &quot;Venus&quot;&gt;&gt;&lt;&lt;elseif $persona.orgn is &quot;mr&quot;&gt;&gt;Naciste en Marte, ¿sabías que fue el segundo planeta en ser terraformado? He escuchado que sus playas artificales son hermosas.&lt;&lt;set $personadata.orgn to &quot;Marte&quot;&gt;&gt;&lt;&lt;elseif $persona.orgn is &quot;sat&quot;&gt;&gt;Provienes de una colonia en un satélite natural ¿quizá la misma Luna?&lt;&lt;set $personadata.orgn to &quot;Satélite&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Ahora necesito saber un poco más de ti para configurar tus aplicaciones sociales.
 
 ¿Puedes decirme tu género?
 [[Cisgénero|cr3][$persona.gen to &quot;cis&quot;]]
-[[Transgénero|cr3][$persona.gen to &quot;trans&quot;]]</tw-passagedata><tw-passagedata pid="7" name="cr3" tags="" position="904,327" size="100,100">¡Genial! ¿Y cómo te perciben los demás?
+[[Transgénero|cr3][$persona.gen to &quot;trans&quot;]]</tw-passagedata><tw-passagedata pid="7" name="cr3" tags="" position="1188,511" size="100,100">¡Genial! ¿Y cómo te perciben los demás?
 [[Hombre|cr4][$persona.gene to &quot;h&quot;]]
 [[Mujer|cr4][$persona.gene to &quot;m&quot;]]
-[[No binario|cr4][$persona.gene to &quot;nb&quot;]]</tw-passagedata><tw-passagedata pid="8" name="cr4" tags="" position="907,457" size="100,100">Esto es muy interesante, creo que puedo ayudarte a ponerte en contácto con personas que quizá te interecen, una última cosa al respecto. ¿Cuál es tú orientación sexual?
-[[Hétero|cr5][$persona.os to &quot;ht&quot;]]
-[[Homo|cr5][$persona.os to &quot;hm&quot;]]
-[[Queer|cr5][$persona.os to &quot;qe&quot;]]
-[[Asexual|cr5][$persona.os to &quot;as&quot;]]
-[[Bisexual|cr5][$persona.os to &quot;bi&quot;]]</tw-passagedata><tw-passagedata pid="9" name="cr5" tags="" position="782,443" size="100,100">¡Muchas gracias $persona.nm! Ahora quisiera ayudarte un poco en tu carrera, ¿Cuál es tu trasfondo profesional?
-[[Escritura|cr6][$persona.pr to &quot;esc&quot;; $persona.sp += 1; $persona.mn += 1]]
-[[Militar|cr6][$persona.pr to &quot;mlt&quot;; $persona.cp += 2]]
-[[Ilustración|cr6][$persona.pr to &quot;ilu&quot;; $persona.sp += 1; $persona.cp += 1]]
-[[Ciencias sociales|cr6][$persona.pr to &quot;cs&quot;; $persona.cp += 1; $persona.mn += 1]]
-[[Ciencias Naturales|cr6][$persona.pr to &quot;cn&quot;; $persona.mn += 2]]
-[[Actuación/Performance|cr6][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]</tw-passagedata><tw-passagedata pid="10" name="StoryInit" tags="" position="769,45" size="100,100">&lt;&lt;set $ss to 0&gt;&gt;
+[[No binario|cr4][$persona.gene to &quot;nb&quot;]]</tw-passagedata><tw-passagedata pid="8" name="cr4" tags="" position="1152,651" size="100,100">¡Genial $persona.nm! Ahora quisiera ayudarte un poco en tu carrera, ¿Cuál es tu trasfondo profesional?
+[[Escritura|cr5][$persona.pr to &quot;esc&quot;; $persona.sp += 1; $persona.mn += 1]]
+[[Militar|cr5][$persona.pr to &quot;mlt&quot;; $persona.cp += 2]]
+[[Ilustración|cr5][$persona.pr to &quot;ilu&quot;; $persona.sp += 1; $persona.cp += 1]]
+[[Ciencias Sociales|cr5][$persona.pr to &quot;cs&quot;; $persona.cp += 1; $persona.mn += 1]]
+[[Ciencias Formales|cr5][$persona.pr to &quot;cn&quot;; $persona.mn += 2]]
+[[Actuación/Performance|cr5][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]</tw-passagedata><tw-passagedata pid="9" name="StoryInit" tags="" position="1001,196" size="100,100">&lt;&lt;set $ss to 0&gt;&gt;
 &lt;&lt;set $ssa to 0&gt;&gt;
-&lt;&lt;set $persona to {nm: &quot;Josi&quot;, plnt: &quot;tr&quot;, gen: &quot;cis&quot;, gene: &quot;nb&quot;, os: &quot;ht&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 5, mn: 5, sp: 5, com: 0, neo: 0, anr: 0, con: 0}&gt;&gt;
-&lt;&lt;set $personadata to {plnt: &quot;Tierra&quot;, gen: &quot;Cisgénero&quot;, gene: &quot;No binario&quot;, os: &quot;Hétero&quot;, pr: &quot;Escribir&quot;, pq: &quot;Toqué fondo&quot;}&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="" position="649,453" size="100,100">Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Quisieras contarme de algún evento que definió tu vida?
-[[Muerte en la familia|cr7][$persona.pq to &quot;mf&quot;; $persona.sp += 2]]
-[[Viaje de descubrimiento|cr7][$persona.pq to &quot;vd&quot;; $persona.mn += 1; $persona.sp +=1]]
-[[Toque fondo|cr7][$persona.pq to &quot;tf&quot;; $persona.sp += 3; $persona.cp -=1]]
-[[Terminando estudios|cr7][$persona.pq to &quot;te&quot;; $persona.mn += 2]]
-[[Temporada en el campo|cr7][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]</tw-passagedata><tw-passagedata pid="12" name="cr7" tags="" position="508,496" size="100,100">&#39;&#39;Datos personales&#39;&#39;&lt;&lt;if $persona.gen is &quot;cis&quot;&gt;&gt;	&lt;&lt;set $personadata.gen to &quot;Cisgénero&quot;&gt;&gt;&lt;&lt;elseif $persona.gen is &quot;trans&quot;&gt;&gt;	&lt;&lt;set $personadata.gen to &quot;Transgénero&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $persona.gene is &quot;h&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;Hombre&quot;&gt;&gt;&lt;&lt;elseif $persona.gene is &quot;m&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;Mujer&quot;&gt;&gt;&lt;&lt;elseif $persona.gene is &quot;nb&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;No binario&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $persona.os is &quot;ht&quot;&gt;&gt;	&lt;&lt;set $personadata.os to &quot;Hétero&quot;&gt;&gt;&lt;&lt;elseif $persona.os is &quot;hm&quot;&gt;&gt;	&lt;&lt;set $personadata.os to &quot;Homo&quot;&gt;&gt;&lt;&lt;elseif $persona.os is &quot;qe&quot;&gt;&gt;	&lt;&lt;set $personadata.os to &quot;Queer&quot;&gt;&gt;&lt;&lt;elseif $persona.os is &quot;as&quot;&gt;&gt;	&lt;&lt;set $personadata.os to &quot;Asexual&quot;&gt;&gt;&lt;&lt;elseif $persona.os is &quot;bi&quot;&gt;&gt;	&lt;&lt;set $personadata.os to &quot;Bisexual&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $persona to {nm: &quot;Josi&quot;, orgn: &quot;tr&quot;, gen: &quot;cis&quot;, gene: &quot;nb&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 3, mn: 3, sp: 3, com: 0, neo: 0, anr: 0, con: 0, cr: 0}&gt;&gt;
+&lt;&lt;set $personadata to {orgn: &quot;Tierra&quot;, gen: &quot;Cisgénero&quot;, gene: &quot;No binario&quot;, pr: &quot;Escribir&quot;, pq: &quot;Toqué fondo&quot;}&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="" position="989,646" size="100,100">Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Quisieras contarme de algún evento que definió tu vida?
+[[Muerte en la familia|cr6][$persona.pq to &quot;mf&quot;; $persona.sp += 2]]
+[[Viaje de descubrimiento|cr6][$persona.pq to &quot;vd&quot;; $persona.mn += 1; $persona.sp +=1]]
+[[Toque fondo|cr6][$persona.pq to &quot;tf&quot;; $persona.sp += 3; $persona.cp -=1]]
+[[Terminando estudios|cr6][$persona.pq to &quot;te&quot;; $persona.mn += 2]]
+[[Temporada en el campo|cr6][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="" position="812,662" size="100,100">&#39;&#39;Datos personales&#39;&#39;&lt;&lt;if $persona.gen is &quot;cis&quot;&gt;&gt;&lt;&lt;set $personadata.gen to &quot;Cisgénero&quot;&gt;&gt;&lt;&lt;elseif $persona.gen is &quot;trans&quot;&gt;&gt;	&lt;&lt;set $personadata.gen to &quot;Transgénero&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $persona.gene is &quot;h&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;Hombre&quot;&gt;&gt;&lt;&lt;elseif $persona.gene is &quot;m&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;Mujer&quot;&gt;&gt;&lt;&lt;elseif $persona.gene is &quot;nb&quot;&gt;&gt;	&lt;&lt;set $personadata.gene to &quot;No binario&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 Nombre: $persona.nm
-Planeta: $personadata.plnt
+Planeta: $personadata.orgn
 Género: $personadata.gen / $personadata.gene
-Orientación: $personadata.os
 
 &#39;&#39;Características&#39;&#39;
 Cuerpo: $persona.cp
@@ -162,87 +160,92 @@ Mente: $persona.mn
 Espíritu: $persona.sp
 
 &#39;&#39;Historia&#39;&#39;
-&lt;&lt;if $persona.plnt is &quot;tr&quot;&gt;&gt;&lt;&lt;set $personadata.plnt to &quot;Tierra&quot;&gt;&gt;&#39;&#39;$personadata.plnt&#39;&#39;. Naciste en la Tierra, &quot;El planeta madre&quot;, origen de toda la vida inteligente que se conoce hasta ahora. La guerra entre los seres humanos y las &#39;&#39;I&#39;&#39;nteligencias &#39;&#39;A&#39;&#39;rtificiales (IA) la dejo devastada, pero aún existen pequeñas ciudades entre lo que solían ser continentes, todas unidas por trenes de hipervelocidad. &#39;&#39;Ente gobernante:&#39;&#39; Ciudades Libres de la Nueva Tierra.
-&lt;&lt;elseif $persona.plnt is &quot;vn&quot;&gt;&gt;&lt;&lt;set $personadata.plnt to &quot;Venus&quot;&gt;&gt;&#39;&#39;$personadata.plnt&#39;&#39;. Naciste en Venus, &quot;El planeta de la luz&quot;, como le dicen sus habitantes, desde su terraformación, ha sido el centro académico y cultural del Sistema Solar, sus instituciones surgieron a partir de la migración de los entes internacionales de la Antigua Tierra, con la mayoría de sus defectos y virtudes. &#39;&#39;Ente gobernante:&#39;&#39; Alianza Venusina de Naciones.
-&lt;&lt;elseif $persona.plnt is &quot;mr&quot;&gt;&gt;&lt;&lt;set $personadata.plnt to &quot;Marte&quot;&gt;&gt;&#39;&#39;$personadata.plnt&#39;&#39;. Naciste en Marte, llamado &quot;La tierra de los monstruos&quot;, desde el descubrimiento de fósiles de animales con conformación biológica que aún 500 años después es objeto de estudio, la terraformación de marte dio lugar a un planeta lleno de hermosas playas artificiales en sus zonas habitables. &#39;&#39;Ente gobernante:&#39;&#39; Federación Planetaria de Repúblicas Marcianas
-&lt;&lt;elseif $persona.plnt is &quot;sat&quot;&gt;&gt;&lt;&lt;set $personadata.plnt to &quot;Satélites&quot;&gt;&gt;&#39;&#39;$personadata.plnt&#39;&#39;. Naciste en alguna de las lunas colonizadas por la humanidad, en su búsqueda de habitarlo todo, la mayoría de los otros planetas consideran a los &quot;lunares&quot; personas sin una unidad u organización, pero sabes que eso no es verdad, todas las lunas habitadas, de Creonte a la Luna, como puertos, comparten la vida de las y los nómadas. Ente Gobernante: Unión de Sindicatos Lunares.&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $persona.pr is &quot;esc&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Escribir&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Antes de dedicarte al periodismo de investigación eras un escritor algo reconocido, con un par de novelas y antologías de cuento publicados. 
-&lt;&lt;elseif $persona.pr is &quot;mlt&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Militar&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Serviste en la II Guerra Solar, ya ni siquiera quieres recordar de que bando terminaste luchando, porque la contratista con la que trabajabas no paro de cambiarse de lado hasta que la guerra terminó.
-&lt;&lt;elseif $persona.pr is &quot;ilu&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ilustración&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Has dibujado lo que te rodea desde que tienes memoria, y lograste publicar tus primeros relatos gráficos bastante jóven, tus últimos trabajos buscan relatar la realidad que vives.
-&lt;&lt;elseif $persona.pr is &quot;cs&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ciencias Sociales&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. La academia y la investigación en las Ciencias Sociales fueron tu pasión por mucho tiempo, tu tesis de grado fue sobre &quot;El mito fundacional de las sociedades en satélites naturales&quot;.
-&lt;&lt;elseif $persona.pr is &quot;cn&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ciencias Naturales&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. La ciencia se muestra ante tí como un lenguaje universal, tus últimos aportes en el &quot;Aprendizaje Profundo&quot; conmocionaron a la comunidad de estudio de las IA.
-&lt;&lt;elseif $persona.pr is &quot;ap&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Actuación/Performance&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Tus habilidades para entretener, encantar, deleitar e incluso conmover al público, son de cierto renombre, la ultima experiencia en la que participaste ha tenído buenas reseñas.&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $persona.pq is &quot;mf&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Muerte en la familia&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de luchar duramente contra una enfermedad terminal, tu madre ha muerto. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
-&lt;&lt;elseif $persona.pq is &quot;vd&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Viaje de descubrimiento&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de pasar un mes en un retiro en la luna de Júpiter, Europa, necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
-&lt;&lt;elseif $persona.pq is &quot;tf&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Tocar fondo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de que no te llamaron más para tu último trabajo, y la pareja sentimental que tenías te pidió que se dieran un tiempo, fue suficiente. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
-&lt;&lt;elseif $persona.pq is &quot;te&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Terminando los estudios&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Acabas de finalizar tus estudios en Ciencias Cognitivas, y sientes que la academía ya te dió todo lo que podía ofrecerte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
-&lt;&lt;elseif $persona.pq is &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
-&lt;&lt;/if&gt;&gt;
-[[Confirmar|cr8][$ss to 1]]
-[[Rechazar|inicio]]</tw-passagedata><tw-passagedata pid="13" name="cr8" tags="" position="695,616" size="100,100">¡Excelente! Como puedes ver hemos guardado tus preferencias y calculado tus &#39;&#39;Características&#39;&#39; a partir de un escaneo biométrico. Mantendrémos un monitoreo constante de ellas, ya que así podrás calcular mejor tus capacidades y limitaciones, ten cuidado, si alguna de ellas cae a 0, podrías tener graves problemas.
-[[Continuar|dsp]]</tw-passagedata><tw-passagedata pid="14" name="dsp" tags="" position="696,754" size="100,100">Hola $persona.nm. Bienvenida a la interfaz de tu &#39;&#39;DSP&#39;&#39;. ¿Qué quieres hacer?
+&lt;&lt;switch $persona.orgn&gt;&gt;
+&lt;&lt;case &quot;tr&quot;&gt;&gt;&lt;&lt;set $personadata.orgn to &quot;Tierra&quot;&gt;&gt;&#39;&#39;$personadata.orgn&#39;&#39;. Naciste en la Tierra, &quot;El planeta madre&quot;, origen de toda la vida inteligente que se conoce hasta ahora. La guerra entre los seres humanos y las &#39;&#39;I&#39;&#39;nteligencias &#39;&#39;A&#39;&#39;rtificiales (IA) la dejo devastada, pero aún existen pequeñas ciudades entre lo que solían ser continentes, todas unidas por trenes de hipervelocidad. &#39;&#39;Ente gobernante:&#39;&#39; Ciudades Libres de la Nueva Tierra.
+&lt;&lt;case &quot;vn&quot;&gt;&gt;&lt;&lt;set $personadata.orgn to &quot;Venus&quot;&gt;&gt;&#39;&#39;$personadata.orgn&#39;&#39;. Naciste en Venus, &quot;El planeta de la luz&quot;, como le dicen sus habitantes, desde su terraformación, ha sido el centro académico y cultural del Sistema Solar, sus instituciones surgieron a partir de la migración de los entes internacionales de la Antigua Tierra, con la mayoría de sus defectos y virtudes. &#39;&#39;Ente gobernante:&#39;&#39; Alianza Venusina de Naciones.
+&lt;&lt;case &quot;mr&quot;&gt;&gt;&lt;&lt;set $personadata.orgn to &quot;Marte&quot;&gt;&gt;&#39;&#39;$personadata.orgn&#39;&#39;. Naciste en Marte, llamado &quot;La tierra de los monstruos&quot;, desde el descubrimiento de fósiles de animales con conformación biológica que aún 500 años después es objeto de estudio, la terraformación de marte dio lugar a un planeta lleno de hermosas playas artificiales en sus zonas habitables. &#39;&#39;Ente gobernante:&#39;&#39; Federación Planetaria de Repúblicas Marcianas
+&lt;&lt;case &quot;sat&quot;&gt;&gt;&lt;&lt;set $personadata.orgn to &quot;Satélites&quot;&gt;&gt;&#39;&#39;$personadata.orgn&#39;&#39;. Naciste en alguna de las lunas colonizadas por la humanidad, en su búsqueda de habitarlo todo, la mayoría de los otros planetas consideran a los &quot;lunares&quot; personas sin una unidad u organización, pero sabes que eso no es verdad, todas las lunas habitadas, de Creonte a la Luna, como puertos, comparten la vida de las y los nómadas. Ente Gobernante: Unión de Comunas Lunares.
+&lt;&lt;/switch&gt;&gt;
+&lt;&lt;switch $persona.pr&gt;&gt;
+&lt;&lt;case &quot;esc&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Escribir&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Antes de dedicarte al periodismo de investigación eras un escritor algo reconocido, con un par de novelas y antologías de cuento publicados. 
+&lt;&lt;case &quot;mlt&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Militar&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Serviste en la II Guerra Solar, ya ni siquiera quieres recordar de que bando terminaste luchando, porque la contratista con la que trabajabas no paro de cambiarse de lado hasta que la guerra terminó.
+&lt;&lt;case &quot;ilu&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ilustración&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Has dibujado lo que te rodea desde que tienes memoria, y lograste publicar tus primeros relatos gráficos bastante jóven, tus últimos trabajos buscan relatar la realidad que vives.
+&lt;&lt;case &quot;cs&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ciencias Sociales&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. La academia y la investigación en las Ciencias Sociales fueron tu pasión por mucho tiempo, tu tesis de grado fue sobre &quot;El mito fundacional de las sociedades en satélites naturales&quot;.
+&lt;&lt;case &quot;cn&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Ciencias Formales&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. La ciencia se muestra ante tí como un lenguaje universal, tus últimos aportes en el &quot;Aprendizaje Profundo&quot; conmocionaron a la comunidad de estudio de las IA.
+&lt;&lt;case &quot;ap&quot;&gt;&gt;&lt;&lt;set $personadata.pr to &quot;Actuación/Performance&quot;&gt;&gt;&#39;&#39;$personadata.pr&#39;&#39;. Tus habilidades para entretener, encantar, deleitar e incluso conmover al público, son de cierto renombre, la ultima experiencia en la que participaste ha tenído buenas reseñas.
+&lt;&lt;/switch&gt;&gt;
+&lt;&lt;switch $persona.pq&gt;&gt;
+&lt;&lt;case &quot;mf&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Muerte en la familia&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de luchar duramente contra una enfermedad terminal, tu madre ha muerto. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
+&lt;&lt;case &quot;vd&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Viaje de descubrimiento&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de pasar un mes en un retiro en la luna de Júpiter, Europa, necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
+&lt;&lt;case &quot;tf&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Tocar fondo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Después de que no te llamaron más para tu último trabajo, y la pareja sentimental que tenías te pidió que se dieran un tiempo, fue suficiente. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
+&lt;&lt;case &quot;te&quot;&gt;&gt;&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Terminando los estudios&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Acabas de finalizar tus estudios en Ciencias Cognitivas, y sientes que la academía ya te dió todo lo que podía ofrecerte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
+&lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
+&lt;&lt;/switch&gt;&gt;
+[[Confirmar|cr7][$ss to 1]]
+[[Rechazar|inicio]]</tw-passagedata><tw-passagedata pid="12" name="cr7" tags="" position="719,800" size="100,100">¡Excelente! Como puedes ver hemos guardado tus preferencias y calculado tus &#39;&#39;Características&#39;&#39; a partir de un escaneo biométrico. Mantendrémos un monitoreo constante de ellas, ya que así podrás calcular mejor tus capacidades y limitaciones. Te recomiendo que estés atento, ya que tus características pueden verse afectadas temporalmente por diferentes causas, y si alguna llega a cero (0) puedes verte en serios problemas.
+[[Continuar|dsp]]</tw-passagedata><tw-passagedata pid="13" name="dsp" tags="" position="880,794" size="100,100">Hola $persona.nm. Bienvenida a la interfaz de tu &#39;&#39;DSP&#39;&#39;. ¿Qué quieres hacer?
 [[Contactar|contactos]]
 [[Revisar correo|correo]]
 [[Notas|notas]]
-</tw-passagedata><tw-passagedata pid="15" name="contactos" tags="" position="546,904" size="100,100">Contáctos:
+</tw-passagedata><tw-passagedata pid="14" name="contactos" tags="" position="918,952" size="100,100">Contáctos:
 Tía Berta
 [[Carlo MARS MEDIA|carlo1]]
 
-[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="16" name="correo" tags="" position="696,903" size="100,100">&#39;&#39;Bandeja de entrada&#39;&#39;
+[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="15" name="correo" tags="" position="1048,943" size="100,100">&#39;&#39;Bandeja de entrada&#39;&#39;
 [[Carlo. carlo@marsmedia.mr. Asunto: Te puede interesar!!!|correo-carlo]]
 
-[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="17" name="notas" tags="" position="856,903" size="100,100">Vacío
+[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="16" name="notas" tags="" position="1208,943" size="100,100">Vacío
 [[Nueva|nnota]]
-[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="18" name="correo-carlo" tags="" position="696,1055" size="100,100">Carlo Arietti
+[[Regresar|dsp]]</tw-passagedata><tw-passagedata pid="17" name="correo-carlo" tags="" position="1048,1079" size="100,100">Carlo Arietti
 Correo: carlo@marsmedia.mr
 Asunto: Te puede interesar!!!
 
 Hola! $persona.nm, tengo un par de semanas terrestres sin saber de tí, cómo has estado? tengo un trabajo que quizá pueda interesarte, [[contáctame a mi dsp|carlo1]]. No me escribas, no te responderé por aquí.
-[[Responder|perdertmp]]</tw-passagedata><tw-passagedata pid="19" name="carlo1" tags="" position="543,1053" size="100,100">piii piii piii piii
+[[Responder|perdertmp]]</tw-passagedata><tw-passagedata pid="18" name="carlo1" tags="" position="830,1076" size="100,100">piii piii piii piii
 [[Esperar|carlo2]]
-[[Colgar|dsp]]</tw-passagedata><tw-passagedata pid="20" name="nnota" tags="" position="846,1055" size="100,100">$persona.nm: No tengo nada que escribir en este momento.
-[[Regresar|notas]]</tw-passagedata><tw-passagedata pid="21" name="perdertmp" tags="" position="696,1205" size="100,100">$persona.nm: Carlo me escribió que no le respondiera por esta vía, no tiene sentido perder el tiempo.
-[[Regresar|correo-carlo]]</tw-passagedata><tw-passagedata pid="22" name="carlo2" tags="" position="546,1203" size="100,100">piii piii piii piii
+[[Colgar|dsp]]</tw-passagedata><tw-passagedata pid="19" name="nnota" tags="" position="1198,1095" size="100,100">$persona.nm: No tengo nada que escribir en este momento.
+[[Regresar|notas]]</tw-passagedata><tw-passagedata pid="20" name="perdertmp" tags="" position="992,1209" size="100,100">$persona.nm: Carlo me escribió que no le respondiera por esta vía, no tiene sentido perder el tiempo.
+[[Regresar|correo-carlo]]</tw-passagedata><tw-passagedata pid="21" name="carlo2" tags="" position="674,1087" size="100,100">piii piii piii piii
 [[Esperar|carlo3]]
-[[Colgar|dsp]]</tw-passagedata><tw-passagedata pid="23" name="carlo3" tags="" position="546,1353" size="100,100">Carlo: ¿Alo? ¿$persona.nm? pense que habías muerto, jajajaja.
+[[Colgar|dsp]]</tw-passagedata><tw-passagedata pid="22" name="carlo3" tags="" position="854,1253" size="100,100">Carlo: ¿Alo? ¿$persona.nm? pense que habías muerto, jajajaja.
 [[Muy gracioso Carlo, ¿Para que querías hablar conmigo?|carlo4]]
-[[&quot;(Imitas a una voz nasal) No soy &quot; + $persona.nm + &quot;, le tenemos secuestradx y queremos cobrar rescate&quot;|carlo4]]</tw-passagedata><tw-passagedata pid="24" name="carlo4" tags="" position="546,1503" size="100,100">Carlo: Jaja, está bien, suficiente de bromas, te quería contactár por algo bastante serio. Pero eso si, una vez empiece a contarte de que trata, no puedes hecharte para atrás, necesitamos con urgencia cubrir esta historia, y no podémos estarla divulgando a menos que estemos seguros de que sea con la persona que hará la publicación. ¿Qué me dices?
+[[&quot;(Imitas a una voz nasal) No soy &quot; + $persona.nm + &quot;, le tenemos secuestradx y queremos cobrar rescate&quot;|carlo4]]</tw-passagedata><tw-passagedata pid="23" name="carlo4" tags="" position="1002,1333" size="100,100">Carlo: Jaja, está bien, suficiente de bromas, te quería contactár por algo bastante serio. Pero eso si, una vez empiece a contarte de que trata, no puedes hecharte para atrás, necesitamos con urgencia cubrir esta historia, y no podémos estarla divulgando a menos que estemos seguros de que sea con la persona que hará la publicación. ¿Qué me dices?
 [[De acuerdo, cuenta conmigo|carlo5]]
-[[No creo, no quiero meterme en problemas ahora|confcarlo]]</tw-passagedata><tw-passagedata pid="25" name="carlo5" tags="" position="570,1643" size="100,100">Carlo: ¡Excelente! Sabía que no me equivoque al buscarte a ti primero. Escuchame bien, dejame verificar que estemos en una conexión realmente cifrada antes de comenzar.
+[[No creo, no quiero meterme en problemas ahora|confcarlo]]</tw-passagedata><tw-passagedata pid="24" name="carlo5" tags="" position="870,1439" size="100,100">Carlo: ¡Excelente! Sabía que no me equivoque al buscarte a ti primero. Escuchame bien, dejame verificar que estemos en una conexión realmente cifrada antes de comenzar.
 [[Revisaré también por mi lado|checci]]
-[[Adelante|carlo6]]</tw-passagedata><tw-passagedata pid="26" name="confcarlo" tags="" position="384,1508" size="100,100">Carlo: ¿Estás seguro? Puede ser lo que estabas buscando para cambiar de aires y dar un nuevo comienzo.
+[[Adelante|carlo6]]</tw-passagedata><tw-passagedata pid="25" name="confcarlo" tags="" position="724,1404" size="100,100">Carlo: ¿Estás seguro? Puede ser lo que estabas buscando para cambiar de aires y dar un nuevo comienzo.
 [[Estoy seguro, busca a otra persona|fin1]]
-[[Tienes razón, cuenta conmigo|carlo5]]</tw-passagedata><tw-passagedata pid="27" name="fin1" tags="" position="318,1366" size="100,100">Carlo: Esta bien, buscaremos a alguien más, es una lástima...
+[[Tienes razón, cuenta conmigo|carlo5]]</tw-passagedata><tw-passagedata pid="26" name="fin1" tags="" position="698,1254" size="100,100">Carlo: Esta bien, buscaremos a alguien más, es una lástima...
 
 Y sigues tu vida como si nada, al tiempo te enteras de que se esta lanzando una operación militar hacia Proxima b, según las noticias estaban experimentando con armas de destrucción planetaria.
 
 &lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
 	&lt;&lt;run Engine.restart()&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="checci" tags="" position="750,1623" size="100,100">Revisas si la conexión está cifrada, y en efecto lo está,
-[[continuar|carlo6]]</tw-passagedata><tw-passagedata pid="29" name="carlo6" tags="" position="645,1793" size="100,100">//Carlo ha pasado a modo cifrado//
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="checci" tags="" position="1022,1475" size="100,100">Revisas si la conexión está cifrada, y en efecto lo está,
+[[continuar|carlo6]]</tw-passagedata><tw-passagedata pid="28" name="carlo6" tags="" position="749,1573" size="100,100">//Carlo ha pasado a modo cifrado//
 Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una idea de porque esto puede ser la noticia del siglo, ¡que te digo el milenio!, ¿qué tal estás en historia? ¿recuerdas la I Guerra Solar?
 [[¡Claro que sí!|carlo7]]
-[[La verdad es que no mucho|carlo7b]]</tw-passagedata><tw-passagedata pid="30" name="carlo7" tags="" position="793,1785.6666666666665" size="100,100">Carlo: Muy bien, como sabemos fue el acontecimiento más terrible del milenio pasado, la II Guerra Solar fue una simple escaramuza en comparación. En el año 2580, las IA se volvieron contra los humanos, dando comienzo a una guerra que duraría hasta el 2604.
+[[La verdad es que no mucho|carlo7b]]</tw-passagedata><tw-passagedata pid="29" name="carlo7" tags="" position="937,1609" size="100,100">Carlo: Muy bien, como sabemos fue el acontecimiento más terrible del milenio pasado, la II Guerra Solar fue una simple escaramuza en comparación. En el año 2580, las IA se volvieron contra los humanos, dando comienzo a una guerra que duraría hasta el 2604.
+[[Continua|carlo8]]
+[[Agregaría que fue para emanciparse de sus cadenas opresoras|carlo8b][$persona.com += 1; $persona.anr += 1; $ssa to 1]]
+[[Te falto decir que eso se hubiera prevenido de tener mayores controles sobre esas máquinas|carlo8c][$persona.con += 1; $persona.neo += 1; $ssa to 1]]</tw-passagedata><tw-passagedata pid="30" name="carlo7b" tags="" position="781,1697" size="100,100">Carlo: Debes estar tomandome el pelo, todo el mundo sabe que fue el acontecimiento más terrible del milenio pasado, la II Guerra Solar fue una simple escaramuza en comparación. En el año 2580, las IA se volvieron contra los humanos, dando comienzo a una guerra que duraría hasta el 2604.
 [[Continua|carlo8]]
 [[Agregaría que fue para emanciparse de sus cadenas opresoras|carlo8b][$persona.com += 1; $persona.an += 1; $ssa to 1]]
-[[Te falto decir que eso se hubiera prevenido de tener mayores controles sobre esas máquinas|carlo8c][$persona.con += 1; $persona.neo += 1; $ssa to 1]]</tw-passagedata><tw-passagedata pid="31" name="carlo7b" tags="" position="581,1933" size="100,100">Carlo: Debes estar tomandome el pelo, todo el mundo sabe que fue el acontecimiento más terrible del milenio pasado, la II Guerra Solar fue una simple escaramuza en comparación. En el año 2580, las IA se volvieron contra los humanos, dando comienzo a una guerra que duraría hasta el 2604.
-[[Continua|carlo8]]
-[[Agregaría que fue para emanciparse de sus cadenas opresoras|carlo8b][$persona.com += 1; $persona.an += 1; $ssa to 1]]
-[[Agregaría que fue para emanciparse de sus cadenas opresoras|carlo8c][$persona.com += 1; $persona.an += 1; $ssa to 1]]</tw-passagedata><tw-passagedata pid="32" name="carlo8b" tags="" position="874,1986" size="100,100">(Acabas de tomar tu primera decisión de alineamiento, a partir de ahora mostraremos tu alineamiento con tus demás estadísticas, tu decisión subió tu alineamiento &#39;&#39;Anarc&#39;&#39; y &#39;&#39;Comun&#39;&#39; +1).
+[[Agregaría que fue para emanciparse de sus cadenas opresoras|carlo8c][$persona.com += 1; $persona.an += 1; $ssa to 1]]</tw-passagedata><tw-passagedata pid="31" name="carlo8b" tags="" position="1042,1774" size="100,100">(Acabas de tomar tu primera decisión de alineamiento, a partir de ahora mostraremos tu alineamiento con tus demás estadísticas, tu decisión subió tu alineamiento &#39;&#39;Anarc&#39;&#39; y &#39;&#39;Comun&#39;&#39; +1).
 Carlo: Vaya, tienes suerte que nuestro Comité Editorial acepte ese tipo de posturas, diciendo esas cosas no te dejarán publicar en muchos más sitios. En fin, al final los humanos ganamos la guerra, se desensamblaron la mayoría de las IA autónomas, y se crearon fuertes regulaciones contra el desarrollo de IA, hasta el punto de llegar a la prohibición total.
-[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="33" name="carlo9" tags="" position="909,2131" size="100,100">Carlo: No fue sino hasta más o menos el año 2900 que empezaron a aligerarse las regulaciones sobre las AI, lo que dio paso a la creación de la tecnología de //lanzamiento Lunar//, proceso por el cual se transforman los satélites naturales en puertos espaciales, y permite acelerar el viaje interplanetario.
+[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="32" name="carlo9" tags="" position="1137,1931" size="100,100">Carlo: No fue sino hasta más o menos el año 2900 que empezaron a aligerarse las regulaciones sobre las AI, lo que dio paso a la creación de la tecnología de //lanzamiento Lunar//, proceso por el cual se transforman los satélites naturales en puertos espaciales, y permite acelerar el viaje interplanetario.
 [[Continuar|carlo10]]
-[[Aburridoooo...|carlo10b]]</tw-passagedata><tw-passagedata pid="34" name="carlo8" tags="" position="698,2029" size="100,100">Carlo: En fin, al final los humanos ganamos la guerra, se desensamblaron la mayoría de las IA autónomas, y se crearon fuertes regulaciones contra el desarrollo de IA, hasta el punto de llegar a la prohibición total.
-[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="35" name="carlo8c" tags="" position="1074,1989" size="100,100">(Acabas de tomar tu primera decisión de alineamiento, a partir de ahora mostraremos tu alineamiento con tus demás estadísticas, tu decisión subió tu alineamiento &#39;&#39;Neo&#39;&#39; y &#39;&#39;Con&#39;&#39; +1).
+[[Aburridoooo...|carlo10b]]</tw-passagedata><tw-passagedata pid="33" name="carlo8" tags="" position="886,1833" size="100,100">Carlo: En fin, al final los humanos ganamos la guerra, se desensamblaron la mayoría de las IA autónomas, y se crearon fuertes regulaciones contra el desarrollo de IA, hasta el punto de llegar a la prohibición total.
+[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="34" name="carlo8c" tags="" position="1106,1641" size="100,100">(Acabas de tomar tu primera decisión de alineamiento, a partir de ahora mostraremos tu alineamiento con tus demás estadísticas, tu decisión subió tu alineamiento &#39;&#39;Neo&#39;&#39; y &#39;&#39;Con&#39;&#39; +1).
 Carlo: En fin, al final los humanos ganamos la guerra, se desensamblaron la mayoría de las IA autónomas, y se crearon fuertes regulaciones contra el desarrollo de IA, hasta el punto de llegar a la prohibición total.
-[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="36" name="carlo10" tags="" position="834,2281" size="100,100">Carlo: Se que ya debes conocer toda esa información, pero quería ponernos en contexto. Resulta que nos hemos topado con un informante, que nos dice que vio como hace 4 años se lanzó un crucero espacial &#39;&#39;fuera del sistema solar&#39;&#39;, desde Creonte, una de las lunas de Plutón, y tiene un puerto de //lanzamiento lunar//.
-[[Eso significa que..|carlo11]]</tw-passagedata><tw-passagedata pid="37" name="carlo10b" tags="" position="1064,2282" size="100,100">Carlo: Jajaja, se que ya debes conocer toda esa información, pero quería ponernos en contexto. Resulta que nos hemos topado con un informante, que nos dice que vio como hace 4 años se lanzó un crucero espacial &#39;&#39;fuera del sistema solar&#39;&#39;, desde Creonte, una de las lunas de Plutón, y tiene un puerto de //lanzamiento lunar//.
-[[Eso significa que..|carlo11]]</tw-passagedata><tw-passagedata pid="38" name="carlo11" tags="" position="897,2436" size="100,100">Carlo: Correcto, lo que se lleva hablando por tanto tiempo, una misión de colonización hacia &#39;&#39;Proxima Centauri b&#39;&#39;, el planeta del sistema &#39;&#39;Alfa Centauri&#39;&#39; que posee una &#39;&#39;zona habitable&#39;&#39;. Por alguna razón el lanzamiento se mantuvo en secreto, pero nuestro informante asegura haber visto el nombre de la nave, &#39;&#39;Bella&#39;&#39;, y que tenía el sello de la &#39;&#39;A&#39;&#39;gencia de &#39;&#39;E&#39;&#39;xploración &#39;&#39;U&#39;&#39;niversal (AEU).
-[[Da mucho que pensar, así que supongo que quieres que investigue al respecto y te de una historia|carlo12]]</tw-passagedata><tw-passagedata pid="39" name="carlo12" tags="" position="834,2581" size="100,100">Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un crucero espacial que saldrá mañana en la madrugada hacia Creonte, con escala en Europa (la luna de Júpiter), el viaje debe durar unas 10 horas, porque no tenemos para pagar una pasaje en hipernave.
-[[Entiendo porque dejaste esa parte para el final, muy bien, envíame toda la información del boleto y del contácto|carlo13]]</tw-passagedata><tw-passagedata pid="40" name="carlo13" tags="" position="834,2731" size="100,100">//Tienes una nueva notificación//
+[[Continuar|carlo9]]</tw-passagedata><tw-passagedata pid="35" name="carlo10" tags="" position="778,1957" size="100,100">Carlo: Se que ya debes conocer toda esa información, pero quería ponernos en contexto. Resulta que nos hemos topado con un informante, que nos dice que vio como hace 4 años se lanzó un crucero espacial &#39;&#39;fuera del sistema solar&#39;&#39;, desde Creonte, una de las lunas de Plutón, y tiene un puerto de //lanzamiento lunar//.
+[[Eso significa que..|carlo11]]</tw-passagedata><tw-passagedata pid="36" name="carlo10b" tags="" position="972,1998" size="100,100">Carlo: Jajaja, se que ya debes conocer toda esa información, pero quería ponernos en contexto. Resulta que nos hemos topado con un informante, que nos dice que vio como hace 4 años se lanzó un crucero espacial &#39;&#39;fuera del sistema solar&#39;&#39;, desde Creonte, una de las lunas de Plutón, y tiene un puerto de //lanzamiento lunar//.
+[[Eso significa que..|carlo11]]</tw-passagedata><tw-passagedata pid="37" name="carlo11" tags="" position="829,2120" size="100,100">Carlo: Correcto, lo que se lleva hablando por tanto tiempo, una misión de colonización hacia &#39;&#39;Proxima Centauri b&#39;&#39;, el planeta del sistema &#39;&#39;Alfa Centauri&#39;&#39; que posee una &#39;&#39;zona habitable&#39;&#39;. Por alguna razón el lanzamiento se mantuvo en secreto, pero nuestro informante asegura haber visto el nombre de la nave, &#39;&#39;Bella&#39;&#39;, y que tenía el sello de la &#39;&#39;A&#39;&#39;gencia de &#39;&#39;E&#39;&#39;xploración &#39;&#39;U&#39;&#39;niversal (AEU).
+[[Da mucho que pensar, así que supongo que quieres que investigue al respecto y te de una historia|carlo12]]</tw-passagedata><tw-passagedata pid="38" name="carlo12" tags="" position="966,2123" size="100,100">Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un crucero espacial que saldrá mañana en la madrugada hacia Creonte, con escala en Europa (la luna de Júpiter), el viaje debe durar unas 10 horas, porque no tenemos para pagar una pasaje en hipernave.
+[[Entiendo porque dejaste esa parte para el final, muy bien, envíame toda la información del boleto y del contácto|carlo13]]</tw-passagedata><tw-passagedata pid="39" name="carlo13" tags="" position="1088,2125" size="100,100">//Tienes una nueva notificación//
 Carlo: Listo, cualquier duda no dudes en volver a contactarme. Una última cosa por ahora, nuestro informante no te contactará por DSP, quiere mantener su anonimato y sabes que con estas cosas nunca se sabe, debes encontrarte con el en el puerto apenas llegue, te enviaré la información en un mensaje cifrado por //Tunel//.
-[[Vale, gracias por la confianza Carlo, ciao|carlo14]]</tw-passagedata><tw-passagedata pid="41" name="carlo14" tags="" position="834,2881" size="100,100">Carlo: Ciao $persona.nm, eres una belleza.
-[[Continuar|nocheantes1]]</tw-passagedata><tw-passagedata pid="42" name="nocheantes1" tags="" position="878,3041" size="100,100">$persona.nm: En que problema me metí ahora. Aunque en el fondo es exactamente lo que estaba buscando, un cambio de aires...
+[[Vale, gracias por la confianza Carlo, ciao|carlo14]]</tw-passagedata><tw-passagedata pid="40" name="carlo14" tags="" position="1208,2121" size="100,100">Carlo: Ciao $persona.nm, eres una belleza.
+[[Continuar|nocheantes1]]</tw-passagedata><tw-passagedata pid="41" name="nocheantes1" tags="" position="1330,2122" size="100,100">$persona.nm: En que problema me metí ahora. Aunque en el fondo es exactamente lo que estaba buscando, un cambio de aires...
 
 (Hasta aquí tenemos con esta demo, muchas gracias por jugar)
 &lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
