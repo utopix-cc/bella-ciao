@@ -170,15 +170,20 @@ input, select, textarea {
 	padding: .4em;
 }
 
-.notice {
-	color: #f8dd65;
-}
 
+/* Avisos de interfaz */
+ 
 .clicon {
-	font-size: 72px;
+	font-size: 24px;
 	color: #f8dd65;
   	line-height: 60px;
 }
+
+.notice {
+  color: #f8dd65;
+}
+  
+  /* Color de fondo */
 
 input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
 	background-color: #2b0138;
@@ -620,10 +625,10 @@ config.history.controls = false;
     \&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;&#39;&#39;&lt;/div&gt;
 &#39;&#39;Características&#39;&#39;
-&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♠ Cuerpo: Atributos físicos del personaje, te ayuda a realizar acciones corporales complejas, como el uso de la fuerza, la velocidad o la resistencia.&lt;/span&gt;&lt;&lt;link &quot;♠:&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/a&gt; &#39;&#39;$persona.cp&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♦ Mente: Capacidad de razonamiento y memorización del personaje, te permite completar proezas de cálculo, interpretación y resolución de problemas.&lt;/span&gt;&lt;&lt;link &quot;♦:&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/a&gt; &#39;&#39;$persona.mn&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♣ Espíritu: Aspecto que define la entereza, carisma e interpretación del personaje, indica tu capacidad para navegar situaciones sociales y enfrentarte a lo desconocido.&lt;/span&gt;&lt;&lt;link &quot;♣:&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/a&gt; &#39;&#39;$persona.sp&#39;&#39;
-&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♥ Voluntad: Capacidad y posibilidad de seguir adelante, tanto mental, física como espiritualmente.&lt;/span&gt;&lt;&lt;link &quot;♥:&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/a&gt; $will / &#39;&#39;$maxWill&#39;&#39;
+&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♠ Cuerpo: Atributos físicos del personaje, te ayuda a realizar acciones corporales complejas, como el uso de la fuerza, la velocidad o la resistencia.&lt;/span&gt;♠:&lt;/a&gt; &#39;&#39;$persona.cp&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♦ Mente: Capacidad de razonamiento y memorización del personaje, te permite completar proezas de cálculo, interpretación y resolución de problemas.&lt;/span&gt;♦:&lt;/a&gt; &#39;&#39;$persona.mn&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♣ Espíritu: Aspecto que define la entereza, carisma e interpretación del personaje, indica tu capacidad para navegar situaciones sociales y enfrentarte a lo desconocido.&lt;/span&gt;♣:&lt;/a&gt; &#39;&#39;$persona.sp&#39;&#39;
+&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♥ Voluntad: Capacidad y posibilidad de seguir adelante, tanto mental, física como espiritualmente.&lt;/span&gt;♥:&lt;/a&gt; $will / &#39;&#39;$maxWill&#39;&#39;
 &lt;&lt;showmeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;
-&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Moneda para el intercambio por bienes y servicios aceptada en el &lt;b&gt;Sistema Solar&lt;/b&gt;.&lt;/span&gt;&lt;&lt;link &quot;☉ Soles:&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/a&gt; &#39;&#39;$sol&#39;&#39;
+&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Moneda para el intercambio por bienes y servicios aceptada en el &lt;b&gt;Sistema Solar&lt;/b&gt;.&lt;/span&gt;☉ Soles:&lt;/a&gt; &#39;&#39;$sol&#39;&#39;
 &lt;&lt;/if&gt;&gt;
 &#39;&#39;Aplicaciones&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="mars scene" position="700,484" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms skipkey &quot;Control&quot;&gt;&gt;\
@@ -736,13 +741,16 @@ Género: $personadata.gene
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Confirmar|cr6][$ss to 1]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="721.3333333333334,716.3333333333334" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="718.0000000000001,714.6666666666667" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;if $note.trvlc == 0&gt;&gt;\
 ¡Configuración exitosa! $persona.nm
 Excelente, como puedes ver hemos guardado tus preferencias y calculado tus &#39;&#39;Características&#39;&#39; a partir de un escaneo integral de tu persona. Mantendrémos un monitoreo constante de ellas, ya que así podrás calcular mejor tus capacidades y limitaciones. Te recomiendo que les prestes atención, ya que tus características pueden verse afectadas por diferentes causas, y si tu &#39;&#39;♥ Voluntad&#39;&#39; llega a cero (0) no podrás continuar.
-&lt;div class=&quot;notice&quot;&gt;
-NOTA: Por favor revisa a tu &#39;&#39;izquierda&#39;&#39; las nuevas &#39;&#39;Aplicaciones&#39;&#39; de to &#39;&#39;DSP&#39;&#39;.
-&lt;span class=&quot;clicon&quot;&gt;☜&lt;/span&gt;&lt;/div&gt;\
+&lt;div class=&quot;notice&quot;&gt;\
+&lt;span class=&quot;clicon&quot;&gt;☜&lt;/span&gt;&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Tu DSP tiene 5 aplicaciones. ✆ Llamar: Videollamada con otros usuarios (Deberías llamar a Carlo Lumini). ✉ Mensajes: Envío de texto con otros usuarios. ✎ Notas: Recordatorios y pistas. ❒ Objetos: Inventario. 🕮 Códice: Enciclopedia de información.&lt;/span&gt;Por favor revisa a tu &#39;&#39;izquierda&#39;&#39; las nuevas &#39;&#39;Aplicaciones&#39;&#39; de to &#39;&#39;DSP&#39;&#39;.&lt;/a&gt;
+&lt;/div&gt;\
+&lt;div class=&quot;notice&quot;&gt;\
+&lt;span class=&quot;clicon&quot;&gt;☟&lt;/span&gt;&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Estas son acciones que puede realizar y suelen tener alguna consecuencia. Los símbolos señalan si están relacionadas con alguna &lt;b&gt;característica&lt;/b&gt;&lt;/span&gt;Abajo puedes ver tus decisiones disponibles.&lt;/a&gt;
+&lt;/div&gt;\
 &lt;&lt;else&gt;&gt;\
 Estás en tu habitación, ubicada en una de las ciudades más grandes de Marte. Deberías prepararte y descansar para tu viaje de mañana.
 &lt;&lt;/if&gt;&gt;\
