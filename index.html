@@ -646,7 +646,11 @@ config.history.controls = false;
 [[NUEVA PARTIDA|inicio]]
 &lt;&lt;link &#39;PARTIDAS GUARDADAS&#39;&gt;&gt;\
 &lt;&lt;ui &#39;saves&#39;&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="736,165.33333333333334" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
+&lt;&lt;/link&gt;&gt;
+
+
+
+por [img[logo utopix|images/ui/utopix-logo.png]]</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="736,165.33333333333334" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
 &lt;&lt;link &quot;✆ Llamar&quot;&gt;&gt;
     &lt;&lt;dialog &#39;✆ Llamar&#39;&gt;&gt;&lt;&lt;include &quot;llamar&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
@@ -672,7 +676,7 @@ config.history.controls = false;
 &lt;&lt;showmeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;
 &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;☉: Moneda utilizada en el intercambio de bienes y servicios aceptada en el &lt;b&gt;Sistema Solar&lt;/b&gt;.&lt;/span&gt;☉ Solar:&lt;/a&gt; &#39;&#39;$sol&#39;&#39;
 &lt;&lt;/if&gt;&gt;
-&#39;&#39;Aplicaciones&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="mars scene" position="700,484" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&#39;&#39;Aplicaciones&#39;&#39;</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="" position="700,484" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms skipkey &quot;Control&quot;&gt;&gt;\
 iniciar dispositivo-soporte-personal
 &lt;&lt;/type&gt;&gt;\
@@ -788,7 +792,7 @@ Indican tu capacidad para realizar diferentes acciones.
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Confirmar|cr6][$ss to 1]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="721.3333333333335,729.6666666666666" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="723.0000000000001,732.9999999999999" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 	&lt;&lt;if $note.trvlc == 0&gt;&gt;\
 		&lt;&lt;if $visit.marshab == 0&gt;&gt;\
 			&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
@@ -807,7 +811,8 @@ Estás en tu habitación, ubicada en una de las ciudades más grandes de Marte. 
 &lt;&lt;/if&gt;&gt;\
 &lt;/div&gt;
 &lt;&lt;if $note.trvlc == 0&gt;&gt;\
-&lt;&lt;fadein 2s 3s&gt;&gt;&lt;&lt;button &quot;&#39;&#39;✆ Llamar&#39;&#39;&quot;&gt;&gt;&lt;&lt;dialog &#39;✆ Llamar&#39;&gt;&gt;&lt;&lt;include &quot;llamar&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;fadein 2s 3s&gt;&gt;&lt;&lt;button &quot;&#39;&#39;✆ Llamar&#39;&#39;&quot;&gt;&gt;&lt;&lt;dialog &#39;✆ Llamar&#39;&gt;&gt;&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
+&lt;&lt;link [[@carlolumini: Carlo Lumini. Mars Media.|carlo1]]&gt;&gt;&lt;&lt;set $location to passage()&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.close()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[♾ Meditar (⊜♥)|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]]
 &lt;/div&gt;
@@ -1034,7 +1039,7 @@ Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un 
 [[Entiendo porque dejaste esa parte para el final, muy bien, envíame el boleto y la información del contácto|carlo12]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo12" tags="hidemenu" position="771.3333333333334,2403.333333333333" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;notify&gt;&gt;❒¡Nuevo objeto!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❒¡Nuevo objeto!&lt;&lt;/type&gt;&gt;\
-&lt;&lt;pickup &#39;$inventory&#39; &#39;🙮 Boleto cod: 763&#39;&gt;&gt;\
+&lt;&lt;pickup &#39;$inventory&#39; &#39;✈ Boleto cod: 763&#39;&gt;&gt;\
 Carlo: Te envié el boleto, cualquier duda no dudes en volver a contactarme. Una última cosa por ahora, nuestro informante no te contactará por DSP, quiere mantener su anonimato y sabes que con estas cosas nunca se sabe, debes encontrarte con el en el puerto apenas llegue, te enviaré la información en un mensaje cifrado por //Tunel//.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="carlo13" tags="hidemenu" position="912.3333333333334,2393" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
@@ -1043,7 +1048,7 @@ Carlo: Te envié el boleto, cualquier duda no dudes en volver a contactarme. Una
 &lt;&lt;set $msg.lum1 to 1&gt;&gt;\
 Carlo: Ciao $persona.nm, eres una belleza.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-&lt;&lt;link [[Colgar|pensamiento]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="llamar" tags="" position="342,380" size="100,100">&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
+&lt;&lt;link [[Colgar|pensamiento]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="llamar" tags="" position="345.3333333333333,378.3333333333333" size="100,100">&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 &lt;&lt;link [[@carlolumini: Carlo Lumini. Mars Media.|carlo1]]&gt;&gt;&lt;&lt;set $location to passage()&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.close()&lt;&lt;/script&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="34" name="mensajes" tags="" position="461,386" size="100,100">&lt;&lt;if $msg.lum1 == 1&gt;&gt;
