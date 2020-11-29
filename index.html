@@ -339,7 +339,8 @@ a.tooltip span {
     z-index:10;
     display:none; 
     padding:14px 20px;
-    margin-top:50px; margin-left:-30px;
+    margin-top:-50px;
+  	margin-left:-30px;
     min-width: 50px;
     max-width: 450px !important;
     line-height:20px;
@@ -391,12 +392,12 @@ button {
 cursor: url(images/ui/cursor_hand.png), pointer;
 }
 /* CONTEST */
-a.contest {
-	color: #b92368!important;
+.box a.contest {
+	color: #b92368;
 }
 
-a.contest:hover {
-	color: #ff657d!important;
+a.contest.show {
+	color: #f8dd65;
 }
 
 a.contest span {
@@ -540,10 +541,10 @@ background: #2b0138;
 	opacity: 1;
 	}
    #ui-bar.stowed ~ #story {
-	margin-left: 1em;
+	margin-left: 0.5em;
 	}
   	#story {
-	margin-right: 1em;
+	margin-right: 0.5em;
 	}
   body.mars {
 	background-position: top center !important;
@@ -561,7 +562,15 @@ background: #2b0138;
 	padding: 5px;
 	}
   a.contest:hover span {
-	font-size: 85px;
+	font-size: 80px;
+	}
+  .cor {
+	left: -16px;
+	border: 10px solid transparent;
+	border-right-color: #fff;
+	}
+  	a.tooltip span {
+    margin-top:-40px;
 	}
 }
 
@@ -878,10 +887,10 @@ Estás en tu habitación, ubicada en Solentiname, una de las ciudades más grand
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[☺ Meditar|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]] &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;
+[[Meditar|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]] &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[☹ Hacer algo estupido|dumb][$will to Math.clamp($will - 1, 0, $maxWill)]]&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;&lt;/div&gt;
+[[Hacer algo estupido|dumb][$will to Math.clamp($will - 1, 0, $maxWill)]]&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 &lt;a data-passage=&quot;&quot; class=&quot;contest&quot;&gt;&lt;span&gt;🂪&lt;/span&gt;🂪&lt;/a&gt; [[Poner tu capacidad física a prueba|prueba-fail][$roll to dice(&#39;2d6&#39;)]] &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="12" name="notas" tags="" position="323,512" size="100,100">&lt;&lt;if $note.bella is 1&gt;&gt;\
@@ -1157,14 +1166,14 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 &lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
 	&lt;&lt;run Engine.restart()&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="prueba-fail" tags="mars scene" position="864.6666666666666,765" size="100,100">&lt;&lt;set $retada to $roll + $persona.cp&gt;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="prueba-fail" tags="mars scene" position="893,770" size="100,100">&lt;&lt;set $retada to $roll + $persona.cp&gt;&gt;\
 &lt;&lt;if 10 &lt;= $retada&gt;&gt;\
 	&lt;div class=&quot;window&quot;&gt;\
 	&#39;&#39;Acierto&#39;&#39;. &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Retada&lt;/span&gt;🃟 &lt;/a&gt; &#39;&#39;$retada&#39;&#39; (&lt;&lt;include &quot;rollcp&quot;&gt;&gt; $roll + &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt; $persona.cp).
 	&lt;&lt;if $saves.test == 0&gt;&gt;\
 	&lt;&lt;set $saves.test to 1&gt;&gt;\
 	&lt;&lt;set $persona.cp +=1&gt;&gt;\
-	Obtienes: +&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt;: $persona.cp
+	Obtienes: +&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt; (&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt;: $persona.cp)
 	Lograste pasar la prueba. Sientes que aumenta tu capacidad corporal.
 	&lt;&lt;set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)&gt;&gt;\
 &lt;&lt;set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)&gt;&gt;\
@@ -1178,7 +1187,7 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
     &lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;\
 	&lt;div class=&quot;window&quot;&gt;\
 	&#39;&#39;Fallo&#39;&#39;. &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Retada&lt;/span&gt;🃟 &lt;/a&gt; (&lt;&lt;include &quot;rollcp&quot;&gt;&gt; $roll + &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Cuerpo&lt;/span&gt;&#39;&#39;♠&#39;&#39;&lt;/a&gt; $persona.cp).
-	Recibes: -&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt; Voluntad. &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;: $will / $maxWill
+	Recibes: -&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt; (&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;: $will / $maxWill)
 	No lograste pasar la prueba.&lt;/div&gt;
 	&lt;&lt;if $will == 0&gt;&gt;\
 		&lt;&lt;include &quot;no-will&quot;&gt;&gt;
@@ -1202,8 +1211,9 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 &lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
 	&lt;&lt;run Engine.restart()&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="meditar" tags="mars scene" position="594.6666666666666,605.6666666666666" size="100,100">&lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;\
-&lt;div class=&quot;window&quot;&gt;Recuperas: ⊜♥ Voluntad. ♥: $will / $maxWill
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="meditar" tags="mars scene" position="579.6666666666666,584" size="100,100">&lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;\
+&lt;div class=&quot;window&quot;&gt;\
+Recuperas: &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt; (&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Voluntad&lt;/span&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;: $will / $maxWill)
 Te sientas en el suelo de la habitación, respiras de forma consciente y profunda, estás en contácto con todo lo que te rodea...
 Sientes como tu voluntad se recupera.
 &lt;/div&gt;
@@ -1308,19 +1318,19 @@ Resulta que nos hemos topado con un informante, quien alega haber visto como hac
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;☻&lt;/div&gt; Al final de cada pasaje puedes ver tus &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Decisiones que puedes tomar, suelen llevarte a otro pasaje. El (★) símbolo al final indica si esta asociada a alguna característica.&lt;/span&gt;&#39;&#39;Acciones&#39;&#39;&lt;/a&gt; disponibles.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest&quot;&gt;&lt;span&gt;🂭&lt;/span&gt;🂭&lt;/a&gt;&lt;/div&gt; Indíca un &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;&#39;&#39;Acierto&#39;&#39; = 🂭 Difícultad &lt; 🃟 Retada.&lt;/span&gt;&#39;&#39;Reto&#39;&#39;&lt;/a&gt;,  requiere un &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Generación de un número aleatorio entre 🂡 1 y 🂭 12&lt;/span&gt;&#39;&#39;🂠 Lanzamiento de reto&#39;&#39;&lt;/a&gt;. 
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;🂠&lt;/div&gt; Se resuelve al comparar la &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Resultado necesario para &#39;&#39;Acertar&#39;&#39;. 🂨 Fácil: 8. 🂪 Normal: 10. 🂭 Difícil: 12.&lt;/span&gt;&#39;&#39;🂭 Difícultad&#39;&#39;&lt;/a&gt; con la &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;🂠 Lanzamiento de Reto + ★ Característica de reto&lt;/span&gt;&#39;&#39;🃟 Retada&#39;&#39;&lt;/a&gt;.
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;☇&lt;/div&gt; Significa que es un &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Reto que se resuelve en el mismo pasaje de forma inmediata&lt;/span&gt; &#39;&#39;Reto Instantáneo&#39;&#39;&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="54" name="rollcp" tags="" position="180,913.3333333333333" size="100,100">&lt;&lt;switch $roll&gt;&gt;\
-&lt;&lt;case 1&gt;&gt;🂡\
-&lt;&lt;case 2&gt;&gt;🂢\
-&lt;&lt;case 3&gt;&gt;🂣\
-&lt;&lt;case 4&gt;&gt;🂤\
-&lt;&lt;case 5&gt;&gt;🂥\
-&lt;&lt;case 6&gt;&gt;🂦\
-&lt;&lt;case 7&gt;&gt;🂧\
-&lt;&lt;case 8&gt;&gt;🂨\
-&lt;&lt;case 9&gt;&gt;🂩\
-&lt;&lt;case 10&gt;&gt;🂪\
-&lt;&lt;case 11&gt;&gt;🂫\
-&lt;&lt;case 12&gt;&gt;🂭\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;☇&lt;/div&gt; Significa que es un &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;Reto que se resuelve en el mismo pasaje de forma inmediata&lt;/span&gt; &#39;&#39;Reto Instantáneo&#39;&#39;&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="54" name="rollcp" tags="" position="181.66666666666666,914.9999999999999" size="100,100">&lt;&lt;switch $roll&gt;&gt;\
+&lt;&lt;case 1&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂡&lt;/span&gt;🂡&lt;/a&gt;\
+&lt;&lt;case 2&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂢&lt;/span&gt;🂢&lt;/a&gt;\
+&lt;&lt;case 3&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂣&lt;/span&gt;🂣&lt;/a&gt;\
+&lt;&lt;case 4&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂤&lt;/span&gt;🂤&lt;/a&gt;\
+&lt;&lt;case 5&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂥&lt;/span&gt;🂥&lt;/a&gt;\
+&lt;&lt;case 6&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂦&lt;/span&gt;🂦&lt;/a&gt;\
+&lt;&lt;case 7&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂧&lt;/span&gt;🂧&lt;/a&gt;\
+&lt;&lt;case 8&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂨&lt;/span&gt;🂨&lt;/a&gt;\
+&lt;&lt;case 9&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂩&lt;/span&gt;🂩&lt;/a&gt;\
+&lt;&lt;case 10&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂪&lt;/span&gt;🂪&lt;/a&gt;\
+&lt;&lt;case 11&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂫&lt;/span&gt;🂫&lt;/a&gt;\
+&lt;&lt;case 12&gt;&gt;&lt;a data-passage=&quot;&quot; class=&quot;contest show&quot;&gt;&lt;span&gt;🂭&lt;/span&gt;🂭&lt;/a&gt;\
 &lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="55" name="rollmn" tags="" position="181.66666666666652,1030" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="56" name="rollsp" tags="" position="176.66666666666652,1168.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
