@@ -615,7 +615,72 @@ body.mars {
 	-webkit-animation: blink 0.7s infinite;
 	-moz-animation: blink 0.7s infinite;
 	animation: blink 0.7s infinite;
+}
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -30px;
+  padding: 7px;
+  display: inline;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #2b0138;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 // preload.min.js, for SugarCube 2, by Chapel
 // v1.0.0, 2020-11-24, 9f958db927f80b0101af14e286ea0ad142026739
 ;!function(){"use strict";function t(t,e){var n=0,r=t.length;t.forEach((function(t){!function(t,e){var n=new Image;n.onload=e,n.onerror=e,n.src=t}(t,(function(){++n===r&&e()}))}))}function e(){return State.length<=0}function n(){var n=[].slice.call(arguments).flatten(),r=!!e()&&LoadScreen.lock();return t(n,(function(){r&&LoadScreen.unlock(r)})),r}setup.preload=n,setup.preload.force=!1,Macro.add("preload",{handler:function(){if(!e()&&!setup.preload.force)return this.error("Attempting to preload images outside of `StoryInit` or similar can cause performance issues. Set `setup.preload.force` to `true` if you want to do it anyway.");n(this.args.flatten().filter((function(t){return"string"==typeof t})))}})}();
@@ -742,7 +807,7 @@ por [img[logo utopix|images/ui/utopix-logo.png]]</tw-passagedata><tw-passagedata
 !!Menú DSP
 !!!&lt;&lt;button &quot;&#39;&#39;♟ $persona.nm&#39;&#39;&quot;&gt;&gt;&lt;&lt;dialog &quot;Perfil&quot;&gt;&gt;&lt;&lt;include &quot;perfil&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;
 &#39;&#39;Características&#39;&#39;
-&lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♠ Cuerpo: Atributos físicos del personaje, te ayuda a realizar acciones corporales complejas, como el uso de la fuerza, la velocidad o la resistencia.&lt;/span&gt;♠:&lt;/a&gt; &#39;&#39;$persona.cp&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♦ Mente: Capacidad de razonamiento y memorización del personaje, te permite completar proezas de cálculo, interpretación y resolución de problemas.&lt;/span&gt;♦:&lt;/a&gt; &#39;&#39;$persona.mn&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♣ Espíritu: Aspecto que define la entereza, carisma e interpretación del personaje, indica tu capacidad para navegar situaciones sociales y enfrentarte a lo desconocido.&lt;/span&gt;♣:&lt;/a&gt; &#39;&#39;$persona.sp&#39;&#39;
+&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot;&gt;♠&lt;/a&gt;: &#39;&#39;$persona.cp&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♦ Mente: Capacidad de razonamiento y memorización del personaje, te permite completar proezas de cálculo, interpretación y resolución de problemas.&lt;/span&gt;♦:&lt;/a&gt; &#39;&#39;$persona.mn&#39;&#39; &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♣ Espíritu: Aspecto que define la entereza, carisma e interpretación del personaje, indica tu capacidad para navegar situaciones sociales y enfrentarte a lo desconocido.&lt;/span&gt;♣:&lt;/a&gt; &#39;&#39;$persona.sp&#39;&#39;
 &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;♥ Voluntad: Capacidad y posibilidad de seguir adelante, tanto mental, física como espiritualmente. Si llega a cero (0) no podrás continuar.&lt;/span&gt;♥:&lt;/a&gt; $will / &#39;&#39;$maxWill&#39;&#39;
 &lt;&lt;showmeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;
 &lt;a data-passage=&quot;&quot; class=&quot;tooltip&quot;&gt;&lt;span&gt;☉: Moneda utilizada en el intercambio de bienes y servicios aceptada en el &lt;b&gt;Sistema Solar&lt;/b&gt;.&lt;/span&gt;☉ Solar:&lt;/a&gt; &#39;&#39;$sol&#39;&#39;
