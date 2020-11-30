@@ -967,7 +967,7 @@ Ahora otra pregunta ¿cómo te identifícas?&lt;/div&gt;\
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ingeniería|cr4][$persona.pr to &quot;ing&quot;; $persona.sp += 1; $persona.cp += 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ciencias Sociales|cr4][$persona.pr to &quot;cs&quot;; $persona.cp += 1; $persona.mn += 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ciencias Naturales|cr4][$persona.pr to &quot;cn&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Actuación/Performance|cr4][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034.6666666666667,172.66666666666666" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39;&gt;&gt;
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Actuación/Performance|cr4][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034.6666666666667,169.33333333333331" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39;&gt;&gt;
 /* Creación de personaje completada */
 &lt;&lt;set $ss to 0&gt;&gt;
 /* Decisión de alineamiento tomada */
@@ -1024,7 +1024,7 @@ Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Podrías co
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Viaje de descubrimiento|cr5][$persona.pq to &quot;vd&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Toque fondo|cr5][$persona.pq to &quot;tf&quot;; $persona.sp += 1; $persona.mn += 1;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Terminando estudios|cr5][$persona.pq to &quot;te&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="851,646.6666666666666" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="844.3333333333334,648.3333333333333" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 !! ♟ $persona.nm
 Origen: $personadata.orgn
 Género: $personadata.gene
@@ -1055,18 +1055,21 @@ Indican tu capacidad para realizar diferentes acciones.
 &lt;&lt;case &quot;te&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Terminando los estudios&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Acabas de finalizar tus estudios en Ciencias Cognitivas, y sientes que la academía ya te dió todo lo que podía ofrecerte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Confirmar. Iniciar interfaz DSP.|cr6][$ss to 1]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675.3333333333333,713.3333333333333" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
-&lt;&lt;ui &#39;toggle&#39;&gt;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;&lt;link [[Confirmar. Iniciar interfaz DSP.|cr6]]&gt;&gt;&lt;&lt;set $ss to 1&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675.3333333333333,724.9999999999999" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
+&lt;&lt;type 40ms&gt;&gt;⛃¡Partida guardada!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;if $visit.marshab == 0&gt;&gt;\
-			&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
+			&lt;&lt;notify&gt;&gt;⛃
+			❂&lt;&lt;/notify&gt;&gt;\
 			&lt;&lt;type 40ms&gt;&gt;❂¡Nuevas entradas en el códice!&lt;&lt;/type&gt;&gt;\
 			&lt;&lt;set $visit.marshab to 1&gt;&gt;\
 			dispositivo-soporte-personal iniciado
 			&lt;a href=&quot;#&quot; data-tooltip=&quot;✆ Llamar. ✉ Mensajes. ✎ Notas. ❒ Objetos. ❂ Códice. ? Guía.&quot; class=&quot;textip&quot;&gt;&#39;&#39;Aplicaciones&#39;&#39;&lt;/a&gt; iniciadas
 			&lt;&lt;set $visit.marshab to 1&gt;&gt;\
 			Excelente $persona.nm, tu &lt;a href=&quot;#&quot; data-tooltip=&quot;Dispositivo de Soporte Personal&quot; class=&quot;textip&quot;&gt;&#39;&#39; DSP&#39;&#39;&lt;/a&gt; está configurado.
+&lt;&lt;else&gt;&gt;\
+&lt;&lt;notify&gt;&gt;⛃&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $note.trvlc == 0&gt;&gt;\
 Si tienes alguna duda puedes consultar la: &lt;&lt;button &quot;&lt;b&gt;?&lt;/b&gt; Guía&quot;&gt;&gt;&lt;&lt;dialog &quot;? Guía&quot;&gt;&gt;&lt;&lt;include &quot;guia&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -1077,7 +1080,7 @@ Estás en tu habitación, ubicada en Solentiname, una de las ciudades más grand
 &lt;&lt;link [[@carlolumini: Carlo Lumini. Mars Media.|carlo1]]&gt;&gt;&lt;&lt;set $location to passage()&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.close()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-&lt;&lt;link &quot;☽ Dormir ♥&quot; &quot;dormir&quot;&gt;&gt;
+&lt;&lt;link &quot;♥ Dormir&quot; &quot;dormir&quot;&gt;&gt;
     &lt;&lt;set $will to Math.clamp($will + $maxWill, 0, $maxWill)&gt;&gt;\
     &lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
@@ -1090,7 +1093,7 @@ Estás en tu habitación, ubicada en Solentiname, una de las ciudades más grand
 	&lt;&lt;include &quot;retadasp&quot;&gt;&gt;
 	&lt;&lt;if 8 &lt;= $retada&gt;&gt;\
 		&#39;&#39;Acertaste&#39;&#39;. &lt;&lt;include &quot;retosp&quot;&gt;&gt;\
-		[[ॐ Meditar ♥|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]]
+		[[♥ Meditar|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]]
 	&lt;&lt;else&gt;&gt;\
 		&#39;&#39;Fallaste&#39;&#39;. &lt;&lt;include &quot;retosp&quot;&gt;&gt;\
 		No puedes concetrarte en la meditación.
@@ -1105,7 +1108,7 @@ Estás en tu habitación, ubicada en Solentiname, una de las ciudades más grand
 		Te das cuenta de que es una tontería y lo dejas.
 	&lt;&lt;else&gt;&gt;\
 		&#39;&#39;Fallaste&#39;&#39;. &lt;&lt;include &quot;retomn&quot;&gt;&gt;\
-[[☹︎ Hacer algo estupido ♥|dumb][$will to Math.clamp($will - 1, 0, $maxWill)]]
+[[-♥ Hacer algo estupido|dumb][$will to Math.clamp($will - 1, 0, $maxWill)]]
 	&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/linkappend&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="notas" tags="" position="319,588" size="100,100">&lt;&lt;if $note.bella is 1&gt;&gt;\
 &lt;div class=&quot;box box-shadow&quot;&gt;\
@@ -1213,9 +1216,9 @@ Carlo: No te preocupes, yo me encargo.
 &lt;&lt;type 1ms&gt;&gt;\
 		&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 		[[Continuar|carlo5]]&lt;/div&gt;&lt;&lt;/type&gt;&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="carlo6" tags="hidemenu" position="921,1588" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="carlo6" tags="hidemenu" position="919.3333333333334,1588" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.gsii == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.gsii to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
@@ -1226,7 +1229,7 @@ Carlo: ¡Exáctamente!
 [[◇ Cosa que se pudo haber evitado con una política efectiva de control.|carlo7c][$align.con += 1; $align.pluto += 1; $ssa to 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[◆ Agregaría que una de las principales causas fue la decadencia del modelo impuesto desde ♀ Venus.|carlo7b][$align.rev += 1; $align.top += 1; $ssa to 1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="carlo6b" tags="" position="741,1593" size="100,100">&lt;&lt;if $codex.gsii == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;❂¡Nuevas entradas en el códice!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nuevas entradas en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.gsii to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
@@ -1237,8 +1240,8 @@ Carlo: ¿Estás bromeando? ¡fue hace solo 10 años! e involucró a todos los lu
 [[◇ Lo sabía, los separatistas marcianos tuvieron la culpa.|carlo7c][$align.con += 1; $align.pluto += 1; $ssa to 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[◆ Seguro que fue debido a la decadencia del modelo impuesto desde ♀ Venus|carlo7b][$align.rev += 1; $align.top += 1; $ssa to 1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="carlo7b" tags="hidemenu" position="801,1766" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
-&lt;&lt;notify&gt;&gt;¡❂!
-¡⬗: +♛ +♚!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂
+⬗: +♛ +♚&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;type 5ms&gt;&gt;&lt;a data-tooltip=&quot;Alineamiento&quot;&gt;⬗&lt;/a&gt; Obtienes: +1 &lt;div class=&quot;circle&quot;&gt;&lt;a data-tooltip=&quot;Revolución&quot;&gt;♛&lt;/a&gt;&lt;/div&gt; y +1 &lt;div class=&quot;circle&quot;&gt;&lt;a data-tooltip=&quot;Toparquía&quot;&gt;♚&lt;/a&gt;&lt;/div&gt;&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ots to 1&gt;&gt;\
@@ -1247,7 +1250,7 @@ Carlo: Las causas de la guerra aún son tema de debate. Lo cierto es que la guer
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="carlo8" tags="hidemenu" position="799,1929" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.ms == 0&gt;&gt;
-&lt;&lt;notify&gt;&gt;¡❂!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Modificación de entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ms to 1&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
@@ -1256,31 +1259,31 @@ Carlo: Una vez terminada la guerra, el control de los puertos de //Lanzamiento L
 [[Continuar|carloPlus]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Aburridoooo...|carlo9b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="carlo7" tags="hidemenu" position="644,1770" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
-&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ots to 1&gt;&gt;\
 Carlo: Lo cierto es que la guerra terminó con la ruptura del &#39;&#39;tratado solar&#39;&#39;, coalición entre los gobiernos de los planetas ♁ Tierra, ♀ Venus y ♂ Marte (los ☾ Satélites eran protectorados del gobierno central de la &#39;&#39;OTS&#39;&#39;).
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="carlo7c" tags="hidemenu" position="957,1773" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
-&lt;&lt;notify&gt;&gt;¡❂!
-¡⬗: +♕ +♔!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂
+⬗: +♕ +♔&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ots to 1&gt;&gt;\
 &lt;&lt;type 5ms&gt;&gt;&lt;a data-tooltip=&quot;Alineamiento&quot;&gt;⬗&lt;/a&gt; Obtienes: +1 &lt;div class=&quot;circle&quot;&gt;&lt;a data-tooltip=&quot;Conservadurismo&quot;&gt;♕&lt;/a&gt;&lt;/div&gt; y +1 &lt;div class=&quot;circle&quot;&gt;&lt;a data-tooltip=&quot;Plutocracia&quot;&gt;♔&lt;/a&gt;&lt;/div&gt;&lt;&lt;/type&gt;&gt;\
 &lt;&lt;type 5ms&gt;&gt;Acabas de tomar tu primera decisión de &lt;a data-tooltip=&quot;♚ Expresa tu forma de ver el mundo, y como crees que debe estar organizada la sociedad. ♛ También indica tu postura hacia los cambios y la forma de a Próximarte a las situaciones reales.&quot; class=&quot;textip tip-down&quot;&gt;&#39;&#39;⬗ Alineamiento&#39;&#39;&lt;/a&gt;, a partir de ahora podrás ver la tendencia de tus decisiones en la ventana de &lt;a href=&quot;#&quot; data-tooltip=&quot;Aquí se muestran todos tus datos.&quot; class=&quot;textip tip-down&quot;&gt;&#39;&#39;♟ Perfil&#39;&#39;&lt;/a&gt;.&lt;&lt;/type&gt;&gt;\
 Carlo: No sabía que tuvieras esas opinión, no suele ser algo muy popular en ♂ Marte. Lo cierto es que la guerra terminó con la ruptura del &#39;&#39;tratado solar&#39;&#39;, coalición entre los gobiernos de los planetas ♁ Tierra, ♀ Venus y ♂ Marte (los ☾ Satélites eran protectorados del gobierno central de la &#39;&#39;OTS&#39;&#39;).
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="carlo9b" tags="hidemenu" position="906,2044" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
+[[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="carlo9b" tags="hidemenu" position="904.3333333333334,2042.3333333333333" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
 &lt;&lt;if $codex.car == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.car to 1&gt;&gt;&lt;&lt;/if&gt;&gt;\
 Carlo: Jajaja, se que ya debes conocer toda esa información, pero quería ponernos en contexto. Después del fin de la segunda guerra, se vieron suspendidos los viajes de exploración fuera del sistema solar, o eso es lo que dicen. Resulta que nos hemos topado con un informante, quien alega haber visto como hace 4 años se lanzó un crucero espacial desde &#39;&#39;♇ Caronte&#39;&#39;, una de las lunas de ♇ Plutón.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Continuar|carlo10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="carlo10" tags="hidemenu" position="881,2198" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
+[[Continuar|carlo10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="carlo10" tags="hidemenu" position="879.3333333333334,2198" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.ac == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;¡✎!
-¡❂!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;✎
+❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✎¡Nueva nota! ❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ac to 1&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
@@ -1294,13 +1297,13 @@ Carlo: Pero no es algo muy conocido que en este momento, ♇ Caronte tiene una t
 Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un crucero espacial que saldrá mañana en la madrugada hacia ♇ Caronte, con escala en ♃ Europa (la luna de ♃ Júpiter), el viaje debe durar unas 10 horas, porque no tenemos para pagar una pasaje en hipernave.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Entiendo porque dejaste esa parte para el final, muy bien, envíame el boleto y la información del contácto|carlo12]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="carlo12" tags="hidemenu" position="771,2403" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
-&lt;&lt;notify&gt;&gt;❒¡Nuevo objeto!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❒&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❒¡Nuevo objeto!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;pickup &#39;$inventory&#39; &#39;🚀 Boleto cod: 763&#39;&gt;&gt;\
 Carlo: Te envié el boleto, cualquier cosa no dudes en volver a contactarme. Un último detalle, nuestro informante no te contactará por DSP, quiere mantener su anonimato y sabes que con estas cosas nunca se sabe, debes encontrarte con el en el puerto apenas llegue, te enviaré la información en un //mensaje cifrado//.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="913.6666666666667,2396.3333333333335" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
-&lt;&lt;notify&gt;&gt;✉¡Nuevo mensaje!&lt;&lt;/notify&gt;&gt;\
+[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="912.0000000000001,2396.3333333333335" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
+&lt;&lt;notify&gt;&gt;✉&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✉¡Nuevo mensaje!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $msg.lum1 to 1&gt;&gt;\
 Carlo: Ciao $persona.nm, eres una belleza.
@@ -1405,7 +1408,7 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
 		&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 		[[Regresar|cr6]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1058.3333333333333,2401" size="100,100">&lt;&lt;notify&gt;&gt;✎¡Nuevas notas!&lt;&lt;/notify&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1053.3333333333333,2402.6666666666665" size="100,100">&lt;&lt;notify&gt;&gt;✎&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✎¡Nuevas notas!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $note.trvlc to 1&gt;&gt;\
 &lt;&lt;set $note.red to 1&gt;&gt;\
@@ -1487,8 +1490,8 @@ OTS por sus siglas, es la organización política que surgió luego de la caída
 Estrella enana roja ubicada aproximadamente a 4,22 AL = años luz del Sol, en la constelación Centauro, y forma parte del sistema triple Alfa Centauri. Alberga dos planetas, Próxima b y Próxima c, el primero posee una &#39;&#39;zona habitable&#39;&#39;.&lt;&lt;/message&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="48" name="carlo10b" tags="hidemenu" position="681,2187" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.ac == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;¡✎!
-¡❂!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;✎
+❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✎¡Nueva nota! ❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.ac to 1&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
@@ -1500,7 +1503,7 @@ Carlo: Correcto, ya veo que sabes algo de astronomía. No se tienen muchos más 
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 [[Da mucho que pensar, así que supongo que quieres que investigue al respecto y te de una historia|carlo11]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="StoryDisplayTitle" tags="" position="899,19" size="100,100">Bella Ciao (demo)</tw-passagedata><tw-passagedata pid="50" name="carloPlus" tags="hidemenu" position="675,2036" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.car == 0&gt;&gt;\
-&lt;&lt;notify&gt;&gt;¡❂!&lt;&lt;/notify&gt;&gt;\
+&lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.car to 1&gt;&gt;&lt;&lt;/if&gt;&gt;\
 Después del fin de la segunda guerra, se vieron suspendidos los viajes de exploración fuera del sistema solar, o eso es lo que dicen. Resulta que nos hemos topado con un informante, quien alega haber visto como hace 4 años se lanzó un crucero espacial desde &#39;&#39;♇ Caronte&#39;&#39;, una de las lunas de ♇ Plutón.
@@ -1512,7 +1515,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 		&lt;&lt;notify&gt;&gt;¡❂!&lt;&lt;/notify&gt;&gt;\
 		&lt;&lt;set $retos.prob to 1&gt;&gt;\
 		&#39;&#39;Acertaste&#39;&#39;. &lt;&lt;include &quot;retomn&quot;&gt;&gt;\
-		[[Si es la última luna habitada del Sistema Solar. Lo más probable es que vaya con dirección a Alfa Centauri, el sistema más cercano.|carlo10b]]
+		[[♦ Si es la última luna habitada del Sistema Solar. Lo más probable es que vaya con dirección a Alfa Centauri, el sistema más cercano.|carlo10b]]
 	&lt;&lt;else&gt;&gt;\
 		&#39;&#39;Fallaste&#39;&#39;. &lt;&lt;include &quot;retomn&quot;&gt;&gt;\
 		Juraría que...
@@ -1537,7 +1540,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 &lt;&lt;button &quot;✆&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; Las aplicaciones son &lt;a href=&quot;#&quot; data-tooltip=&quot;Videollamada a otros usuarios.&quot; class=&quot;textip&quot;&gt;&#39;&#39;✆ Llamar&#39;&#39;&lt;/a&gt;, &lt;a href=&quot;#&quot; data-tooltip=&quot;Envío de texto con otros usuarios.&quot;  class=&quot;textip&quot;&gt;&#39;&#39;✉ Mensajes&#39;&#39;&lt;/a&gt;, &lt;a href=&quot;#&quot; data-tooltip=&quot;Recordatorios y pistas.&quot; class=&quot;textip&quot;&gt;&#39;&#39;✎ Notas&#39;&#39;&lt;/a&gt;, &lt;a href=&quot;#&quot; data-tooltip=&quot;Inventario de artículos.&quot; class=&quot;textip&quot;&gt;&#39;&#39;❒ Objetos&#39;&#39;&lt;/a&gt;, &lt;a href=&quot;#&quot; data-tooltip=&quot;Enciclopedia de información.&quot; class=&quot;textip&quot;&gt;&#39;&#39;❂ Códice&#39;&#39;&lt;/a&gt;, &lt;a href=&quot;#&quot; data-tooltip=&quot;Instrucciones y referencias.&quot; class=&quot;textip&quot;&gt;&#39;&#39;? Guía&#39;&#39;&lt;/a&gt;
 !!!Acciones
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;b&gt;A&lt;/b&gt;&lt;/div&gt; Al final de cada pasaje puedes ver tus &lt;a href=&quot;#&quot; data-tooltip=&quot;Decisiones que puedes tomar, suelen llevarte a otro pasaje.&quot; class=&quot;textip tip-down&quot;&gt;&#39;&#39;Acciones&#39;&#39;&lt;/a&gt; disponibles.
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;♠&lt;/div&gt; Si tienen un  símbolo al final, indica que la acción esta relacionada con alguna &lt;a href=&quot;#&quot; data-tooltip=&quot;♠ Cuerpo, ♦ Mente, ♣ Espíritu y ♥ Vida.&quot; class=&quot;textip&quot;&gt;&#39;&#39;Característica&#39;&#39;&lt;/a&gt;.
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;♠&lt;/div&gt; Si tienen un  símbolo, indica que la acción esta relacionada con alguna &lt;a href=&quot;#&quot; data-tooltip=&quot;♠ Cuerpo, ♦ Mente, ♣ Espíritu y ♥ Vida.&quot; class=&quot;textip&quot;&gt;&#39;&#39;Característica&#39;&#39;&lt;/a&gt;.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;a href=&quot;#&quot; data-tooltip=&quot;🂭&quot; class=&quot;zoom&quot;&gt;🂭&lt;/a&gt;&lt;/div&gt; Indíca un &lt;a href=&quot;#&quot; data-tooltip=&quot;Acierto = 🃟 &gt;= 🂭 &quot; class=&quot;matip tip-down&quot;&gt;&#39;&#39;Reto&#39;&#39; &lt;/a&gt;,  requiere un &lt;a href=&quot;#&quot; data-tooltip=&quot;Número aleatorio entre 🂡 1 y 🂭 12&quot; class=&quot;textip&quot;&gt;&#39;&#39;🂠 Lanzamiento de reto&#39;&#39;&lt;/a&gt;.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;🂠&lt;/div&gt; Se resuelve al comparar la &lt;a href=&quot;#&quot; data-tooltip=&quot;🂨 Fácil: 8. 🂪 Normal: 10. 🂭 Difícil: 12.&quot; class=&quot;textip&quot;&gt;&#39;&#39;🂭 Difícultad&#39;&#39;&lt;/a&gt; con la &lt;a href=&quot;#&quot; data-tooltip=&quot;🃟 = 🂠 + ♠&quot; class=&quot;matip&quot;&gt;&#39;&#39;🃟 Retada&#39;&#39;&lt;/a&gt;. Aciertas si la Retada es mayor o igual que la difícultad.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;☇&lt;/div&gt; Significa que es un reto &lt;a href=&quot;#&quot; data-tooltip=&quot;Reto que se resuelve en el mismo pasaje de forma inmediata&quot; class=&quot;textip&quot;&gt;&#39;&#39;☇ Instantáneo&#39;&#39;&lt;/a&gt;.
@@ -1587,32 +1590,32 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 &lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 	&lt;&lt;set $caracp.cpp +=1&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +1★(♠)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+1★(♠)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +1 \
 &lt;&lt;case 10&gt;&gt;\
 	&lt;&lt;set $caracp.cpp +=2&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +2★(♠)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+2★(♠)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +2 \
 &lt;&lt;case 12&gt;&gt;\
 	&lt;&lt;set $caracp.cpp +=3&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +3★(♠)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+3★(♠)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +3 \
 &lt;&lt;/switch&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot;  class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;). &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;): $caracp.cpp / 3.\
 </tw-passagedata><tw-passagedata pid="58" name="guiacaracp" tags="" position="198,985" size="100,100">&lt;&lt;dialog &quot;★ Puntos de experiencia&quot;&gt;&gt;Cada vez que &#39;&#39;Aciertas&#39;&#39; un &lt;a href=&quot;#&quot; data-tooltip=&quot;Acierto = 🃟 &gt;= 🂭 &quot; class=&quot;matip tip-down&quot;&gt;&#39;&#39;Reto&#39;&#39; &lt;/a&gt; que &#39;&#39;no&#39;&#39; sea &lt;a href=&quot;#&quot; data-tooltip=&quot;Reto que se resuelve en el mismo pasaje de forma inmediata&quot; class=&quot;textip tip-down&quot;&gt; &#39;&#39;☇ Instantáneo&#39;&#39;&lt;/a&gt; o &lt;a href=&quot;#&quot; data-tooltip=&quot;Reto que no requiere de un 🂠 Lanzamiento de reto&quot; class=&quot;textip tip-down&quot;&gt; &#39;&#39;🂡 Natural&#39;&#39;&lt;/a&gt;., obtienes +1 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt;, +2 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; o +3 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; según  la &lt;a href=&quot;#&quot; data-tooltip=&quot;Resultado necesario para Acertar.&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;🂭 Difícultad&#39;&#39;&lt;/a&gt;. &lt;a href=&quot;#&quot; data-tooltip=&quot;🂨&quot; class=&quot;zoom tip-down&quot;&gt;🂨&lt;/a&gt; Fácil: +1, &lt;a href=&quot;#&quot; data-tooltip=&quot;🂪&quot; class=&quot;zoom tip-down&quot;&gt;🂪&lt;/a&gt; Normal: +2, &lt;a href=&quot;#&quot; data-tooltip=&quot;🂭&quot; class=&quot;zoom tip-down&quot;&gt;🂭&lt;/a&gt; Difícil: +3. Cada vez que acumulas 3 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; en una misma &lt;a href=&quot;#&quot; data-tooltip=&quot;♠Cuerpo, ♦Mente, ♣Espíritu&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;característica&#39;&#39;&lt;/a&gt; subes +1 nivel de la misma. En el caso de la &lt;a href=&quot;#&quot; data-tooltip=&quot;♥ = [(♠ + ♦ + ♣)/ 3]&quot; class=&quot;matip&quot;&gt;&#39;&#39;♥ Vida&#39;&#39;&lt;/a&gt;, se obtiene mediante una //función parte entera// &lt;a href=&quot;#&quot; data-tooltip=&quot;Asigna a cada número real su parte entera&quot; class=&quot;textip&quot;&gt;⨍(x) = [x]&lt;/a&gt;, de la sumatoria de las otras &lt;a href=&quot;#&quot; data-tooltip=&quot;♠Cuerpo, ♦Mente, ♣Espíritu&quot;&gt;&#39;&#39;características&#39;&#39;&lt;/a&gt; entre tres (3).&lt;&lt;/dialog&gt;&gt;\</tw-passagedata><tw-passagedata pid="59" name="retadamn" tags="" position="179,1242" size="100,100">&lt;&lt;set $retada to $roll + $persona.mn&gt;&gt;\
-&lt;&lt;include &quot;rollmn&quot;&gt;&gt; $roll + &lt;a data-tooltip=&quot;Mente&quot;  class=&quot;tip-down&quot;&gt;♦&lt;/a&gt; $persona.mn = &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39;</tw-passagedata><tw-passagedata pid="60" name="subidamn" tags="" position="178,1505" size="100,100">/* Subida de puntos */\
+&lt;&lt;include &quot;rollmn&quot;&gt;&gt; $roll + &lt;a data-tooltip=&quot;Mente&quot;  class=&quot;tip-down&quot;&gt;♦&lt;/a&gt; $persona.mn = &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39;</tw-passagedata><tw-passagedata pid="60" name="subidamn" tags="" position="174.66666666666666,1506.6666666666667" size="100,100">/* Subida de puntos */\
 &lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 	&lt;&lt;set $caracp.mnp +=1&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +1★(♦)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+1★(♦)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +1 \
 &lt;&lt;case 10&gt;&gt;\
 	&lt;&lt;set $caracp.mnp +=2&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +2★(♦)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+2★(♦)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +2 \
 &lt;&lt;case 12&gt;&gt;
 	&lt;&lt;set $caracp.mnp +=3&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +3★(♦)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+3★(♦)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +3 \
 &lt;&lt;/switch&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot;  class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;). &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;): $caracp.mnp / 3.\</tw-passagedata><tw-passagedata pid="61" name="mnup" tags="" position="179,1629" size="100,100">/* Subida de nivel de característica */\
@@ -1621,14 +1624,14 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 			&lt;&lt;set $caracp.mnp -=3&gt;&gt;\
 			&lt;&lt;set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)&gt;&gt;\
 			&lt;&lt;set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)&gt;&gt;\
-			&lt;&lt;notify&gt;&gt;¡Subida de característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;¡&lt;&lt;/notify&gt;&gt;\
-			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;: $persona.mn&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="cpup" tags="" position="56,1633" size="100,100">/* Subida de nivel de característica */\
+			&lt;&lt;notify&gt;&gt;+♦&lt;&lt;/notify&gt;&gt;\
+			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;: $persona.mn&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="cpup" tags="" position="56,1636.3333333333335" size="100,100">/* Subida de nivel de característica */\
 		&lt;&lt;if $caracp.cpp &gt;= 3&gt;&gt;\
 			&lt;&lt;set $persona.cp +=1&gt;&gt;\
 			&lt;&lt;set $caracp.cpp -=3&gt;&gt;\
 			&lt;&lt;set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)&gt;&gt;\
 			&lt;&lt;set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)&gt;&gt;\
-			&lt;&lt;notify&gt;&gt;¡Subida de característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;¡&lt;&lt;/notify&gt;&gt;\
+			&lt;&lt;notify&gt;&gt;+♠&lt;&lt;/notify&gt;&gt;\
 			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;: $persona.cp&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="63" name="retocp" tags="" position="43,1378" size="100,100">&lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39; &gt;= &lt;a href=&quot;#&quot; data-tooltip=&quot;🂨&quot; class=&quot;zoom tip-down&quot;&gt;🂨&lt;/a&gt; 8
@@ -1651,19 +1654,19 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39; &gt;= &lt;a href=&quot;#&quot; data-tooltip=&quot;🃊&quot; class=&quot;zoom tip-down&quot;&gt;🃚&lt;/a&gt; 10
 &lt;&lt;case 12&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39; &gt;= &lt;a href=&quot;#&quot; data-tooltip=&quot;🃍&quot; class=&quot;zoom tip-down&quot;&gt;🃝&lt;/a&gt; 12
-&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="subidasp" tags="" position="303,1500" size="100,100">/* Subida de puntos */\
+&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="subidasp" tags="" position="301.3333333333333,1500" size="100,100">/* Subida de puntos */\
 &lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 	&lt;&lt;set $caracp.spp +=1&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +1★(♣)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+1★(♣)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +1 \
 &lt;&lt;case 10&gt;&gt;\
 	&lt;&lt;set $caracp.spp +=2&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +2★(♣)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+2★(♣)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +2 \
 &lt;&lt;case 12&gt;&gt;
 	&lt;&lt;set $caracp.spp +=3&gt;&gt;\
-	&lt;&lt;notify&gt;&gt;¡Obtienes +3★(♣)!&lt;&lt;/notify&gt;&gt;\
+	&lt;&lt;notify&gt;&gt;+3★(♣)&lt;&lt;/notify&gt;&gt;\
 	Obtienes: +3 \
 &lt;&lt;/switch&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Espíritu&quot; class=&quot;tip-down&quot;&gt;♣&lt;/a&gt;). &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Espíritu&quot; class=&quot;tip-down&quot;&gt;♣&lt;/a&gt;): $caracp.spp / 3.\</tw-passagedata><tw-passagedata pid="68" name="spup" tags="" position="303,1626" size="100,100">/* Subida de nivel de característica */\
@@ -1672,7 +1675,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 			&lt;&lt;set $caracp.spp -=3&gt;&gt;\
 			&lt;&lt;set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)&gt;&gt;\
 			&lt;&lt;set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)&gt;&gt;\
-			&lt;&lt;notify&gt;&gt;¡Subida de característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♣&lt;/a&gt;¡&lt;&lt;/notify&gt;&gt;\
+			&lt;&lt;notify&gt;&gt;+♣&lt;&lt;/notify&gt;&gt;\
 			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Espíritu&quot; class=&quot;tip-down&quot;&gt;♣&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♣&lt;/a&gt;: $persona.sp&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="carlo5" tags="" position="1141,1568" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una idea de porque esto puede ser la noticia del siglo, ¡que te digo el milenio!, ¿qué tal estás en historia contemporánea? ¿recuerdas la Segunda Guerra Solar?
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
@@ -1694,7 +1697,7 @@ Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una 
 Te recomendamos el uso de audífonos a un volumen razonable
 
 &lt;div class=&quot;icon&quot;&gt;⛁&lt;/div&gt;\
-Las partidas se guardan en la caché del navegador
+Las partidas se guardan automáticamente en la caché del navegador
 
 &lt;div class=&quot;mobile&quot;&gt;&lt;div class=&quot;icon&quot;&gt;↕&lt;/div&gt;\
 Juega con el dispositivo de forma vertical
