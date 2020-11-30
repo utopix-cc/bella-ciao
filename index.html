@@ -861,7 +861,7 @@ a.current=t.toFixed(2),e(a.current)}var n={},a={current:100,rangeMax:100,step:1,
 n.last=a.current,n.start=n.last/a.rangeMax,postdisplay["volume-task"]=function(t){delete postdisplay[t],e(n.start.toFixed(2))},$(document).on("input","input[name=volume]",function(){var t=$("input[name=volume]").val(),o=t/a.rangeMax
 a.current=o.toFixed(2),e(a.current),n.last=t}),Macro.add("volume",{handler:function(){var e=$(document.createElement("span")),t=$(document.createElement("input")),o="macro-"+this.name
 t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,step:a.step,value:n.last}),e.append(t).addClass(o).appendTo(this.output)}}),a.setting&&(Setting&&Setting.addRange&&"function"==typeof Setting.addRange?Setting.addRange("volume",{label:"Volume: ",min:0,max:a.rangeMax,step:a.step,"default":a.current,onInit:t,onChange:t}):console.error("This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube."))}()
-// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="678.6666666666666,302.6666666666667" size="100,100">&lt;div class=&quot;center top&quot;&gt;\
+// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="678,302" size="100,100">&lt;div class=&quot;center top&quot;&gt;\
 [img[bella ciao|images/ui/bella-ciao-min.png]]
 //SAUDADE SOLAR//
 &lt;&lt;if (Save.autosave.has())&gt;&gt;
@@ -896,7 +896,7 @@ t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,st
 
 
 
-por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="732.6666666666666,166.66666666666666" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
+por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="732,166" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
 &lt;&lt;link &quot;✆ Llamar&quot;&gt;&gt;
     &lt;&lt;dialog &quot;✆ Llamar&quot;&gt;&gt;&lt;&lt;include &quot;llamar&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
 	&lt;&lt;ui &#39;toggle&#39;&gt;&gt;
@@ -927,7 +927,7 @@ por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Solares&quot;&gt;☉&lt;/a&gt;: &#39;&#39;$sol&#39;&#39;
 
 &#39;&#39;Aplicaciones&#39;&#39;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700.6666666666666,501.6666666666667" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700,501" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms skipkey &quot;Control&quot;&gt;&gt;\
 iniciar dispositivo-soporte-personal
@@ -967,7 +967,7 @@ Ahora otra pregunta ¿cómo te identifícas?&lt;/div&gt;\
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ingeniería|cr4][$persona.pr to &quot;ing&quot;; $persona.sp += 1; $persona.cp += 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ciencias Sociales|cr4][$persona.pr to &quot;cs&quot;; $persona.cp += 1; $persona.mn += 1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Ciencias Naturales|cr4][$persona.pr to &quot;cn&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Actuación/Performance|cr4][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034.6666666666667,169.33333333333331" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39;&gt;&gt;
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Actuación/Performance|cr4][$persona.pr to &quot;ap&quot;; $persona.sp += 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034,169" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39;&gt;&gt;
 /* Creación de personaje completada */
 &lt;&lt;set $ss to 0&gt;&gt;
 /* Decisión de alineamiento tomada */
@@ -1024,7 +1024,7 @@ Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Podrías co
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Viaje de descubrimiento|cr5][$persona.pq to &quot;vd&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Toque fondo|cr5][$persona.pq to &quot;tf&quot;; $persona.sp += 1; $persona.mn += 1;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Terminando estudios|cr5][$persona.pq to &quot;te&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="844.3333333333334,648.3333333333333" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="844,648" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 !! ♟ $persona.nm
 Origen: $personadata.orgn
 Género: $personadata.gene
@@ -1056,7 +1056,7 @@ Indican tu capacidad para realizar diferentes acciones.
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;&lt;link [[Confirmar. Iniciar interfaz DSP.|cr6]]&gt;&gt;&lt;&lt;set $ss to 1&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675.3333333333333,726.6666666666665" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675,726" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms&gt;&gt;⛃¡Partida guardada!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;if $visit.marshab == 0&gt;&gt;\
@@ -1216,7 +1216,7 @@ Carlo: No te preocupes, yo me encargo.
 &lt;&lt;type 1ms&gt;&gt;\
 		&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 		[[Continuar|carlo5]]&lt;/div&gt;&lt;&lt;/type&gt;&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="carlo6" tags="hidemenu" position="919.3333333333334,1588" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="carlo6" tags="hidemenu" position="919,1588" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.gsii == 0&gt;&gt;\
 &lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
@@ -1273,14 +1273,14 @@ Carlo: Lo cierto es que la guerra terminó con la ruptura del &#39;&#39;tratado 
 &lt;&lt;type 5ms&gt;&gt;Acabas de tomar tu primera decisión de &lt;a data-tooltip=&quot;♚ Expresa tu forma de ver el mundo, y como crees que debe estar organizada la sociedad. ♛ También indica tu postura hacia los cambios y la forma de a Próximarte a las situaciones reales.&quot; class=&quot;textip tip-down&quot;&gt;&#39;&#39;⬗ Alineamiento&#39;&#39;&lt;/a&gt;, a partir de ahora podrás ver la tendencia de tus decisiones en la ventana de &lt;a href=&quot;#&quot; data-tooltip=&quot;Aquí se muestran todos tus datos.&quot; class=&quot;textip tip-down&quot;&gt;&#39;&#39;♟ Perfil&#39;&#39;&lt;/a&gt;.&lt;&lt;/type&gt;&gt;\
 Carlo: No sabía que tuvieras esas opinión, no suele ser algo muy popular en ♂ Marte. Lo cierto es que la guerra terminó con la ruptura del &#39;&#39;tratado solar&#39;&#39;, coalición entre los gobiernos de los planetas ♁ Tierra, ♀ Venus y ♂ Marte (los ☾ Satélites eran protectorados del gobierno central de la &#39;&#39;OTS&#39;&#39;).
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="carlo9b" tags="hidemenu" position="904.3333333333334,2042.3333333333333" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
+[[Continuar|carlo8]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="carlo9b" tags="hidemenu" position="904,2042" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
 &lt;&lt;if $codex.car == 0&gt;&gt;\
 &lt;&lt;notify&gt;&gt;❂&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $codex.car to 1&gt;&gt;&lt;&lt;/if&gt;&gt;\
 Carlo: Jajaja, se que ya debes conocer toda esa información, pero quería ponernos en contexto. Después del fin de la segunda guerra, se vieron suspendidos los viajes de exploración fuera del sistema solar, o eso es lo que dicen. Resulta que nos hemos topado con un informante, quien alega haber visto como hace 4 años se lanzó un crucero espacial desde &#39;&#39;♇ Caronte&#39;&#39;, una de las lunas de ♇ Plutón.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Continuar|carlo10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="carlo10" tags="hidemenu" position="879.3333333333334,2198" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
+[[Continuar|carlo10]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="carlo10" tags="hidemenu" position="879,2198" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-lumini.gif]]@@
 &lt;&lt;if $codex.ac == 0&gt;&gt;\
 &lt;&lt;notify&gt;&gt;✎
 ❂&lt;&lt;/notify&gt;&gt;\
@@ -1302,7 +1302,7 @@ Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un 
 &lt;&lt;pickup &#39;$inventory&#39; &#39;🚀 Boleto cod: 763&#39;&gt;&gt;\
 Carlo: Te envié el boleto, cualquier cosa no dudes en volver a contactarme. Un último detalle, nuestro informante no te contactará por DSP, quiere mantener su anonimato y sabes que con estas cosas nunca se sabe, debes encontrarte con el en el puerto apenas llegue, te enviaré la información en un //mensaje cifrado//.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="912.0000000000001,2396.3333333333335" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
+[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="912,2396" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
 &lt;&lt;notify&gt;&gt;✉&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✉¡Nuevo mensaje!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $msg.lum1 to 1&gt;&gt;\
@@ -1367,7 +1367,7 @@ Género: $personadata.gene
 &lt;&lt;set _nextwill to ($maxWill+1)&gt;&gt;\
 &lt;&lt;button &quot;★: _natwill / _nextwill&quot;&gt;&gt;&lt;&lt;include &quot;guiacaracp&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="objetos" tags="" position="315,734" size="100,100">&lt;&lt;inventory &#39;$inventory&#39;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="40" name="cr0" tags="mars scene" position="852.3333333333334,499.33333333333337" size="100,100">&lt;&lt;set $persona to {nm: &quot;Josi&quot;, orgn: &quot;tr&quot;, gene: &quot;nb&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 1, mn: 1, sp: 1, pow: 3}&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="40" name="cr0" tags="mars scene" position="852,499" size="100,100">&lt;&lt;set $persona to {nm: &quot;Josi&quot;, orgn: &quot;tr&quot;, gene: &quot;nb&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 1, mn: 1, sp: 1, pow: 3}&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 ¡Hola! ☻ Soy la asistente de tu nuevo &#39;&#39;Dispositivo de Soporte Personal (DSP)&#39;&#39;.
 Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el sistema.
@@ -1407,7 +1407,7 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
 		&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 		[[Regresar|cr6]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1053.3333333333333,2402.6666666666665" size="100,100">&lt;&lt;notify&gt;&gt;✎&lt;&lt;/notify&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1053,2402" size="100,100">&lt;&lt;notify&gt;&gt;✎&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✎¡Nuevas notas!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $note.trvlc to 1&gt;&gt;\
 &lt;&lt;set $note.red to 1&gt;&gt;\
@@ -1602,7 +1602,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 &lt;&lt;/switch&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot;  class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;). &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down&quot;&gt;★&lt;/a&gt;(&lt;a href=&quot;#&quot; data-tooltip=&quot;Cuerpo&quot; class=&quot;tip-down&quot;&gt;♠&lt;/a&gt;): $caracp.cpp / 3.\
 </tw-passagedata><tw-passagedata pid="58" name="guiacaracp" tags="" position="198,985" size="100,100">&lt;&lt;dialog &quot;★ Puntos de experiencia&quot;&gt;&gt;Cada vez que &#39;&#39;Aciertas&#39;&#39; un &lt;a href=&quot;#&quot; data-tooltip=&quot;Acierto = 🃟 &gt;= 🂭 &quot; class=&quot;matip tip-down&quot;&gt;&#39;&#39;Reto&#39;&#39; &lt;/a&gt; que &#39;&#39;no&#39;&#39; sea &lt;a href=&quot;#&quot; data-tooltip=&quot;Reto que se resuelve en el mismo pasaje de forma inmediata&quot; class=&quot;textip tip-down&quot;&gt; &#39;&#39;☇ Instantáneo&#39;&#39;&lt;/a&gt; o &lt;a href=&quot;#&quot; data-tooltip=&quot;Reto que no requiere de un 🂠 Lanzamiento de reto&quot; class=&quot;textip tip-down&quot;&gt; &#39;&#39;🂡 Natural&#39;&#39;&lt;/a&gt;., obtienes +1 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt;, +2 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; o +3 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot;  class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; según  la &lt;a href=&quot;#&quot; data-tooltip=&quot;Resultado necesario para Acertar.&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;🂭 Difícultad&#39;&#39;&lt;/a&gt;. &lt;a href=&quot;#&quot; data-tooltip=&quot;🂨&quot; class=&quot;zoom tip-down&quot;&gt;🂨&lt;/a&gt; Fácil: +1, &lt;a href=&quot;#&quot; data-tooltip=&quot;🂪&quot; class=&quot;zoom tip-down&quot;&gt;🂪&lt;/a&gt; Normal: +2, &lt;a href=&quot;#&quot; data-tooltip=&quot;🂭&quot; class=&quot;zoom tip-down&quot;&gt;🂭&lt;/a&gt; Difícil: +3. Cada vez que acumulas 3 &lt;a href=&quot;#&quot; data-tooltip=&quot;Punto de experiencia&quot; class=&quot;tip-down diatip&quot;&gt;★&lt;/a&gt; en una misma &lt;a href=&quot;#&quot; data-tooltip=&quot;♠Cuerpo, ♦Mente, ♣Espíritu&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;característica&#39;&#39;&lt;/a&gt; subes +1 nivel de la misma. En el caso de la &lt;a href=&quot;#&quot; data-tooltip=&quot;♥ = [(♠ + ♦ + ♣)/ 3]&quot; class=&quot;matip&quot;&gt;&#39;&#39;♥ Vida&#39;&#39;&lt;/a&gt;, se obtiene mediante una //función parte entera// &lt;a href=&quot;#&quot; data-tooltip=&quot;Asigna a cada número real su parte entera&quot; class=&quot;textip&quot;&gt;⨍(x) = [x]&lt;/a&gt;, de la sumatoria de las otras &lt;a href=&quot;#&quot; data-tooltip=&quot;♠Cuerpo, ♦Mente, ♣Espíritu&quot;&gt;&#39;&#39;características&#39;&#39;&lt;/a&gt; entre tres (3).&lt;&lt;/dialog&gt;&gt;\</tw-passagedata><tw-passagedata pid="59" name="retadamn" tags="" position="179,1242" size="100,100">&lt;&lt;set $retada to $roll + $persona.mn&gt;&gt;\
-&lt;&lt;include &quot;rollmn&quot;&gt;&gt; $roll + &lt;a data-tooltip=&quot;Mente&quot;  class=&quot;tip-down&quot;&gt;♦&lt;/a&gt; $persona.mn = &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39;</tw-passagedata><tw-passagedata pid="60" name="subidamn" tags="" position="174.66666666666666,1506.6666666666667" size="100,100">/* Subida de puntos */\
+&lt;&lt;include &quot;rollmn&quot;&gt;&gt; $roll + &lt;a data-tooltip=&quot;Mente&quot;  class=&quot;tip-down&quot;&gt;♦&lt;/a&gt; $persona.mn = &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39;</tw-passagedata><tw-passagedata pid="60" name="subidamn" tags="" position="174,1506" size="100,100">/* Subida de puntos */\
 &lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 	&lt;&lt;set $caracp.mnp +=1&gt;&gt;\
@@ -1624,7 +1624,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 			&lt;&lt;set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)&gt;&gt;\
 			&lt;&lt;set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)&gt;&gt;\
 			&lt;&lt;notify&gt;&gt;+♦&lt;&lt;/notify&gt;&gt;\
-			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;: $persona.mn&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="cpup" tags="" position="56,1636.3333333333335" size="100,100">/* Subida de nivel de característica */\
+			¡Subida característica: +&lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;¡ &lt;a href=&quot;#&quot; data-tooltip=&quot;Mente&quot; class=&quot;tip-down&quot;&gt;♦&lt;/a&gt;: $persona.mn&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="cpup" tags="" position="56,1636" size="100,100">/* Subida de nivel de característica */\
 		&lt;&lt;if $caracp.cpp &gt;= 3&gt;&gt;\
 			&lt;&lt;set $persona.cp +=1&gt;&gt;\
 			&lt;&lt;set $caracp.cpp -=3&gt;&gt;\
@@ -1653,7 +1653,7 @@ Después del fin de la segunda guerra, se vieron suspendidos los viajes de explo
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39; &gt;= &lt;a href=&quot;#&quot; data-tooltip=&quot;🃊&quot; class=&quot;zoom tip-down&quot;&gt;🃚&lt;/a&gt; 10
 &lt;&lt;case 12&gt;&gt;\
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Retada&quot; class=&quot;tip-down&quot;&gt;🃟&lt;/a&gt; &#39;&#39;$retada&#39;&#39; &gt;= &lt;a href=&quot;#&quot; data-tooltip=&quot;🃍&quot; class=&quot;zoom tip-down&quot;&gt;🃝&lt;/a&gt; 12
-&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="subidasp" tags="" position="301.3333333333333,1500" size="100,100">/* Subida de puntos */\
+&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="subidasp" tags="" position="301,1500" size="100,100">/* Subida de puntos */\
 &lt;&lt;switch $dif&gt;&gt;\
 &lt;&lt;case 8&gt;&gt;\
 	&lt;&lt;set $caracp.spp +=1&gt;&gt;\
@@ -1689,7 +1689,7 @@ Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una 
 	[[♟ Militar: Claro. fue la guerra entre ♂ Marte y los ☾ Satélites por un lado, y ♀ Venus y la ♁ Tierra por el otro. Serví con la contratista de seguridad &#39;&#39;Deep Space&#39;&#39;, y no pararon de cambiarse de bando hasta que terminó la guerra.|carlo6]]&lt;/div&gt;
 	&lt;&lt;/if&gt;&gt;\
 	&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="840.3333333333334,306" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
+	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="840,306" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
 &lt;&lt;fadein 3s&gt;&gt;\
 &lt;div class=&quot;warn center&quot;&gt;\
 &lt;div class=&quot;icon&quot;&gt;♬&lt;/div&gt;\
@@ -1704,7 +1704,7 @@ Juega con el dispositivo de forma vertical
 &lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;utopix&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;cont append&gt;&gt;\
 &lt;&lt;goto &quot;utopix&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1036.3333333333335,306.33333333333337" size="100,100">&lt;div class=&quot;center&quot;&gt;\
+&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1036,306" size="100,100">&lt;div class=&quot;center&quot;&gt;\
 &lt;&lt;fadein 3s&gt;&gt;[img[utopix|images/ui/utopix.png]]&lt;&lt;/fadein&gt;&gt;
 &lt;&lt;fadein 3s&gt;&gt;\
 &lt;b&gt;PRESENTA&lt;/b&gt;
@@ -1713,7 +1713,7 @@ Juega con el dispositivo de forma vertical
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;title&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;cont append&gt;&gt;\
 &lt;&lt;goto &quot;title&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1194.6666666666667,341.3333333333333" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1194,341" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;title&quot; loop volume 0 fadeoverto 3 1&gt;&gt;\
 &lt;div class=&quot;center top&quot;&gt;\
 &lt;&lt;fadein 3s&gt;&gt;@@.title;[img[bella ciao|images/ui/bella-ciao.png]]@@&lt;&lt;/fadein&gt;&gt;
