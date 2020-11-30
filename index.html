@@ -896,9 +896,10 @@ t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,st
 
 
 
-por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="736,165" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
+por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="732.6666666666666,166.66666666666666" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
 &lt;&lt;link &quot;✆ Llamar&quot;&gt;&gt;
     &lt;&lt;dialog &quot;✆ Llamar&quot;&gt;&gt;&lt;&lt;include &quot;llamar&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
+	&lt;&lt;ui &#39;toggle&#39;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;✉ Mensajes&quot;&gt;&gt;
 	&lt;&lt;dialog &quot;✉ Mensajes&quot;&gt;&gt;&lt;&lt;include &quot;mensajes&quot;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
@@ -926,7 +927,7 @@ por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Solares&quot;&gt;☉&lt;/a&gt;: &#39;&#39;$sol&#39;&#39;
 
 &#39;&#39;Aplicaciones&#39;&#39;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700.6666666666666,498.3333333333333" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700.6666666666666,501.6666666666667" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms skipkey &quot;Control&quot;&gt;&gt;\
 iniciar dispositivo-soporte-personal
@@ -1023,7 +1024,7 @@ Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Podrías co
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Viaje de descubrimiento|cr5][$persona.pq to &quot;vd&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Toque fondo|cr5][$persona.pq to &quot;tf&quot;; $persona.sp += 1; $persona.mn += 1;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Terminando estudios|cr5][$persona.pq to &quot;te&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="856,645" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="851,646.6666666666666" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 !! ♟ $persona.nm
 Origen: $personadata.orgn
 Género: $personadata.gene
@@ -1054,8 +1055,9 @@ Indican tu capacidad para realizar diferentes acciones.
 &lt;&lt;case &quot;te&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Terminando los estudios&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Acabas de finalizar tus estudios en Ciencias Cognitivas, y sientes que la academía ya te dió todo lo que podía ofrecerte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Confirmar|cr6][$ss to 1]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="708.6666666666666,696.6666666666666" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0.50&gt;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Confirmar. Iniciar interfaz DSP.|cr6][$ss to 1]]&lt;/div&gt;
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675.3333333333333,713.3333333333333" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
+&lt;&lt;ui &#39;toggle&#39;&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;if $visit.marshab == 0&gt;&gt;\
 			&lt;&lt;notify&gt;&gt;❂¡Nueva entrada en el códice!&lt;&lt;/notify&gt;&gt;\
@@ -1134,7 +1136,7 @@ Una vez llegue a ♇ Caronte, debo buscar al contácto de Carlo para seguir la p
 &lt;&lt;if visited(&quot;carlo3&quot;)&gt;&gt;\
 Carlo: ¿Qué pasó amigo? ¿Se te olvidó decirme algo?
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-&lt;&lt;link &quot;No, disculpa hablamos luego...&quot; $location&gt;&gt;&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;link &quot;No, disculpa hablamos luego...&quot; $location&gt;&gt;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;else&gt;&gt;\
 Carlo: ¿Alo? ¿$persona.nm? pense que habías muerto, jajajaja.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
@@ -1297,7 +1299,7 @@ Carlo: Por eso iniciamos esta conversación, ya tengo un boleto reservado en un 
 &lt;&lt;pickup &#39;$inventory&#39; &#39;🚀 Boleto cod: 763&#39;&gt;&gt;\
 Carlo: Te envié el boleto, cualquier cosa no dudes en volver a contactarme. Un último detalle, nuestro informante no te contactará por DSP, quiere mantener su anonimato y sabes que con estas cosas nunca se sabe, debes encontrarte con el en el puerto apenas llegue, te enviaré la información en un //mensaje cifrado//.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="912,2393" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
+[[Vale, gracias por la confianza Carlo, ciao|carlo13]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="carlo13" tags="hidemenu" position="913.6666666666667,2396.3333333333335" size="100,100">@@.mapShrink;[img[Hombre de mediana edad, piel rojiza, y una barba de algunos días un poco desaliñada|images/npc/carlo-luminiH.png]]@@
 &lt;&lt;notify&gt;&gt;✉¡Nuevo mensaje!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✉¡Nuevo mensaje!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $msg.lum1 to 1&gt;&gt;\
@@ -1362,8 +1364,8 @@ Género: $personadata.gene
 &lt;&lt;set _nextwill to ($maxWill+1)&gt;&gt;\
 &lt;&lt;button &quot;★: _natwill / _nextwill&quot;&gt;&gt;&lt;&lt;include &quot;guiacaracp&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="objetos" tags="" position="315,734" size="100,100">&lt;&lt;inventory &#39;$inventory&#39;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="40" name="cr0" tags="mars scene" position="852.3333333333334,492.6666666666667" size="100,100">&lt;&lt;set $persona to {nm: &quot;Josi&quot;, orgn: &quot;tr&quot;, gene: &quot;nb&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 1, mn: 1, sp: 1, pow: 3}&gt;&gt;\
-&lt;&lt;audio &quot;mars&quot; loop volume 0 fadeoverto 5 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="cr0" tags="mars scene" position="852.3333333333334,494.33333333333337" size="100,100">&lt;&lt;set $persona to {nm: &quot;Josi&quot;, orgn: &quot;tr&quot;, gene: &quot;nb&quot;, pr: &quot;esc&quot;, pq: &quot;tf&quot;, cp: 1, mn: 1, sp: 1, pow: 3}&gt;&gt;\
+&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 ¡Hola! ☻ Soy la asistente de tu nuevo &#39;&#39;Dispositivo de Soporte Personal (DSP)&#39;&#39;.
 Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el sistema.
@@ -1403,13 +1405,13 @@ Porfavor, necesito que respondas unas sencillas preguntas antes de iniciar el si
 		&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 		[[Regresar|cr6]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1060,2396" size="100,100">&lt;&lt;notify&gt;&gt;✎¡Nuevas notas!&lt;&lt;/notify&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="43" name="pensamiento" tags="hidemenu" position="1058.3333333333333,2401" size="100,100">&lt;&lt;notify&gt;&gt;✎¡Nuevas notas!&lt;&lt;/notify&gt;&gt;\
 &lt;&lt;type 40ms&gt;&gt;✎¡Nuevas notas!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;set $note.trvlc to 1&gt;&gt;\
 &lt;&lt;set $note.red to 1&gt;&gt;\
 Ha comenzado tu aventura, debes estar mañana temprano en el &#39;&#39;puerto de lanzamiento&#39;&#39;.
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-&lt;&lt;link &quot;Continuar&quot; $location&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="dormir" tags="" position="873,922" size="100,100">&lt;div class=&quot;&quot;&gt;\
+&lt;&lt;link &quot;Continuar&quot; $location&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="dormir" tags="" position="873,922" size="100,100">&lt;div class=&quot;&quot;&gt;\
 	Recuperas: ⊜♥ Vida. ♥: $will / $maxWill
 	Descansas un par de horas...
 	(FIN DE LA DEMO. En esta versión de demostración están todas las mecánicas de juego de Bella Ciao //Saudade Solar//. ¿Que te pareció?)
@@ -1690,9 +1692,6 @@ Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una 
 &lt;div class=&quot;warn center&quot;&gt;\
 &lt;div class=&quot;icon&quot;&gt;♬&lt;/div&gt;\
 Te recomendamos el uso de audífonos a un volumen razonable
-
-&lt;div class=&quot;icon&quot;&gt;↻&lt;/div&gt;\
-Por favor NO recargues el navegador
 
 &lt;div class=&quot;icon&quot;&gt;⛁&lt;/div&gt;\
 Las partidas se guardan en la caché del navegador
