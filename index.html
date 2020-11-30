@@ -104,11 +104,12 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 .mobile{
 	display:none;
 }
-
+.top{
+margin-top:20%;
+}
 /* inicio */
 .center {
 	text-align: center;
-  margin-top:20%
 }
 .icon {
 	font-size: 45px;
@@ -860,7 +861,7 @@ a.current=t.toFixed(2),e(a.current)}var n={},a={current:100,rangeMax:100,step:1,
 n.last=a.current,n.start=n.last/a.rangeMax,postdisplay["volume-task"]=function(t){delete postdisplay[t],e(n.start.toFixed(2))},$(document).on("input","input[name=volume]",function(){var t=$("input[name=volume]").val(),o=t/a.rangeMax
 a.current=o.toFixed(2),e(a.current),n.last=t}),Macro.add("volume",{handler:function(){var e=$(document.createElement("span")),t=$(document.createElement("input")),o="macro-"+this.name
 t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,step:a.step,value:n.last}),e.append(t).addClass(o).appendTo(this.output)}}),a.setting&&(Setting&&Setting.addRange&&"function"==typeof Setting.addRange?Setting.addRange("volume",{label:"Volume: ",min:0,max:a.rangeMax,step:a.step,"default":a.current,onInit:t,onChange:t}):console.error("This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube."))}()
-// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="682,302.6666666666667" size="100,100">&lt;div class=&quot;center&quot;&gt;\
+// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="678.6666666666666,302.6666666666667" size="100,100">&lt;div class=&quot;center top&quot;&gt;\
 [img[bella ciao|images/ui/bella-ciao-min.png]]
 //SAUDADE SOLAR//
 &lt;&lt;if (Save.autosave.has())&gt;&gt;
@@ -1684,7 +1685,7 @@ Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una 
 	[[♟ Militar: Claro. fue la guerra entre ♂ Marte y los ☾ Satélites por un lado, y ♀ Venus y la ♁ Tierra por el otro. Serví con la contratista de seguridad &#39;&#39;Deep Space&#39;&#39;, y no pararon de cambiarse de bando hasta que terminó la guerra.|carlo6]]&lt;/div&gt;
 	&lt;&lt;/if&gt;&gt;\
 	&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="843.6666666666667,299.3333333333333" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
+	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="840.3333333333334,306" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
 &lt;&lt;fadein 3s&gt;&gt;\
 &lt;div class=&quot;warn center&quot;&gt;\
 &lt;div class=&quot;icon&quot;&gt;♬&lt;/div&gt;\
@@ -1693,13 +1694,16 @@ Te recomendamos el uso de audífonos a un volumen razonable
 &lt;div class=&quot;icon&quot;&gt;↻&lt;/div&gt;\
 Por favor NO recargues el navegador
 
+&lt;div class=&quot;icon&quot;&gt;⛁&lt;/div&gt;\
+Las partidas se guardan en la caché del navegador
+
 &lt;div class=&quot;mobile&quot;&gt;&lt;div class=&quot;icon&quot;&gt;↕&lt;/div&gt;\
 Juega con el dispositivo de forma vertical
 &lt;/div&gt;&lt;/div&gt;&lt;&lt;/fadein&gt;&gt;
-&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &quot;utopix&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;utopix&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;cont append&gt;&gt;\
 &lt;&lt;goto &quot;utopix&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1036.3333333333335,304.6666666666667" size="100,100">&lt;div class=&quot;center&quot;&gt;\
+&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1036.3333333333335,306.33333333333337" size="100,100">&lt;div class=&quot;center&quot;&gt;\
 &lt;&lt;fadein 3s&gt;&gt;[img[utopix|images/ui/utopix.png]]&lt;&lt;/fadein&gt;&gt;
 &lt;&lt;fadein 3s&gt;&gt;\
 &lt;b&gt;PRESENTA&lt;/b&gt;
@@ -1708,13 +1712,13 @@ Juega con el dispositivo de forma vertical
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;title&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;cont append&gt;&gt;\
 &lt;&lt;goto &quot;title&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1203.0000000000002,336.3333333333333" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1194.6666666666667,341.3333333333333" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;title&quot; loop volume 0 fadeoverto 3 1&gt;&gt;\
-&lt;div class=&quot;center&quot;&gt;\
+&lt;div class=&quot;center top&quot;&gt;\
 &lt;&lt;fadein 3s&gt;&gt;@@.title;[img[bella ciao|images/ui/bella-ciao.png]]@@&lt;&lt;/fadein&gt;&gt;
 &lt;&lt;fadein 3s 1s&gt;&gt;!!//SAUDADE SOLAR//&lt;&lt;/fadein&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;goto &quot;inicio&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
 &lt;&lt;cont append&gt;&gt;\
 &lt;&lt;goto &quot;inicio&quot;&gt;&gt;
 &lt;&lt;/cont&gt;&gt;\ </tw-passagedata></tw-storydata>
