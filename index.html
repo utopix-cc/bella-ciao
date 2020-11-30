@@ -927,7 +927,7 @@ por [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;</tw-passagedata><tw
 &lt;a href=&quot;#&quot; data-tooltip=&quot;Solares&quot;&gt;☉&lt;/a&gt;: &#39;&#39;$sol&#39;&#39;
 
 &#39;&#39;Aplicaciones&#39;&#39;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700,501" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="inicio" tags="hidebar" position="700,506" size="100,100">&lt;&lt;audio &quot;title&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms skipkey &quot;Control&quot;&gt;&gt;\
 iniciar dispositivo-soporte-personal
@@ -1024,7 +1024,7 @@ Muchas gracias, agradecemos tu paciencia, ya estámos casi listos. ¿Podrías co
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Viaje de descubrimiento|cr5][$persona.pq to &quot;vd&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Toque fondo|cr5][$persona.pq to &quot;tf&quot;; $persona.sp += 1; $persona.mn += 1;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Terminando estudios|cr5][$persona.pq to &quot;te&quot;; $persona.mn += 2]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="844,648" size="100,100">&lt;div class=&quot;window&quot;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Temporada en el campo|cr5][$persona.pq to &quot;tc&quot;; $persona.cp += 1; $persona.sp +=1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="cr5" tags="mars scene" position="839,649.6666666666666" size="100,100">&lt;div class=&quot;window&quot;&gt;\
 !! ♟ $persona.nm
 Origen: $personadata.orgn
 Género: $personadata.gene
@@ -1056,7 +1056,7 @@ Indican tu capacidad para realizar diferentes acciones.
 &lt;&lt;case &quot;tc&quot;&gt;&gt;&lt;&lt;set $personadata.pq to &quot;Temporada en el campo&quot;&gt;&gt;&#39;&#39;$personadata.pq&#39;&#39;. Recien terminas unas jornadas que estuviste trabajando en los campos de cultivos de Marte. Necesitas cambiar de aires, así que decides contactar a tu amigo Carlo en &#39;&#39;//MARS MEDIA//&#39;&#39; a ver si tiene algo para ti, ya han trabajado en un par de artículos antes.
 &lt;&lt;/switch&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;&lt;&lt;link [[Confirmar. Iniciar interfaz DSP.|cr6]]&gt;&gt;&lt;&lt;set $ss to 1&gt;&gt;&lt;&lt;ui &#39;toggle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="675,726" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Rechazar. Volver a introducir mis datos.|cr0]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="cr6" tags="autosave savable mars scene" position="670,727.6666666666666" size="100,100">&lt;&lt;audio &quot;mars&quot; volume 0 fadeoverto 5 0.5&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 &lt;&lt;type 40ms&gt;&gt;⛃¡Partida guardada!&lt;&lt;/type&gt;&gt;\
 &lt;&lt;if $visit.marshab == 0&gt;&gt;\
@@ -1421,7 +1421,7 @@ Ha comenzado tu aventura, debes estar mañana temprano en el &#39;&#39;puerto de
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
 &lt;&lt;link &quot;Reiniciar&quot;&gt;&gt;
 	&lt;&lt;run Engine.restart()&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="meditar" tags="mars scene" position="579,584" size="100,100">&lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="meditar" tags="mars scene" position="579,589" size="100,100">&lt;&lt;updatemeter &#39;willBar&#39; &#96;$will / $maxWill&#96;&gt;&gt;\
 &lt;div class=&quot;window&quot;&gt;\
 Recuperas: &lt;a href=&quot;#&quot; data-tooltip=&quot;Vida&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt; (&lt;a href=&quot;#&quot; data-tooltip=&quot;Vida&quot; class=&quot;tip-down&quot;&gt;&#39;&#39;♥&#39;&#39;&lt;/a&gt;: $will / $maxWill)
 Te sientas en el suelo de la habitación, respiras de forma consciente y profunda, estás en contácto con todo lo que te rodea...
@@ -1689,7 +1689,7 @@ Carlo: Muy bien, todo en orden. Empecemos por el principio, para que tengas una 
 	[[♟ Militar: Claro. fue la guerra entre ♂ Marte y los ☾ Satélites por un lado, y ♀ Venus y la ♁ Tierra por el otro. Serví con la contratista de seguridad &#39;&#39;Deep Space&#39;&#39;, y no pararon de cambiarse de bando hasta que terminó la guerra.|carlo6]]&lt;/div&gt;
 	&lt;&lt;/if&gt;&gt;\
 	&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;\
-	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="840,306" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
+	[[Por favor refrescame la memoria|carlo6b]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="advertencias" tags="" position="834.9999999999999,309.33333333333337" size="100,100">&lt;&lt;audio &quot;intro&quot; loop play&gt;&gt;
 &lt;&lt;fadein 3s&gt;&gt;\
 &lt;div class=&quot;warn center&quot;&gt;\
 &lt;div class=&quot;icon&quot;&gt;♬&lt;/div&gt;\
@@ -1701,19 +1701,12 @@ Las partidas se guardan automáticamente en la caché del navegador
 &lt;div class=&quot;mobile&quot;&gt;&lt;div class=&quot;icon&quot;&gt;↕&lt;/div&gt;\
 Juega con el dispositivo de forma vertical
 &lt;/div&gt;&lt;/div&gt;&lt;&lt;/fadein&gt;&gt;
-&lt;&lt;timed 12s&gt;&gt;&lt;&lt;goto &quot;utopix&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;cont append&gt;&gt;\
-&lt;&lt;goto &quot;utopix&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1036,306" size="100,100">&lt;div class=&quot;center&quot;&gt;\
-&lt;&lt;fadein 3s&gt;&gt;[img[utopix|images/ui/utopix.png]]&lt;&lt;/fadein&gt;&gt;
-&lt;&lt;fadein 3s&gt;&gt;\
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;goto &#39;utopix&#39;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="utopix" tags="" position="1001,332.6666666666667" size="100,100">&lt;div class=&quot;center&quot;&gt;\
+&lt;&lt;fadein 3s&gt;&gt;[img[utopix|images/ui/utopix.png]]
 &lt;b&gt;PRESENTA&lt;/b&gt;
 &lt;&lt;/fadein&gt;&gt;\
 &lt;/div&gt;
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;title&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;cont append&gt;&gt;\
-&lt;&lt;goto &quot;title&quot;&gt;&gt;
-&lt;&lt;/cont&gt;&gt;\ </tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1194,341" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &#39;title&#39;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="title" tags="" position="1187.333333333333,339.3333333333333" size="100,100">&lt;&lt;audio &quot;intro&quot; volume 1 fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;title&quot; loop volume 0 fadeoverto 3 1&gt;&gt;\
 &lt;div class=&quot;center top&quot;&gt;\
 &lt;&lt;fadein 3s&gt;&gt;@@.title;[img[bella ciao|images/ui/bella-ciao.png]]@@&lt;&lt;/fadein&gt;&gt;
