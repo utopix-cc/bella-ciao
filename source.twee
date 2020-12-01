@@ -1,0 +1,1955 @@
+:: StoryTitle
+Bella Ciao - BETA
+
+
+:: StoryData
+{
+	"ifid": "089EA592-F0FF-408B-9931-409A9E2A7EFA",
+	"format": "SugarCube",
+	"format-version": "2.33.4",
+	"start": "Portada",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+@font-face {
+  font-family: DejaVuSans;
+  src: url(../bella-ciao/fonts/DejaVuSans.WOFF);
+}
+
+/* <<type>> macro styles */
+body, tw-story
+{
+  font-family: "Lucida Console", Monaco, monospace, "DejaVuSans";
+  font-size: 20px;
+  background: #2b0138;
+
+}
+
+.macro-type {
+	color: #fefec8;
+  	font-family: "Lucida Console", Monaco, monospace, "DejaVuSans";
+}
+
+.macro-type-cursor:after {
+	color: #fefec8;
+  	font-family: "Lucida Console", Monaco, monospace, "DejaVuSans";
+  	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+h2 {
+	margin-bottom: 5px;
+}
+h3 {
+	margin-bottom: 5px;
+}
+h4 {
+	margin-bottom: 5px;
+}
+
+.title img {
+	width: 70%;
+}
+.mobile{
+	display:none;
+}
+.top{
+margin-top:20%;
+}
+/* inicio */
+.center {
+	text-align: center;
+}
+.icon {
+	font-size: 45px;
+}
+
+/* Bandeja de menu */
+#story-title {
+	margin: 0;
+	font-size: 100%;
+}
+
+#story-caption h2 {
+	margin: 0;
+}
+
+#story-author {
+	display: none;
+}
+
+#ui-bar-history [id|="history"], #ui-bar-toggle {
+	font-size: 2.2em;
+}
+#ui-bar-toggle {
+	padding: .3em .2em .25em;
+}
+#ui-bar.stowed #ui-bar-toggle {
+	padding: .3em 0.05em .25em .55em;
+}
+
+#ui-bar.stowed {
+	left: -17.4em;
+}
+
+#ui-bar-toggle {
+	right: -13%;
+  border-right: 1px solid #2b0138;
+}
+
+#ui-bar{
+background: #2b0138;
+opacity: 0.9;
+border-right: none;
+}
+
+#ui-bar {
+	box-shadow: 5px 5px 10px #640d46;
+}
+
+
+#ui-bar:hover{
+opacity: 1;
+box-shadow: 5px 5px 10px #b92168;
+}
+
+#ui-bar-history [id|="history"], #ui-bar-toggle {
+	border: 1px solid #2b0138;
+}
+
+#ui-bar-body > :not(:first-child) {
+	margin-top: 0em;
+}
+
+#ui-dialog-close {
+	color: #fff!important;
+}
+
+#ui-dialog-close:hover {
+	color: #fefec8!important;
+}
+
+.hidemenu ul#menu-story li:nth-of-type(-n+1){
+  display: none;
+}
+
+#menu ul {
+	border: 1px solid #2b0138;
+  	margin: 0em 0 0;
+}
+
+#menu li:not(:first-child) {
+	border-top: 1px solid #2b0138;
+}
+
+
+#menu li a {
+	color: #f8dd65;
+}
+
+#menu li a:hover {
+	background-color: #b92368;
+  	color: #fefec8!important;
+}
+
+#menu-story a {
+	font-size: 22px;
+  font-weight: bolder;
+  color: #fff!important;
+}
+
+#menu-story {
+	background-color: #b92368;
+}
+/* tme-fa-icons */
+#linkedicon button::before {
+	font-family: tme-fa-icons;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+}
+
+#linkedicon button::before {
+	content: "\e81d";
+}
+
+
+input, select, textarea {
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #ff657d;
+	padding: .4em;
+}
+
+
+  /* Color de fondo */
+
+input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
+	background-color: #2b0138;
+	border-color: #fefec8;
+}
+
+/* call animation */
+.blob {
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: 50px;
+  height: 100px;
+  width: 100px;
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blob.white {
+  background: white;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+  animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1.5);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.blob span {
+	font-size: 72px;
+	color: #b92368;
+}
+
+/* console background */
+.window {
+	background-color: #2b0138;
+	padding: 20px;
+}
+
+/* dialog */
+#ui-dialog {
+	width: 100%;
+}
+
+#ui-dialog.open {
+	opacity: 1;
+}
+
+#ui-dialog-titlebar {
+	background-color: #fff;
+}
+
+#ui-dialog-title {
+	color: #2b0138;
+}
+
+#ui-dialog-close {
+	color: #b92368;
+}
+
+#ui-dialog-close:hover {
+	color: #ff657d;
+  background-color: #fff;
+	border-color: #fff;
+}
+
+#ui-dialog-body {
+	background-color: #2b0138;
+	border: none;
+  min-height: 25vh;
+}
+
+/* general */
+html, body {
+	min-height: 100%;
+    width: 100%;
+    padding: 0; margin: 0; /* reset the default stylesheet */
+  cursor: [img[images/ui/cursor_pointer3D_shadow.png]], auto;
+  color: #fff;
+}
+
+a {
+	cursor: url(images/ui/cursor_hand.png), pointer;
+	color: #f8dd65;
+}
+
+a:hover {
+	cursor: url(images/ui/cursor_hand.png), pointer;
+	color: #fefec8;
+	text-decoration: none;
+}
+
+button {
+cursor: url(images/ui/cursor_hand.png), pointer;
+	background-color: #b92368 !important;
+	border: 1px solid #2b0138;
+}
+
+button:hover {
+  	color: #fefec8;
+	background-color: #ff657d;
+	border-color: #fff;
+}
+
+/* box shadow*/
+.box a{
+color: #2b0138;
+}
+
+.box a:hover{
+color: #7a4390;
+}
+
+.box{
+background-color: #fff;
+position: relative;
+ display: inline-block;
+  padding: 5px 15px;
+  margin-top: 10px;
+  color: #2b0138;
+}
+.cor {
+	position: absolute;
+	left: -20px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 12px solid transparent;
+	border-right-color: #fff;
+}
+.box-shadow{
+box-shadow:5px 5px 10px black;
+  margin-top: 10px;
+}
+.box-shadow:hover {
+	box-shadow: 5px 5px 10px #b92168;
+}
+
+/* fin box */
+
+/* responsive images */
+.mapShrink img {
+	height: auto;
+	width: auto;
+	max-width: 50%;
+	max-height: 50%;
+}
+
+/* responsive div square */
+.square {
+  position: relative;
+  width: 50%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 90%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #story {
+	margin-top: 3.7em;
+}
+.title img {
+	width: 100%;
+}
+  .mobile{
+	display:inline;
+}
+  .link-internal {
+	font-size: 18px;
+}
+   a {
+	font-size: 18px;
+}
+  #menu-story a {
+	font-size: 20px;
+}
+	.mapShrink img {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+	}
+	.square {
+	position: relative;
+	width: 100%;
+	}
+	#ui-dialog {
+	width: auto;
+	}
+ 	 #ui-bar {
+	opacity: 1;
+	}
+   #ui-bar.stowed ~ #story {
+	margin-left: 0.5em;
+	}
+  	#story {
+	margin-right: 0.5em;
+	}
+  body.mars {
+	background-position: top center !important;
+	background-size: contain !important;
+	}
+  .mars {
+  	margin-top: 13em;
+  }
+  body, tw-story
+	{
+  font-size: 16px;
+	}
+  .window {
+	background-color: #2b0138;
+	padding: 5px;
+	}
+  .cor {
+	left: -16px;
+	border: 10px solid transparent;
+	border-right-color: #fff;
+	}
+  	.box a.zoom {
+	font-size: 26px;
+	}
+	#ui-dialog.open {
+		width: 100%;
+		left: 0px !important;
+		height: 100vh;
+		top: 0px !important;
+	}
+  	  	[data-tooltip]::before {
+	position: fixed !important;
+	top: 50% !important;
+	bottom: auto !important;
+	left: 50% !important;
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	  margin-left: 0px!important;
+	  font-size: 20px!important;
+	}
+  	.tip-down::before {
+	top: 50% !important;
+	bottom: auto !important;
+	left: 50% !important;
+	}
+  	[data-tooltip].zoom:before {
+  	margin-left: 0px!important;
+  	font-size: 120px!important;
+	  padding: 0px 0px 12px 0px!important;
+	}
+  	[data-tooltip].textip::before {
+	margin-left: 0px !important;
+	}
+  	[data-tooltip].diatip::before {
+	margin-left: 0px !important;
+	}
+}
+
+/* scenes */
+
+body.mars {
+	background: url(images/scenes/hab-marte.png);
+}
+
+body.scene {
+  	background-color: #2b0138;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* GAME OVER */
+#gameover {
+	color: #f8dd65;
+	font-size: 52px;
+}
+
+/* popover.min.css, by chapel; for use with popover.js; v1.0.0 */
+#ui-dialog-body.popover{background:0 0;border:0;padding:0}.popover #ui-dialog-titlebar{background:0 0}.popover #ui-dialog-title{display:none}.popover #ui-dialog-close{position:fixed;display:block;top:0;right:0;height:3em}.popover #ui-dialog-close:hover{background-color:transparent;border-color:transparent;color:#c22}#ui-overlay.popover.opaque{opacity:1}#ui-overlay.popover.transparent{opacity:0}#ui-overlay.popover.invert{background-color:#f8f8f8}#ui-dialog-body.popover.invert{color:#111}
+/* end popover.min.css */
+
+/* notify.min.css, by chapel; for use with notify.js; v1.0.0 */
+#notify{position:fixed;display:block;width:16em;right:-20em;top:2em;padding:.5em;background-color:#fff;color:#000;-webkit-transition:right .3s;-moz-transition:right .3s;-o-transition:right .3s;transition:right .3s}#notify.open{right:0}
+/* end notify.min.css */
+
+/**
+ * Tooltip Styles
+ */
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000000;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -40px;
+  padding: 7px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fefec8;
+  color: #2b0138;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Down */
+[data-tooltip].tip-down:before {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+[data-tooltip].tip-down:before {
+  margin-top: 12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #fefec8;
+}
+
+/* Wider tooltip */
+[data-tooltip].textip::before {
+	min-width: 220px;
+	margin-left: -110px;
+	font-size: 18px;
+  	-webkit-hyphens: none;
+    -moz-hyphens:    none;
+    -ms-hyphens:     none;
+    hyphens:         none;
+}
+
+/* Wider tooltip */
+[data-tooltip].diatip::before {
+	margin-left: -90px;
+	font-size: 18px;
+  	-webkit-hyphens: none;
+    -moz-hyphens:    none;
+    -ms-hyphens:     none;
+    hyphens:         none;
+}
+
+[data-tooltip].zoom::before {
+	margin-left: -30px;
+	font-size: 72px;
+	padding: 0px 0px 7px 0px;
+}
+
+[data-tooltip]:after{
+ display: none;
+}
+
+[data-tooltip].matip::before{
+	white-space: nowrap;
+}
+
+/* zoom link */
+
+.box a[data-tooltip] {
+	color: #b92368;
+}
+
+.box a[data-tooltip]:hover{
+	color: #ff657d;
+}
+
+/* no breaks */
+b, strong {
+	white-space: nowrap;
+}
+
+.circle {
+	width: 25px;
+	height: 25px;
+	background: white;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 50%;
+  	display: inline-block;
+  	text-align: center;
+	vertical-align: middle;
+  	line-height: 25px;
+}
+
+.circle a{
+	color: #b92368;
+}
+
+.circle:hover a{
+	color: #ff657d;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 13.8px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -14px;
+  width: 16px;
+  height: 36px;
+  background: #b92368;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 36px;
+  background: #b92368;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 14.8px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  width: 16px;
+  height: 36px;
+  background: #b92368;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+
+:: Story JavaScript [script]
+Config.ui.stowBarInitially = true;
+
+// preload.min.js, for SugarCube 2, by Chapel
+// v1.0.0, 2020-11-24, 9f958db927f80b0101af14e286ea0ad142026739
+;!function(){"use strict";function t(t,e){var n=0,r=t.length;t.forEach((function(t){!function(t,e){var n=new Image;n.onload=e,n.onerror=e,n.src=t}(t,(function(){++n===r&&e()}))}))}function e(){return State.length<=0}function n(){var n=[].slice.call(arguments).flatten(),r=!!e()&&LoadScreen.lock();return t(n,(function(){r&&LoadScreen.unlock(r)})),r}setup.preload=n,setup.preload.force=!1,Macro.add("preload",{handler:function(){if(!e()&&!setup.preload.force)return this.error("Attempting to preload images outside of `StoryInit` or similar can cause performance issues. Set `setup.preload.force` to `true` if you want to do it anyway.");n(this.args.flatten().filter((function(t){return"string"==typeof t})))}})}();
+// end preload.min.js
+
+/* Do an autosave for all passages tagged with "autosave". */
+Config.saves.autosave = "autosave";
+
+//allow saves
+config.saves.isAllowed = function () {
+	return tags().contains("savable");
+};
+
+// Disable back button
+config.history.controls = false;
+
+// operations.min.js, for SugarCube 2, by Chapel
+// v1.1.0, 2020-11-24, 9f958db927f80b0101af14e286ea0ad142026739
+;!function(){"use strict";var r=r||{},e=!0,t=!0,i=[0,100];function o(r,e){var t,i=[],o=0,n=1;if("string"==typeof r)i=r.split("d");else if("number"==typeof r&&e)i=[r,e];else{if(!(Array.isArray(r)&&r.length>=2))throw new TypeError("dice(): could not process arguments...");r.length=2,i=r}if(i[0]=Number(i[0]),"string"==typeof i[1]&&"F"===i[1].trim().toUpperCase()?(i[1]=3,n=-1):i[1]=Number(i[1]),i.some((function(r){return Number.isNaN(r)})))throw new TypeError("dice(): could not process arguments...");for(t=0;t<i[0];t++){o+=Math.floor(State.random()*i[1])+n}return o}function n(r,e){if("string"==typeof r){var t=[(i=r.trim().replace(/\s/g,"").match(/(\d+[d][\df]d*)(.*)/i))[1],Number(i[2])];return o(t[0])+t[1]}return o(r,e);var i}r.dice={roll:n},e&&(window.dice=window.dice||n),Number.prototype.dice||Object.defineProperty(Number.prototype,"dice",{configurable:!0,writable:!0,value:function(r){if(0===this)return 0;if(this<0)throw new TypeError("Number.prototype.dice: cannot roll a negative number of dice!");if(("string"!=typeof r||"F"!==r.trim().toUpperCase())&&(null==r||"number"!=typeof r||r<=0||!Number.isInteger(r)))throw new TypeError("Number.prototype.dice: error in argument");if(!Number.isInteger(this))throw new TypeError("Number.prototype.dice: cannot roll partial dice!");return n(this,r)}}),Number.prototype.fairmath||Object.defineProperty(Number.prototype,"fairmath",{configurable:!0,writable:!0,value:function(r){var e=i;if(this<e[0]||this>e[1])throw new TypeError("Number.prototype.fairmath called on a number that is out of the defined range (the number was "+this+").");if(null==r||"number"!=typeof r||r>100||r<-100||arguments.length<1)throw new TypeError("Number.prototype.fairmath given incorrect argument or an argument that is out of the valid 0-100 range.");if(0===r)return Math.clamp(Math.trunc(this),e[0],e[1]);if(r<0)return r*=-1,Math.clamp(Math.trunc(this-(this-e[0])*(r/e[1])),e[0],e[1]);if(r>0)return Math.clamp(Math.trunc(this+(e[1]-this)*(r/e[1])),e[0],e[1]);throw new Error("Number.prototype.fairmath encountered an unspecified error.")}}),Math.fairmath||Object.defineProperty(Math,"fairmath",{configurable:!0,writable:!0,value:function(r,e){return r.fairmath(e)}}),t&&(Math.fm||Object.defineProperty(Math,"fm",{configurable:!0,writable:!0,value:function(r,e){return r.fairmath(e)}}),Number.prototype.fm||Object.defineProperty(Number.prototype,"fm",{configurable:!0,writable:!0,value:function(r){return this.fairmath(r)}}),Number.prototype.d||Object.defineProperty(Number.prototype,"d",{configurable:!0,writable:!0,value:function(r){return this.dice(r)}}))}();
+// end operations.min.js
+
+// fading-macro-set.min.js, for SugarCube 2, by Chapel
+// v1.1.0, 2020-11-24, 9f958db927f80b0101af14e286ea0ad142026739
+;Macro.add("fadein",{tags:null,handler:function(){var t,a,s=$(document.createElement("span")),e=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),a=this.args.length>1?Util.fromCssTime(this.args[1]):0,s.wiki(e).addClass("macro-"+this.name).appendTo(this.output).hide().delay(a).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,a,s=$(document.createElement("span")),e=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),a=this.args.length>1?Util.fromCssTime(this.args[1]):0,s.wiki(e).addClass("macro-"+this.name).appendTo(this.output).delay(a).fadeOut(t)}});
+// end fading-macro-set.min.js
+
+// dialog-api-macro-set.min.js, for SugarCube 2, by Chapel
+// v1.3.0, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;Macro.add("dialog",{tags:["onopen","onclose"],handler:function(){var t="",s=null,n=null,o=this.args.length>0?this.args[0]:"",e=this.args.length>1?this.args.slice(1).flatten():[];this.payload.forEach((function(o,e){0===e?t=o.contents:"onopen"===o.name?s=s?s+o.contents:o.contents:n=n?n+o.contents:o.contents})),e.push("macro-"+this.name),Dialog.setup(o,e.join(" ")),Dialog.wiki(t),s&&"string"==typeof s&&s.trim()&&$(document).one(":dialogopened",(function(){$.wiki(s)})),n&&"string"==typeof n&&n.trim()&&$(document).one(":dialogclosed",(function(){$.wiki(n)})),Dialog.open()}}),Macro.add("popup",{handler:function(){if(this.args.length<1)return this.error("need at least one argument; the passage to display");if(!Story.has(this.args[0]))return this.error("the passage "+this.args[0]+"does not exist");var t=this.args[0],s=this.args.length>1?this.args[1]:"",n=this.args.length>2?this.args.slice(2).flatten():[];n.push("macro-"+this.name),Dialog.setup(s,n.join(" ")),Dialog.wiki(Story.get(t).processText()),Dialog.open()}}),Macro.add("dialogclose",{skipArgs:!0,handler:function(){Dialog.close()}});
+// end dialog-api-macro-set.min.js
+
+// message-macro.min.js, for SugarCube 2, by Chapel
+// v1.0.1, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;setup.messageMacro={},setup.messageMacro.default="Help",Macro.add("message",{tags:null,handler:function(){var e=this.payload[0].contents,a=$(document.createElement("span")),s=$(document.createElement(this.args.includes("btn")?"button":"a")),t=$(document.createElement("span"));s.wiki(this.args.length>0&&"btn"!==this.args[0]?this.args[0]:setup.messageMacro.default).ariaClick(this.createShadowWrapper((function(){a.hasClass("open")?t.css("display","none").empty():t.css("display","block").wiki(e),a.toggleClass("open")}))),a.attr("id","macro-"+this.name+"-"+this.args.join("").replace(/[^A-Za-z0-9]/g,"")).addClass("message-text").append(s).append(t).appendTo(this.output)}});
+// end message-macro.min.js
+
+// notify.min.js, for SugarCube 2, by Chapel
+// v1.1.1, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;!function(){var s=/\d+m?s$/;function e(s,e,t){"string"==typeof s&&("number"!=typeof e&&(e=!1),$(document).trigger({type:":notify",message:s,delay:e,class:t||""}))}$(document.body).append("<div id='notify'></div>"),$(document).on(":notify",(function(s){s.message&&"string"==typeof s.message&&(s.message.trim(),s.class?"string"==typeof s.class?s.class="open macro-notify "+s.class:Array.isArray(s.class)?s.class="open macro-notify "+s.class.join(" "):s.class="open macro-notify":s.class="open macro-notify",s.delay?("number"!=typeof s.delay&&(s.delay=Number(s.delay)),Number.isNaN(s.delay)&&(s.delay=2e3)):s.delay=2e3,$("#notify").empty().wiki(s.message).addClass(s.class),setTimeout((function(){$("#notify").removeClass()}),s.delay))})),Macro.add("notify",{tags:null,handler:function(){var t=this.payload[0].contents,a=!1,n=!1;if(this.args.length>0){var i=s.test(this.args[0]);"number"==typeof this.args[0]||i?(a=i?Util.fromCssTime(this.args[0]):this.args[0],n=this.args.length>1&&this.args.slice(1).flatten()):n=this.args.flatten().join(" ")}e(t,a,n)}}),setup.notify=e}();
+// end notify.min.js
+
+// type-sim.min.js, for SugarCube 2, by Chapel
+// v1.0.1, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;Macro.add("typesim",{tags:null,handler:function(){var t=$(document.createElement("textarea")),e=$(document.createElement("div"));if(1!==this.args.length)return this.error("incorrect number of arguments");if("string"!=typeof this.args[0])return this.error("argument should be a string");var r=this.args[0],a="",n=r.length,i=0,s="typesim-output-"+r.replace(/[^A-Za-z0-9]/g,""),o="macro-"+this.name,d=this.payload[0].contents;t.wiki(a).attr({id:s,readonly:!0}).addClass(o).appendTo(this.output),$(document).on("keydown","#"+s,this.createShadowWrapper((function(t){i<n&&(a+=r.charAt(i),$("#"+s).empty().wiki(a)),i===n&&e.wiki(d).addClass(o).insertAfter("#"+s),i++})))}});
+// end type-sim.min.js
+
+
+// simple-inventory.min.js, for SugarCube 2, by Chapel
+// v2.3.0, 2020-11-24, 9f958db927f80b0101af14e286ea0ad142026739
+;!function(){"use strict";var r={tryGlobal:!0,defaultStrings:{empty:"Vacío.",listDrop:"Discard",separator:"\n"}};function i(r,i,t,n){$(document).trigger({type:"initialized"===n?":inventory-init":":inventory-update",instance:r,receiving:i,moved:t,context:n})}function t(r){if(r=r?(r=[].slice.call(arguments)).flatten():[],!(this instanceof t))return new t(r);this.inv=r,i(this,null,r=r.length?r:null,"initialized")}Object.assign(t,{is:function(r){return r instanceof t},log:function(r){return t.is(r)?"Inventory.log() -> "+r.toArray().join(" - "):"Inventory.log() -> object is not an inventory..."},removeDuplicates:function(r){if(t.is(r)){var i,n=r.toArray();return i=[],n.forEach((function(r){i.includes(r)||i.push(r)})),i}}}),Object.assign(t.prototype,{transfer:function(r){if(arguments.length<2)return this;if(!t.is(r))return this;for(var n=[].slice.call(arguments),e=[],s=0,a=(n=n.slice(1).flatten()).length;s<a;s++)this.inv.includes(n[s])&&(this.inv.delete(n[s]),e.push(n[s]));return e.length?(r.inv=r.inv.concat(e),i(this,r,e,"transfer"),this):this},has:function(){var r=[].slice.call(arguments).flatten();return!(!r||!r.length)&&this.inv.includesAny(r)},hasAll:function(){var r=[].slice.call(arguments).flatten();return!(!r||!r.length)&&this.inv.includesAll(r)},pickUp:function(r){var t=[].slice.call(arguments).flatten(),n=this;return t&&t.length&&("unique"!==r&&"unique"!==t[0]||(t=function(r){var i=[];return r.forEach((function(r){n.inv.includes(r)||i.includes(r)||i.push(r)})),i}(t=t.splice(1))),this.inv=this.inv.concat(t),i(this,null,t,"pickup")),this},drop:function(){var r,t=[].slice.call(arguments).flatten(),n=this;if(t&&t.length){var e=[];t.forEach((function(i){n.has(i)&&(e.push(i),r=n.inv.indexOf(i),n.inv.deleteAt(r))})),i(this,null,e,"drop")}return this},sort:function(){return this.inv=this.inv.sort(),i(this,null,null,"sort"),this},show:function(i){return i&&"string"==typeof i||(i=r.defaultStrings.separator),this.inv.length?this.inv.join(i):r.defaultStrings.empty},empty:function(){var r=clone(this.inv);return this.inv=[],i(this,null,r,"drop"),this},toArray:function(){return this.inv},count:function(r){if(r&&"string"==typeof r){var i=0;return this.toArray().forEach((function(t){t===r&&i++})),i}return this.toArray().length},isEmpty:function(){return 0===this.toArray().length},linkedList:function(i,n){i&&t.is(i)||(i=!1);var e=this.toArray(),s=this,a=$(document.createElement("span"));return e&&e.length?(e.forEach((function(t,e,o){var l=$(document.createElement("span")),u=$(document.createElement("a")),h=n||r.defaultStrings.drop,c=function(r,i){var t=Math.random().toString(36).substring(7);return arguments.length<2&&(r=Math.random().toString(36).substring(7),i=random(99)),"simple-inv-"+i+"-"+Date.now()+"-"+r.replace(/[^A-Za-z0-9]/g,"")+"-"+t}(t,e);u.wiki(h).addClass("simple-inv drop-link"),u.ariaClick((function(){i?s.transfer(i,t):s.drop(t),$("#"+c).empty()})),l.attr("id",c).addClass("simple-inv link-listing").wiki(t+" ").append(u),e<o.length-1&&l.wiki("<br />"),a.append(l)})),a):(a.wiki(r.defaultStrings.empty),a)},constructor:t,toJSON:function(){return JSON.reviveWrapper("new setup.Inventory("+JSON.stringify(this.inv)+")")},clone:function(){return new t(this.inv)}}),setup.Inventory=t,setup.simpleInv={inventory:t},r.tryGlobal&&(window.Inventory=window.Inventory||t),Macro.add("newinventory",{handler:function(){if(this.args.length<1)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');Wikifier.setValue(r,new t(this.args.slice(1).flatten()))}}),Macro.add("pickup",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");i.pickUp(this.args.slice(1).flatten())}}),Macro.add("drop",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");i.drop(this.args.slice(1).flatten())}}),Macro.add("transfer",{handler:function(){if(this.args.length<3)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");var n=this.args[1].trim();if("$"!==n[0]&&"_"!==n[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var e=Wikifier.getValue(n);if(!t.is(e))return this.error("variable "+n+" is not an inventory!");i.transfer(e,this.args.slice(2).flatten())}}),Macro.add("dropall",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");i.empty()}}),Macro.add("clear","dropall",!1),Macro.add("sort",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");i.sort()}}),Macro.add("inventory",{handler:function(){if(this.args.length<1||this.args.length>2)return this.error("incorrect number of arguments");var r=this.args[0].trim();if("$"!==r[0]&&"_"!==r[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var i=Wikifier.getValue(r);if(!t.is(i))return this.error("variable "+r+" is not an inventory!");var n=$(document.createElement("span")),e=!!this.args[1]&&this.args[1];n.wiki(i.show(e)).addClass("macro-"+this.name).appendTo(this.output)}}),Macro.add("linkedinventory",{handler:function(){if(this.args.length<2||this.args.length>3)return this.error("incorrect number of arguments");var r=!1,i="",n=this.args[1].trim(),e="string"==typeof this.args[0]&&this.args[0];if(!e)return this.error("first argument should be the link text");if("$"!==n[0]&&"_"!==n[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var s=Util.slugify(n);s=this.name+"-"+s;var a=Wikifier.getValue(n);if(!t.is(a))return this.error("variable "+n+" is not an inventory!");if(this.args.length>2){if("$"!==(i=this.args[2].trim())[0]&&"_"!==i[0])return this.error('variable name "'+this.args[2]+'" is missing its sigil ($ or _)');if(r=Wikifier.getValue(i),!t.is(r))return this.error("variable "+i+" is not an inventory!")}a.linkedList(r,e).attr({id:s,"data-rec":i,"data-self":n,"data-action":e}).addClass("macro-"+this.name).appendTo(this.output)}})}();
+// end simple-inventory.min.js
+
+// ui-macro.min.js, for SugarCube 2, by Chapel
+// v1.0.0, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;!function(){var s={update:UIBar.setStoryElements,stow:UIBar.stow,unstow:UIBar.unstow,toggle:function(){$("#ui-bar").hasClass("stowed")?UIBar.unstow():UIBar.stow()},hide:function(){$("#ui-bar").css("display","none")},show:function(){$("#ui-bar").css("display","block")},kill:function(){$("#ui-bar").css("display","none"),$("#story").css("margin-left","2.5em")},restore:function(){$("#ui-bar").css("display","block"),$("#story").css("margin-left","20em")},jump:UI.jumpto,saves:UI.saves,restart:UI.restart,settings:UI.settings,share:UI.share,aliases:{refresh:"update",reload:"update",destroy:"kill",revive:"restore",jumpto:"jump",save:"saves",load:"saves",setting:"settings",sharing:"share"}},r=Object.keys(s);function t(t){return t&&"string"==typeof t?function(s){return r.includes(s)}(t=t.toLowerCase().trim())||(t=function(r){return s.aliases[r]||null}(t))?(s[t](),!1):'Command "'+t+'" is not a valid command.':"Command is not a string."}Macro.add("ui",{handler:function(){Array.isArray(this.args)&&this.args.length||this.error("No commands passed to macro.");var s,r=function(s){if(!Array.isArray(s))return"Command list error.";var r=[];return s.forEach((function(s){r.push(t(s))})),r}(this.args.flatten());s=(r=r.filter((function(s){return"string"==typeof s}))).join(" "),r.length&&s&&this.error(s)}})}();
+// end ui-macro.min.js
+
+// meters.min.js, for SugarCube 2, by Chapel
+// v1.0.1, 2020-08-02, 1d6b869ee7a4b36293aaf4003bfe47ffdfbdeba8
+;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
+// end meters.min.js
+
+// volume slider, by chapel; for sugarcube 2
+!function(){function e(e){"number"!=typeof e&&(e=+e),(Number.isNaN(e)||0>e)&&(e=0),e>1&&(e=1)
+try{if(!SimpleAudio)throw Error("Cannot access audio API.")
+"function"==typeof SimpleAudio.volume?SimpleAudio.volume(e):SimpleAudio.volume=e}catch(t){console.error(t.message,t),$.wiki("<<masteraudio volume "+e+">>")}finally{return e}}function t(){var t=settings.volume/a.rangeMax
+a.current=t.toFixed(2),e(a.current)}var n={},a={current:100,rangeMax:100,step:1,setting:!0}
+n.last=a.current,n.start=n.last/a.rangeMax,postdisplay["volume-task"]=function(t){delete postdisplay[t],e(n.start.toFixed(2))},$(document).on("input","input[name=volume]",function(){var t=$("input[name=volume]").val(),o=t/a.rangeMax
+a.current=o.toFixed(2),e(a.current),n.last=t}),Macro.add("volume",{handler:function(){var e=$(document.createElement("span")),t=$(document.createElement("input")),o="macro-"+this.name
+t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,step:a.step,value:n.last}),e.append(t).addClass(o).appendTo(this.output)}}),a.setting&&(Setting&&Setting.addRange&&"function"==typeof Setting.addRange?Setting.addRange("volume",{label:"Volume: ",min:0,max:a.rangeMax,step:a.step,"default":a.current,onInit:t,onChange:t}):console.error("This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube."))}()
+// end volume slider
+
+
+:: Portada {"position":"678,302","size":"100,100"}
+<div class="center top">\
+[img[bella ciao|images/ui/bella-ciao-min.png]]
+''SOLAR SAUDADE''
+<<if (Save.autosave.has())>>
+/* Continue button */
+<<link "CONTINUE">>
+	<<set _slotLatest = -1>>
+/* Compare manual saves */
+	<<for _slotNo = 0; _slotNo < Save.slots.length; _slotNo++>>
+		<<if Save.slots.has(_slotNo)>>
+			<<if _slotLatest === -1>>
+				<<set _slotLatest = _slotNo>>
+			<<else>>
+				<<if Save.slots.get(_slotLatest).date < Save.slots.get(_slotNo).date>>
+					<<set _slotLatest = _slotNo>>
+				<</if>>
+			<</if>>
+		<</if>>
+	<</for>>
+/* Check saves */
+	<<if _slotLatest == -1>>
+	     <<script>>Save.autosave.load()<</script>>
+	<<elseif _slotLatest !== -1 and Save.autosave.get().date < Save.slots.get(_slotLatest).date>>
+        <<run Save.slots.load(_slotLatest)>>
+	<<elseif _slotLatest !== -1 and Save.autosave.get().date > Save.slots.get(_slotLatest).date>>
+    <<script>>Save.autosave.load()<</script>>
+  <</if>><</link>>\
+  <</if>>
+[[NEW GAME|advertencias]]
+<<link 'SAVED GAMES'>>\
+<<ui 'saves'>>
+<</link>>
+
+
+
+by [img[logo utopix|images/ui/utopix-logo.png]]</div>
+
+
+:: StoryMenu {"position":"732,166","size":"100,100"}
+<<if $ss is 1>>\
+<<link "✆ Call">>
+    <<dialog "✆ Call">><<include "llamar">><</dialog>>
+<</link>>
+<<link "✉ Menssages">>
+	<<dialog "✉ Menssages">><<include "mensajes">><</dialog>>
+<</link>>
+<<link "✎ Notes">>
+	<<dialog "✎ Notes">><<include "notas">><</dialog>>
+<</link>>
+<<link "❒ Items">>
+	<<dialog "❒ Items">><<include "objetos">><</dialog>>
+<</link>>
+<<link "❂ Codex">>
+	<<dialog "❂ Codex">><<include "codex">><</dialog>>
+<</link>>
+<<link "''?'' Guide">>
+<<dialog "? Guide">><<include "guia">><</dialog>>
+<</link>>
+<</if>>
+
+
+:: StoryCaption {"position":"896,162","size":"100,100"}
+<<if $ss is 1>>\
+!!PSD Menu
+!!!<<button "''♟ $persona.nm''">><<dialog "Profile">><<include "perfil">><</dialog>><</button>>
+''Characteristics''
+<a href="#" data-tooltip="Body">♠</a>: ''$persona.cp'' <a href="#" data-tooltip="Mind">♦</a>: ''$persona.mn'' <a href="#" data-tooltip="Spirit">♣</a>: ''$persona.sp''
+<a href="#" data-tooltip="Life">♥</a>: $will / ''$maxWill''
+<<showmeter 'willBar' `$will / $maxWill`>>
+<a href="#" data-tooltip="Solares">☉</a>: ''$sol''
+
+''Apps''
+<</if>>\
+
+
+:: inicio [hidebar] {"position":"700,506","size":"100,100"}
+<<audio "title" volume 1 fadeoverto 2 0>>\
+<div class="window">\
+<<type 40ms skipkey "Control">>\
+start personal-support-device
+<</type>>\
+<<type 20ms skipkey "Control">>\
+loading neural modules...
+<</type>>\
+<<type 20ms skipkey "Control">>\
+deploying interface...
+connecting action nodes...
+calibrating bidirectional ports...
+configuring assistant...
+<</type>>\
+<<type 5ms skipkey "Control">>\
+Start the personal-support-device assistant?
+<</type>></div>\
+<<type 1ms skipkey "Control">><div class="box box-shadow"><i class="cor"></i>[[Accept|cr0]]</div>
+<</type>>
+
+
+:: cr1 [mars scene] {"position":"990,502","size":"100,100"}
+<div class="window">\
+<<type 20ms>>Name: $persona.nm<</type>>\
+Awesome $persona.nm! Pleased to meet you, can you tell me where you where born?</div>\
+<div class="box box-shadow"><i class="cor"></i>[[♁ Earth|cr2][$persona.orgn to "tr";$personadata.orgn to "♁ Earth"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[♀ Venus|cr2][$persona.orgn to "vn"; $personadata.orgn to "♀ Venus"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[♂ Mars|cr2][$persona.orgn to "mr"; $personadata.orgn to "♂ Mars"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[☾ Satellite|cr2][$persona.orgn to "mr"; $personadata.orgn to "☾ Satellite"]]</div>
+
+
+:: cr2 [mars scene] {"position":"1165,503","size":"100,100"}
+<div class="window">\
+<<type 20ms>>Origin: ''$personadata.orgn''<</type>>\
+<<if $persona.orgn is "tr">>So you're from Earth, the mother planet.<<elseif $persona.orgn is "vn">>The blue planet, the second one to be terraformed<<elseif $persona.orgn is "mr">>The red plantes, it was the firs planet to be terraformed<<elseif $persona.orgn is "sat">>A satellite settlement. Maybe from the Moon itself?<</if>>
+Another question if you please, how do you identify yourself?</div>\
+<div class="box box-shadow"><i class="cor"></i>[[Male|cr3][$persona.gene to "h";$personadata.gene to "Male"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Female|cr3][$persona.gene to "m";$personadata.gene to "Female"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Non binary|cr3][$persona.gene to "nb";$personadata.gene to "Non binary"]]</div>
+
+
+:: cr3 [mars scene] {"position":"1151,656","size":"100,100"}
+<div class="window">\
+<<type 20ms>>Gender: ''$personadata.gene''<</type>>\
+Great $persona.nm! Now let me help you with your career profile.  What's your professional background?</div>\
+<div class="box box-shadow"><i class="cor"></i>[[Writing|cr4][$persona.pr to "esc"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Military|cr4][$persona.pr to "mlt"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Engeneering|cr4][$persona.pr to "ing"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Social sciences|cr4][$persona.pr to "cs"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Hard sciences|cr4][$persona.pr to "cn"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Performing arts|cr4][$persona.pr to "ap"]]</div>
+
+
+:: StoryInit {"position":"1034,169","size":"100,100"}
+<<preload 'images/npc/carlo-lumini.gif' 'images/npc/carlo-luminiH.png'>>
+/* Creación de personaje completada */
+<<set $ss to 0>>
+/* Decisión de Alignment tomada */
+<<set $ssa to 0>>
+/* Variables de personaje */
+<<set $persona to {nm: "Josi", orgn: "tr", gene: "nb", pr: "esc", pq: "tf", cp: 1, mn: 1, sp: 1, pow: 3}>>
+/* Experience points */
+<<set $caracp to {cpp: 0, mnp: 0, spp: 0}>>
+/* Alignment */
+<<set $align to {pluto: 0, top: 0, con: 0, rev: 0, cen: 0}>>
+/* Moneda */
+<<set $sol to 100>>
+/* Variables print de personaje */
+<<set $personadata to {orgn: "♁ Earth", gene: "Non binary", pr: "Escribir", pq: "Toqué fondo"}>>
+<<set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)>>
+<<newmeter 'willBar'>>
+    <<sizing '100%'>>
+<</newmeter>>
+/% create a new, empty inventory in the $inventory variable %/
+<<newinventory '$inventory'>>
+
+/* ubicacion al llamar */
+<<set $location to passage()>>
+/* notas */
+<<set $note to {trvlc:0,red:0,bella:0}>>
+/* mensajes */
+<<set $msg to {lum1:0,lum2:0}>>
+/* Contests*/
+<<set $dif to 8>>
+<<set $roll to 0>>
+<<set $retada to 0>>
+
+/* salvados */
+<<set $retos to {test:0, cifr1:0, prob:0}>>
+/* codex */
+<<set $codex to {ac:0, gsi:0, gsii:0, isol:0, ms:0, ots:0, pb:0, car:0}>>
+/* visitados */
+<<set $visit to {marshab:0,carport:0}>>
+
+<<cacheaudio "intro" "sound/intro.ogg" "sound/intro.mp3">>
+<<cacheaudio "title" "sound/title.ogg" "sound/title.mp3">>
+
+<<waitforaudio>>
+
+<<cacheaudio "call" "sound/fx/call.ogg" "sound/fx/call.mp3">>
+<<cacheaudio "mars" "sound/mars.ogg" "sound/mars.mp3">>
+
+
+:: cr4 [mars scene] {"position":"974,648","size":"100,100"}
+<<switch $persona.pr>>\
+<<case "esc">> <<set $personadata.pr to "Writing">> <<set $persona.sp += 1>> <<set $persona.mn += 1>>\
+<<case "mlt">>  <<set $personadata.pr to "Military">> <<set $persona.cp += 2>>\
+<<case "ing">> <<set $personadata.pr to "Engeneering">> <<set $persona.sp += 1>> <<set $persona.cp += 1>>\
+<<case "cs">> <<set $personadata.pr to "Ciencias Sociales">> <<set $persona.cp += 1>> <<set $persona.mn += 1>>\
+<<case "cn">> <<set $personadata.pr to "Ciencias Naturales">> <<set $persona.mn += 2>>\
+<<case "ap">><<set $personadata.pr to "Performance">> <<set $persona.sp += 2>>\
+<</switch>>\
+<div class="window">\
+<<type 5ms>>Profession: $personadata.pr<</type>>\
+Thanks a lot, we are almost done. Could you please tell me of an event that defined your life?</div>\
+<div class="box box-shadow"><i class="cor"></i>[[Death in the family|cr5][$persona.pq to "mf"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Self-discovery journey|cr5][$persona.pq to "vd"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Touched rock-bottom|cr5][$persona.pq to "tf"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Graduation|cr5][$persona.pq to "te"]]</div>
+<div class="box box-shadow"><i class="cor"></i>[[Season in the countryside|cr5][$persona.pq to "tc"]]</div>
+
+
+:: cr5 [mars scene] {"position":"828,645","size":"100,100"}
+<<switch $persona.pq>>\
+<<case "mf">> <<set $personadata.pq to "Death in the family">> <<set $persona.sp += 2>>\
+<<case "vd">> <<set $personadata.pq to "Self-discovery journey">> <<set $persona.cp += 1>> <<set $persona.sp +=1>>\
+<<case "tf">> <<set $personadata.pq to "Touched rock-bottom">> <<set $persona.sp += 1>> <<set $persona.mn += 1>>\
+<<case "te">> <<set $personadata.pq to "Graduation">> <<set $persona.mn += 2>>\
+<<case "tc">> <<set $personadata.pq to "Season in the countryside">> <<set $persona.cp += 1>> <<set $persona.sp +=1>>\
+<</switch>>
+<<set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)>>\
+<<set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)>>\
+<div class="window">\
+!''♟ $persona.nm''
+Origin: $personadata.orgn
+Gender: $personadata.gene
+!!Characteristics
+<<include "caracteristicas-crea">>
+!!History
+<<include "historia">>
+<div class="box box-shadow"><i class="cor"></i><<link [[Confirm. Launch PSD interface..|cr6]]>><<set $ss to 1>><<ui 'toggle'>><</link>></div>
+<div class="box box-shadow"><i class="cor"></i>[[Reject. Re-enter data.|cr0]]</div>
+
+
+:: cr6 [autosave savable mars scene action] {"position":"673,728","size":"100,100"}
+<<audio "mars" volume 0 fadeoverto 5 1>>\
+<div class="window">\
+<<type 40ms>>⛁ Game Saved!<</type>>\
+<<if $visit.marshab == 0>>\
+			<<notify>>⛁ Game Saved!
+			❂ New entry!<</notify>>\
+			<<type 40ms>>❂¡Nuevas entry in the Codex!<</type>>\
+			<<set $visit.marshab to 1>>\
+			dispositivo-soporte-personal started
+			<a href="#" data-tooltip="✆ Call. ✉ Menssages. ✎ Notes. ❒ Items. ❂ Codex. ? Guide." class="textip">''Apps''</a> started
+			<<set $visit.marshab to 1>>\
+			Excellent $persona.nm, your <a href="#" data-tooltip="Personal Support Device" class="textip">'' PSD''</a> it's configured.
+<<else>>\
+<<notify>>⛁<</notify>>\
+<</if>>\
+<<if $note.trvlc == 0>>\
+If you have any questions you can consult the <<button "<b>?</b> Guide">><<dialog "? Guide">><<include "guia">><</dialog>><</button>>
+<</if>>\
+You're in your room in Solentiname, one the largest cities in â™‚ Mars. What do you do?</div>\
+<<if $note.trvlc == 0>>
+<<button "''✆ Call''">><<dialog '✆ Call'>><div class="box box-shadow"><i class="cor"></i>\
+<<link [[@carlolumini: Carlo Lumini. //MARS MEDIA//.|carlo1]]>><<set $location to passage()>><<script>>Dialog.close()<</script>><</link>></div><</dialog>><</button>>
+<<else>>\
+<div class="box box-shadow"><i class="cor"></i>\
+<a href="#" data-tooltip="Life">♥</a><<link "Sleep" "dormir">>
+    <<set $will to Math.clamp($will + $maxWill, 0, $maxWill)>>\
+    <<updatemeter 'willBar' `$will / $maxWill`>>
+<</link>></div>
+<</if>>\
+<div class="box box-shadow"><i class="cor"></i>\
+<a href="#" data-tooltip="🂪" class="zoom">🂪</a> [[Test your physical capabilities|prueba-fail][$roll to dice('2d6');$dif to 10]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+☇<a href="#" data-tooltip="🃘" class="zoom">🃘</a> <<linkappend "Meditate">>
+	<<set $roll to (dice('2d6'))>>\
+	<<set $dif to 8>>\
+	<<include "retadasp">>
+	<<if $dif <= $retada>>\
+		''Hit''. <<include "retosp">>\
+		<div class="box box-shadow"><i class="cor"></i>\
+		''<a href="#" data-tooltip="Life">♥</a>[[Meditar|meditar][$will to Math.clamp($will + $maxWill, 0, $maxWill)]]''</div>
+	<<else>>\
+		''Fail''. <<include "retosp">>\
+		You can't focus on meditation.
+	<</if>>\
+<</linkappend>></div>
+
+
+:: notas {"position":"319,588","size":"100,100"}
+<<if $note.bella is 1>>\
+<div class="box box-shadow">\
+<<message "Bella">>\
+The ship that left from ♇ Charon four years ago and is suspected to be headed to Alfa Centauri. Those behind the operation could set off a scandal.<</message>></div>
+<</if>>\
+<<if $note.trvlc is 1>>\
+<div class="box box-shadow">\
+<<message "Voyage to ♇ Charon">>\
+The last inhabited moon in the Solar System, thanks to the ''Moonshot'' is close enough, but a trip to Pluto remains long. I should get my stuff in order to be at the port tomorrow.<</message>></div>
+<</if>>\
+<<if $note.red is 1>>\
+<div class="box box-shadow">\
+<<message "Appointment in the port">>\
+Once I arrive in ♇ Caronte, I should get in touch with Carlo to invesigate this story. The details to find him are in a message from Carlo.<</message>></div>
+<</if>>\
+
+
+:: carlo1 [dsp hidemenu] {"position":"559,858","size":"100,100"}
+<<audio "mars" stop>>\
+<div class="square"><div class="content">
+<div class="blob white"><span>✆</span></div></div></div>
+<<type 40ms>>connecting camera-drone...<</type>>
+<<timed 1s>><<audio "call" loop play>>\<</timed>>\
+<<fadein 200ms 2s>>ring<</fadein>> <<fadein 200ms 4s>>ring<</fadein>> <<fadein 200ms 6s>>ring<</fadein>> <<fadein 200ms 8s>>ring<</fadein>> <<fadein 200ms 10s>>ring<</fadein>>
+/* Execute the handler function when the event triggers. */
+<<timed 12s>><<goto "carlo2">><</timed>>
+
+
+:: carlo2 [hidemenu] {"position":"539,993","size":"100,100"}
+<<audio "call" stop>>\
+<<audio "mars" loop volume 0 fadeoverto 5 0.2>>\
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if visited("carlo3")>>\
+Carlo: What's wrong, buddy? Forgetting something?
+<div class="box box-shadow"><i class="cor"></i>\
+<<link "No, sorry, we'll talk later..." $location>>>><</link>></div>
+<<else>>\
+Carlo: Hello? $persona.nm? I thought you were dead hahahaha.
+<div class="box box-shadow"><i class="cor"></i>\
+[[Very funny Carlo, what do you want to talk to me about?|carlo3]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[["(Making a nasal voice) I'm not " + $persona.nm + ", we have them held hostage and want a ransom"|carlo3]]</div>
+<</if>>
+
+
+:: carlo3 [hidemenu] {"position":"833,1093","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-luminiH.png]]@@
+Carlo: Haha, very good. Enough joking around. I wanted to talk to you about something serious. However, once I start explaining it you can't walk away. We need to cover this story urgently, we can't be disclosing it unless it's with someone we know will publish it. What do you say?
+<div class="box box-shadow"><i class="cor"></i>\
+[[Sure, you can count on me|carlo4]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[I don't think so, don't want to get in trouble right now|confcarlo]]</div>
+
+
+:: carlo4 [hidemenu] {"position":"864,1373","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+Carlo: I know I was right in reaching out to you first. Listen carefully, let me check we have a properly encrypted connection before I begin.
+<div class="box box-shadow"><i class="cor"></i>\
+<div class="box box-shadow"><i class="cor"></i>\
+<a href="#" data-tooltip="🃈" class="zoom">🃈</a> [[Encrypt connection|checci][$roll to dice('2d6');$dif to 8]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[Go ahead|carlocifr]]</div>
+
+
+:: confcarlo [hidemenu] {"position":"728,1400","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+Carlo: Are you sure? It might be what you're looking for. A change of scenery and a fresh start.
+<div class="box box-shadow"><i class="cor"></i>\
+[[I'm sure, you should find someone else|fin1]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[You're right, count me in|carlo4]]</div>
+
+
+:: fin1 {"position":"564,1415","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+Carlo: Ok, we'll find someone else. Such a shame...
+[[Keep going|fin1b]]
+
+
+:: fin1b {"position":"700,1430","size":"100,100"}
+And you carry on with life as usual, and in time you watch in the news that a military operation against Proxima b, a planet in Alfa Centauri. According to the media, they were testing planetary destruction weapons.
+<<include "no-will">>
+
+
+:: checci [hidemenu] {"position":"1058,1322","size":"100,100"}
+<<include "retadamn">>
+<<if $dif <= $retada>>\
+		''Hit''. <<include "retomn">>\
+		<<include "subidamn">>\
+		<<include "mnup">>
+		<<set $retos.cifr1 to 1>>\
+		<<button "''?'': ★ Experience Points">><<include "guiacaracp">><</button>>
+		<<type 40ms skipkey "Control">>\
+			run clandestino
+		<</type>>\
+		<<type 5ms skipkey "Control">>\
+			loading encryptation system...
+		<</type>>\
+		<<type 5ms skipkey "Control">>\
+			encrypting communications...
+		veridiyng key...
+		<</type>>\
+		<<type 5ms skipkey "Control">>\
+			clandestino module started
+			connection encrypted
+		<</type>>\
+		<<type 1ms>>\
+		<div class="box box-shadow"><i class="cor"></i>\
+		[[Continue|carlo5]]</div><</type>>
+<<else>>\
+	''Fail''. <<include "retomn">>\
+	<<type 40ms skipkey "Control">>\
+			run clandestino
+		<</type>>\
+		<<type 5ms skipkey "Control">>\
+			clandestino error 503...
+			check clandestino-log to know more.
+		<</type>>\
+		<<type 1ms>>\
+		<div class="box box-shadow"><i class="cor"></i>\
+		[[Continue|carlocifr]]</div><</type>>
+<</if>>\
+
+
+:: carlocifr [hidemenu] {"position":"999,1460","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+Carlo: Don't worry, I'll take care of it.
+	<<type 40ms>>\
+	@carlolumini launches clandestino...
+	<</type>>\
+	<<type 5ms start 2s>>\
+	clandestino module started
+	connection encrypted
+	<</type>>\
+<<type 1ms>>\
+		<div class="box box-shadow"><i class="cor"></i>\
+		[[Continue|carlo5]]</div><</type>>
+<</if>>\
+
+
+:: carlo6 [hidemenu] {"position":"965,1638","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if $codex.gsii == 0>>\
+<<notify>>❂ New Entry!<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.gsii to 1>>\
+<</if>>\
+Carlo: Exactly!
+<div class="box box-shadow"><i class="cor"></i>\
+[[Continue|carlo7][$align.cen += 1]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+<div class="circle"><a data-tooltip="Conservative Plutocracy">◻︎</a></div> [[This would have been avoided with a proper control policy.|carlo7c][$align.con += 1; $align.pluto += 1; $ssa to 1]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+<div class="circle"><a data-tooltip="Toparchist Revolution">◼︎</a></div> [[I would add that one of the main causes was the decadence of the model imposed from ♀ Venus.|carlo7b][$align.rev += 1; $align.top += 1; $ssa to 1]]</div>
+
+
+:: carlo6b {"position":"741,1593","size":"100,100"}
+<<if $codex.gsii == 0>>\
+<<notify>>❂ New entry!<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.gsii to 1>>\
+<</if>>\
+Carlo: Are you kidding me? This was just 10 years ago. It involved all the inhabited places in the Solar System, with ♂ Mars and the
+☾ Satellites on one side, ♀ Venus and ♁ Earth on the other.
+<div class="box box-shadow"><i class="cor"></i>\
+[[Say nothing...|carlo7][$align.cen += 1]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[◻︎ I knew it, Martian separatist where to blame|carlo7c][$align.con += 1; $align.pluto += 1; $ssa to 1]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[◼︎ It was surely due to the decadence of the model imposed from ♀ Venus.|carlo7b][$align.rev += 1; $align.top += 1; $ssa to 1]]</div>
+
+
+:: carlo7b [hidemenu] {"position":"804,1766","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<notify>>❂ New entry!
+⬗: +♛ +♚ Alignment<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<type 5ms>><a data-tooltip="Alignment">⬗</a> You get: +1 <div class="circle"><a data-tooltip="Revolution">♛</a></div> y +1 <div class="circle"><a data-tooltip="Toparchy">♚</a></div><</type>>\
+<<set $codex.ots to 1>>\
+<<type 5ms>>You've just made your <a href="#" data-tooltip="♚ Shows your worldview, how you feel society should be organized. ♛ Also shows your position concerning change and your approach towards real issues." class="textip tip-down">''⬗ Alignment''</a> decision, from now on you can see the tendency of your decisions in the <a href="#" data-tooltip="Displays your data." class="textip tip-down">''♟ Profile''</a> window.<</type>>\
+Carlo: What caused the war is still subject of debate. The truth is that the war ended with the tearing of the ''solar treaty'', a coalition between the goverments of the planets ♁ Earth, ♀ Venus and ♂ Mars (☾ Satelllites where protectorates of the ''STO'' central government).
+<div class="box box-shadow"><i class="cor"></i>\
+[[Continue|carlo8]]</div>
+
+
+:: carlo8 [hidemenu] {"position":"799,1929","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if $codex.ms == 0>>
+<<notify>>❂ Entry modification!<</notify>>\
+<<type 40ms>>❂ ms == 0>>
+<<notify>>❂ Entry modification in the codex!<</type>>\
+<<set $codex.ms to 1>>\
+<</if>>\
+Carlo: Once the war was over, control over the ''Moonshot'' ports, a space travel technology, , was left to the ''Union of Lunar Councils'', and organization that brings together the populated ☾ Satellites of the ''Solar System''...
+<div class="box box-shadow"><i class="cor"></i>\
+[[Say nothing...|carloPlus]]</div>
+<div class="box box-shadow"><i class="cor"></i>\
+[[Boooooring...|carlo9b]]</div>
+
+
+:: carlo7 [hidemenu] {"position":"644,1770","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<notify>>❂ New Entry!<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.ots to 1>>\
+Carlo: The truth is that the war ended with the tearing of the ''solar treaty'', a coalition between the goverments of the planets ♁ Earth, ♀ Venus and ♂ Mars (☾ Satelllites where protectorates of the ''STO'' central government).
+<div class="box box-shadow"><i class="cor"></i>\
+[[Continuar|carlo8]]</div>
+
+
+:: carlo7c [hidemenu] {"position":"957,1773","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<notify>>❂
+⬗: +♕ +♔<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.ots to 1>>\
+<<type 5ms>><a data-tooltip="Alignment">⬗</a> You get: +1 <div class="circle"><a data-tooltip="Conservadurismo">♕</a></div> y +1 <div class="circle"><a data-tooltip="Plutocracy">♔</a></div><</type>>\
+<<type 5ms>>You've just made your <a href="#" data-tooltip="♚ Shows your worldview, how you feel society should be organized. ♛ Also shows your position concerning change and your approach towards real issues." class="textip tip-down">''⬗ Alignment''</a> decision, from now on you can see the tendency of your decisions in the <a href="#" data-tooltip="Displays your data." class="textip tip-down">''♟ Profile''</a> window.<</type>>\
+Carlo: I didn't know you held that opinion, it's not that popular here in ♂ Mars. The truth is that the war ended with the tearing of the ''solar treaty'', a coalition between the goverments of the planets ♁ Earth, ♀ Venus and ♂ Mars (☾ Satelllites where protectorates of the ''STO'' central government).
+<div class="box box-shadow"><i class="cor"></i>\
+[[Continuar|carlo8]]</div>
+
+
+:: carlo9b [hidemenu] {"position":"904,2042","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-luminiH.png]]@@
+<<if $codex.car == 0>>\
+<<notify>>❂ New Entry!<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.car to 1>><</if>>\
+Carlo: Hahaha, I know you're familiar with this, just want to get us on the same page. After the end of the second war, exploration travel outside the Solar System was suspended, or so they say. As it turns out, we have an informant who claims to have seen the launch of a space cruise some four years ago from  ''♇ Charon'', on of the ♇ Pluto moons.
+<div class="box box-shadow"><i class="cor"></i>\
+[[Go on...|carlo10]]</div>
+
+
+:: carlo10 [hidemenu] {"position":"879,2198","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if $codex.ac == 0>>\
+<<notify>>✎ New note!
+❂ New entry!<</notify>>\
+<<type 40ms>>✎ New note! ❂ New codex entry!<</type>>\
+<<set $codex.ac to 1>>\
+<<else>>\
+<<notify>>✎ New note!<</notify>>\
+<<type 40ms>>✎ New note!<</type>>\
+<</if>>\
+<<set $note.bella to 1>>\
+Carlo: But it's not something well known at the moment, ♇ Charon has a direct trajectory Alpha Centauri, the closest system to ours. I don't know if there are many more details, but our source assures us that he saw the name of the ship, ''Bella Horizon''.
+<div class="box box-shadow"><i class="cor"></i>\
+[[It's a lot to think about, I suppose you want me to investigate and bring you a story|carlo11]]</div>
+
+
+:: carlo11 [hidemenu] {"position":"631,2397","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-luminiH.png]]@@
+Carlo:  That's why we're having this conversation. I have a ticket reservation for a special cruise leaving tomorrow morning for ♇ Charon, , stopping in ♃ Europa (a ♃ Jupiter's moon), The trip should last some 10 hours as we cannot afford to send you on a hypership.
+<div class="box box-shadow"><i class="cor"></i>\
+[[I understand why you left that for the end. Very well, send me the ticket and the contact information|carlo12]]</div>
+
+
+:: carlo12 [hidemenu] {"position":"771,2403","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<notify>>❒<</notify>>\
+<<type 40ms>>❒ New item!<</type>>\
+<<pickup '$inventory' '✈ Boleto cod: 763'>>\
+Carlo: Here's your ticket. If something comes up don't hesitate to get in touch. One final detail, our informant will not get in touch via PSD, he wants to stay anonymous. With these things you never know. You should meet him at the port as soon as you arrive, i'll send you the information in an //encrypted message//.
+<div class="box box-shadow"><i class="cor"></i>\
+[[Ok, thanks for trusting in me Carlo, ciao.|carlo13]]</div>
+
+
+:: carlo13 [hidemenu] {"position":"912,2396","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-luminiH.png]]@@
+<<notify>>✉ New message!<</notify>>\
+<<type 40ms>>✉ New message!<</type>>\
+<<set $msg.lum1 to 1>>\
+Carlo: Ciao $persona.nm, you'r a beauty.
+<div class="box box-shadow"><i class="cor"></i>\
+<<link [[Hang up|pensamiento]]>><</link>></div>
+
+
+:: llamar {"position":"343,317","size":"100,100"}
+<div class="box box-shadow"><i class="cor"></i>\
+<<link [[@carlolumini: Carlo Lumini. Mars Media|carlo1]]>><<set $location to passage()>><<script>>Dialog.close()<</script>><<ui 'toggle'>><</link>></div>
+
+
+:: mensajes {"position":"330,462","size":"100,100"}
+<<if $msg.lum1 == 1>>\
+<div class="box box-shadow">\
+<<message "@carlolumini: contácto (//cifrado//) / 14feb3020">>\
+		//This is an encrypted messagel//
+		As I'd told you, this guy is careful, doesn't want you reaching him via PSD. He says he'll wait for you when you land in ♇ Charon, next to the port vending machine. Wait for him with arms crossed and when he tells you "Tupi, or not tupi",   junto a la máquina expendedora del puerto, esperalo cruzado de brazos y cuando te diga "Tupi, or not tupi", you answer "that is the question". Don't ask me what it means, this guy is quite cryptic<</message>></div>
+<</if>>\
+<div class="box box-shadow">\
+<<message "@carlolumini: importante! / 10feb3020">>\
+	Hello $persona.nm, I've been trying to reach you for days. There's a new story I'd like you to investigate, ''call me'' as soon as you can. Ciao!<</message>></div>
+
+
+:: perfil {"position":"341,159","size":"100,100"}
+!!''♟ $persona.nm''
+Origin: $personadata.orgn
+Gender: $personadata.gene
+!!!Characteristics
+<<include "caracteristicas">>
+!!!''Story''
+<<include "origen">>
+<<include "profesion">>
+<<include "quiebre">>
+<<if $ssa is 1>>\
+<<include "Alignment">>
+<</if>>
+
+
+:: origen {"position":"203,156","size":"100,100"}
+<div class="box box-shadow">\
+<<message "''$personadata.orgn''">>\
+<<switch $persona.orgn>>\
+<<case "tr">>You were born on Earth, the "mother planet", home to all intelligent life known until now. The First Solar War left it devastated, but there are still small cities in what used to be continents, connected by high speed trains. ''Governing body:'' Free Cities of New Earth.
+<<case "vn">>You were born in Venus, "the planet of light" as its inhabitants say. Ever since its terraformation, it has been the Solar Systems academic and cultural center. It's institutions emerged from the migration of the Old Earth's international bodies, with all its virtues and vices. ''Governing body:'' Venusian Alliance of Nations Naciste en Venus.
+<<case "mr">>You were born in Mars, called "the land of monsters". Ever since the discovery of animal fossils with biological composition which are still being studied 500 years later, Mars' terraformation gave rise to a planet full of artificial beaches in its inhabitable areas. ''Governing body:'' Planetary Federation of Martian Republics.
+<<case "sat">>You were born in one of the moons colonized by humanity in is quest to inhabit everything. Most other planets consider "lunar people" as lacking unity and organization, but you know that's not true. All the inhabited moons, from Creonte to the Moon, as ports, share nomadic lives. ''Governing body:'' Union of Lunar Communes.
+<</switch>>\<</message>></div>
+
+
+:: profesion {"position":"203,271","size":"100,100"}
+<div class="box box-shadow"><<message "''$personadata.pr''">>\
+<<switch $persona.pr>>\
+<<case "esc">>Before becoming an investigative journalist you were a fairly successful writer, with a couple of novels and a short story compilation published. Now you're a freelance journalist for several media outlets.
+<<case "mlt">>You served in the Second Solar War, and you don't even want to remember which side you ended up on, as the security contractor you worked for kept changing sides until the war was over. Now you're a freelance journalist for several media outlets.
+<<case "ing">>Your final "Deep Learning" contributions shook the Artificial Intelligence development community, but your work did not give you any motivation. Now you're a freelance journalist for several media outlets.
+<<case "cs">>Academia and social sciences research were your passison for a while. Your thesis was on "The foundational myth of natural satellite societies". Now you're a freelance journalist for several media outlets, including.
+<<case "cn">>Science appears as a universal language before you, and your research in biology and physics is still leading to new results, but you decided to try something else. Now you're a freelance journalist for several media outlets.
+<<case "ap">>Your ability to entertain, charm, delight and even move the audience is renowned, but you no longer wanted to get on stage. Now you're a freelance journalist for several media outlets, including.
+<</switch>>\<</message>></div>
+
+
+:: quiebre {"position":"205,389","size":"100,100"}
+<div class="box box-shadow"><<message "''$personadata.pq''">>\
+<<switch $persona.pq>>\
+<<case "mf">>After struggling against a terminal illness, your motther passed away. You need to change scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "vd">>After spending a month in a retreat in Jupiter's moon Europa. You need a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "tf">>After they stopped calling you in your previous workplace, and your partner asked for some space, you had enough. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "te">>You've just graduated in Cognitive Science, and feel academia has nothing left to offer you. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "tc">>You've just finished some work initiatives in Mars' crop fields. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<</switch>><</message>></div>
+
+
+:: caracteristicas {"position":"207,15","size":"100,100"}
+<div class="box box-shadow">\
+<<message "♠ Body: ''$persona.cp''">>Character's physical attributes, allows you to undertake complex physical actions such as using force, speed or stamina.<</message>></div>
+<<button "★: $caracp.cpp / 3">><<include "guiacaracp">><</button>>
+<div class="box box-shadow">\
+<<message "♦ Mind: ''$persona.mn''">>Character's ability to reason and memorize, allows you yo form calculation, interpretation andd problem-solving tasks.<</message>></div>
+<<button "★: $caracp.mnp / 3">><<include "guiacaracp">><</button>>
+<div class="box box-shadow">\
+<<message "♣ Spirit: ''$persona.sp''">>Define's the character's integrity, charisma and personality. Indicates your ability to navigate social situations and face the unknown.<</message>></div>
+<<button "★: $caracp.spp / 3">><<include "guiacaracp">><</button>>
+<div class="box box-shadow">\
+<<message "♥ Life: ''$maxWill''">>Ability and possibility of moving forward mentally, physically and spiritually. If it reaches zero (0) you cannot continue. The <a href="#" data-tooltip="♥ = [(♠ + ♦ + ♣)/ 3]" class="matip">''♥ Life''</a> is obtained sained via a //integer part function// of the sum of the other three <a href="#" data-tooltip="♠Body, ♦Mind, ♣Spirit" class="textip">''characteristic''</a> divided by three (3).<</message>></div>
+<<set _natwill to ($persona.pow/3).toFixed(1)>>\
+<<set _nextwill to ($maxWill+1)>>\
+<<button "★: _natwill / _nextwill">><<include "guiacaracp">><</button>>
+
+
+:: objetos {"position":"315,734","size":"100,100"}
+<<inventory '$inventory'>>
+
+
+:: cr0 [mars scene] {"position":"850,499","size":"100,100"}
+<<set $persona to {nm: "Josi", orgn: "tr", gene: "nb", pr: "esc", pq: "tf", cp: 1, mn: 1, sp: 1, pow: 3}>>\
+<<audio "mars" volume 0 fadeoverto 5 1>>\
+<div class="window">\
+Hi! ☻ I'm your new ''Personal Support Device (PSD)''.
+I need you to answer some simple questions before launching the system.
+<label>Entry your name: <<textbox "$persona.nm" "Josi">> </label>
+</div>\
+/*verificar que no sea null*/\
+<div class="box box-shadow"><i class="cor"></i>[[Accept|cr1]]</div>
+
+
+:: no-will {"position":"101,816","size":"100,100"}
+<span id="gameover">GAME OVER?</span>
+<div class="box box-shadow"><i class="cor"></i>\
+<<link "Restart">>
+	<<run Engine.restart()>>
+<</link>></div>
+
+
+:: prueba-fail [mars scene action] {"position":"884,774","size":"100,100"}
+<div class="window">\
+<<include "retadacp">>
+<<if $dif <= $retada>>\
+	/* Resolución reto */\
+	''Hit''. <<include "retocp">>\
+	<<if $retos.test == 0>>\
+		<<set $retos.test to 1>>\
+		<<include "subidacp">>\
+		<<include "cpup">>
+		/* Guia sistema de puntos */\
+<<button "''?'': ★ Experience points">><<include "guiacaracp">><</button>>
+	 You passed the test. You find out something new about your body.
+	<<else>>\
+You passed the test. But you had done it before, so you learn nothing new.
+	<</if>>\
+<<else>>\
+   ''Fail''. <<include "retocp">>\
+    <<set $will to Math.clamp($will - 1, 0, $maxWill)>>\
+    <<updatemeter 'willBar' `$will / $maxWill`>>\
+	You get: -1 <a href="#" data-tooltip="Life" class="tip-down">♥</a> (<a href="#" data-tooltip="Life" class="tip-down">♥</a>: $will / $maxWill)
+	You failed the test.
+<</if>>\
+</div>\
+<<if $will == 0>>\
+		<<include "no-will">>
+	<<else>>\
+		<div class="box box-shadow"><i class="cor"></i>\
+		[[Go on...|cr6]]</div>
+<</if>>\
+
+
+:: pensamiento [hidemenu] {"position":"1053,2398","size":"100,100"}
+<<notify>>✎ New notes!<</notify>>\
+<<type 40ms>>✎ New notes!<</type>>\
+<<set $note.trvlc to 1>>\
+<<set $note.red to 1>>\
+Your adventure has begun. You should be at the ''launch port'' tomorrow in the early hours.
+<div class="box box-shadow"><i class="cor"></i>\
+<<link "Continue" $location>><</link>></div>
+
+
+:: dormir {"position":"868,920","size":"100,100"}
+<div class="">\
+	You recover: <a href="#" data-tooltip="Life">♥</a> Life. <a href="#" data-tooltip="Life">♥</a>: $will / $maxWill
+	You rest for a couple of hours...
+	(End of the demo, hope you liked it).
+</div>
+<div class="box box-shadow"><i class="cor"></i>\
+<<link "Restart">>
+	<<run Engine.restart()>>
+<</link>></div>
+
+
+:: meditar [mars scene action] {"position":"579,589","size":"100,100"}
+<<updatemeter 'willBar' `$will / $maxWill`>>\
+<div class="window">\
+Your recover: <a href="#" data-tooltip="Life" class="tip-down">''♥''</a> (<a href="#" data-tooltip="Life" class="tip-down">''♥''</a>: $will / $maxWill)
+Te sientas en el suelo de la habitación, respiras de forma consciente y profunda, estás en contácto con todo lo que te rodea...
+Sientes como tu Life se recupera.
+</div>
+<div class="box box-shadow"><i class="cor"></i>[[Continuar|cr6]]</div>
+
+
+:: dumb [mars scene action] {"position":"716,868","size":"100,100"}
+<<updatemeter 'willBar' `$will / $maxWill`>>\
+<div class="window">Your recover: <a href="#" data-tooltip="Life" class="tip-down">''♥''</a> (<a href="#" data-tooltip="Life" class="tip-down">''♥''</a>: $will / $maxWill)
+You did something stupid, you really should stop.
+<<if $will == 0>>\
+		<<include "no-will">>
+	<<else>>
+		<div class="box box-shadow"><i class="cor"></i>\
+		[[Continue|cr6]]</div>
+	<</if>>\
+
+
+:: codex {"position":"337,857","size":"100,100"}
+<<if $codex.ac is 1>>\
+<div class="box box-shadow">\
+<<message "''Alfa Centauri''">>\
+Triple star system. Its stars are Alfa Centauri, Beta Centauri (o Hadar) and Proxima Centauri. It is the closest to the Solar System, at a distance of approximatly 4.3 l.y.=light years.<</message>></div>
+<</if>>\
+<<if $codex.car is 1>>\
+<div class="box box-shadow">\
+<<message "''Bella Horizon''">>\
+Mysterious space ship that left from ''♇ Charon'' with an unknown destination. Those familiar with the launch suspect it was headed towards ''Alpha Centauri''.<</message>></div>
+<</if>>\
+<<if $codex.car is 1>>\
+<div class="box box-shadow">\
+<<message "''♇ Charon''">>\
+♇ Pluto moon, covered mostly in ice. Being the last inhabited satellite in the Solar System, it doesn't have much trade. Its main activities are scientific research and mineral extraction.<</message>></div>
+<</if>>\
+<<if $codex.gsi is 1>>\
+<div class="box box-shadow">\
+<<message "'Solar War, First''">>\
+First war at a solar scale, resulted in the fall of the ''Solar Empire''. It began in 2580, when the struggling forces within the Empire, the ''Rothschild corporate house'' and ''Sanctum santorum'' declared war on each other. The smaller corporate houses, and a host of other tendencies emerged during the conflict, which ended with the signing of the ''Solar Treaty'' and the forming of the ''Solar Treaty Organization'' in 2604<</message>></div>
+<</if>>\
+<<if $codex.gsii is 1>>\
+<div class="box box-shadow">\
+<<message "''Solar War, Second''''">>\
+Also known as the ''Marslunar independence war''. Military conflict that began in the year 3006 and involved the planetary governments of   â™€ Venus and â™ Earth, against the //"separatists"// from â™‚ Mars and the â˜¾ Satellites, which at the time were colonies run by the ''Solar Treaty Organization''. It ended in 3010, with â™‚ Mars and â˜¾ Satellites breaking from the ''Solar Treaty Organization''.<</message>></div>
+<</if>>\
+<<if $codex.isol is 1>>\
+<div class="box box-shadow">\
+<<message "''Solar Empire''">>\
+Corporate Solar Empire or Magnum Imperium, this was the political organization that ruled the Solar System from the beginnings of planetary terraformation, in 2123, until its fall, which was set off by the beginning of the ''First Solar War'' in 2580.<</message>></div>
+<</if>>\
+<div class="box box-shadow">\
+<<message "''Moonshot''">>\
+<<if $codex.ms is 1>>\
+	''Moonshot - engeneering''
+    • Technology designed for space travel in the year 2732. Consists of the creation of ports with O'Neill generators in the nuclei of natural satellites. It allowed, alongside the discovery of elements in ♃ Jupiter, for certain ships to travel at 299.000 km/s.
+	<</if>>\
+''Moonshot – noun''
+    • an extremely ambitious and innovative project.
+    • the act of launching a spaceship to the moon.
+    • the strike or launch of a ball that travels a large distance at a high speed.
+''moonshot thinking - noun''
+    • a kind of thought aimed at something generally thought to be impossible.<</message>></div>
+<<if $codex.ots is 1>>\
+<div class="box box-shadow">\
+<<message "''Solar Treaty Organization''">>\
+With its STO acronym, this is the political organization that emerged after the fall of the Solar Empire and the signing of the 2604 Solar Treaty. It suffered a major split when ♂ Mars and the ☾ Satellites broke away. Its headquarters are in ♀ Venus.<</message>></div>
+<</if>>\
+<<if $codex.pb is 1>>\
+<div class="box box-shadow">\
+<<message "''Proxima Centauri''">>\
+Red dwarf star some 4.22 l.y. = light years from the Sun, in the Centauri, and part of the triple Alpha Centauri system. It has two planets, Proxima b and Proxima c, the first of which has an ''inhabitable zone''.<</message>></div>
+<</if>>\
+
+
+:: carlo10b [hidemenu] {"position":"681,2187","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if $codex.ac == 0>>\
+<<notify>>✎ New note!
+❂ New entry!<</notify>>\
+<<type 40ms>>✎ New note! ❂ New codex entry!<</type>>\
+<<set $codex.ac to 1>>\
+<<else>>\
+<<notify>>✎ New note!<</notify>>\
+<<type 40ms>>✎ New note!<</type>>\
+<</if>>\
+<<set $note.bella to 1>>\
+Carlo: That's correct, I see you know some astronomy. Not much else is known, but our informant assures us he saw the ship's name, ''Bella Horizon''.
+<div class="box box-shadow"><i class="cor"></i>\
+[[That's a lot to think about, so I suppose you want me to investigate and bring you a story|carlo11]]</div>
+
+
+:: StoryDisplayTitle {"position":"899,19","size":"100,100"}
+Bella Ciao
+
+
+:: carloPlus [hidemenu] {"position":"675,2036","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+<<if $codex.car == 0>>\
+<<notify>>❂ New Entry!<</notify>>\
+<<type 40ms>>❂ New codex entry!<</type>>\
+<<set $codex.car to 1>><</if>>\
+After the end of the second war, exploration travel outside the Solar System was suspended, or so they say. As it turns out, we have an informant who claims to have seen the launch of a space cruise some four years ago from ''♇ Charon'', one of the ♇ Pluto moons.
+<div class="box box-shadow"><i class="cor"></i>\
+☇<a href="#" data-tooltip="🃈" class="zoom">🃈</a> <<linkappend "Eso significa que...">>
+	<<set $roll to (dice('2d6'))>>\
+	<<set $dif to 8>>
+	<<include "retadamn">>
+	<<if $dif <= $retada>>\
+		<<notify>>¡❂!<</notify>>\
+		<<set $retos.prob to 1>>\
+		''Hit''. <<include "retomn">>\
+		<div class="box box-shadow box-border"><i class="cor"></i>\
+		<a href="#" data-tooltip="Mind">♦</a> [[If it's the last inhabited moon in the Solar System, considering it's orbit, it's possible that it's headed towards Alpha Centauri, the closest system to ours.|carlo10b]]</div>\
+	<<else>>\
+		''Fail''. <<include "retomn">>\
+		Juraría que...
+	<</if>>\
+<</linkappend>></div>
+<<if $persona.pr is "cn">>\
+<div class="box box-shadow"><i class="cor"></i>\
+	<a href="#" data-tooltip="Profile">♟</a> [[Hard sciences: Alpha Centauri is the closest system to the Solar System. It's most likely to be headed in that direction.|carlo10b]]</div>
+	<</if>>\
+<div class="box box-shadow"><i class="cor"></i>\
+[[Ships depart from ports every day...|carlo10]]</div>
+
+
+:: Alignment {"position":"351,23","size":"100,100"}
+!!!⬗ Alignment
+<div class="box box-shadow">\
+<<message "♔ Plutocracy: ''$align.pluto'' / ♚ Toparchy: ''$align.top''">>Shows your worldview, how you feel society should be organized.
+<a data-tooltip="Plutocracy">♔</a>: Government of the powerful.
+<a data-tooltip="Toparchy">♚</a>: Common government in the territory.<</message>></div>
+<div class="box box-shadow">\
+<<message "♕ Conservadurismo: ''$align.con'' / ♛ Revolution: ''$align.rev''">>Shows your position concerning change and your approach towards universal issues.
+<a data-tooltip="Conservadurismo">♕</a>: You think it's best to keep things as they are.
+<a data-tooltip="Revolution">♛</a>: You see change as something natural and necessary.<</message>></div>
+
+
+:: guia {"position":"319,976","size":"100,100"}
+!!!PSD Menu
+<span id="linkedicon"><<button " ">><</button>></span> Use the button in the upper left corner to control the <a href="#" data-tooltip="Personal Support Device." class="textip tip-down">''PSD''</a> menu.
+<<button "♟">><</button>> Here you can see your <a href="#" data-tooltip="Displays all your data." class="textip tip-down">''Profile''</a>, your <a href="#" data-tooltip="Indicate your ability to perform different actions." class="textip tip-down">''Characteristics''</a> and more info.
+<<button "✆">><</button>> The apps are <a href="#" data-tooltip="Video call to other users." class="textip">''✆ Call''</a>, <a href="#" data-tooltip="Text message other users."  class="textip">''✉ Menssages''</a>, <a href="#" data-tooltip="Reminders and clues." class="textip">''✎ Notes''</a>, <a href="#" data-tooltip="Article inventory." class="textip">''❒ Items''</a>, <a href="#" data-tooltip="Information encyclopedia" class="textip">''❂ Codex''</a>, <a href="#" data-tooltip="Instructions and references." class="textip">''? Guide''</a>
+!!!Actions
+<div class="box box-shadow"><i class="cor"></i><b>A</b></div> At the end of each passage you can see the <a href="#" data-tooltip="Decisions you can make, usually taking you to another passage." class="textip tip-down">''Actions''</a> available.
+<div class="box box-shadow"><i class="cor"></i>♠</div> If they have a symbol, it means they are related to a <a href="#" data-tooltip="♠ Body, ♦ Mind, ♣ Spirit y ♥ Life." class="textip">''Characteristic''</a>.
+<div class="box box-shadow"><i class="cor"></i><a href="#" data-tooltip="🂭" class="zoom">🂭</a></div> Indicates a <a href="#" data-tooltip="Hit = 🃟 >= 🂭 " class="matip tip-down">''Contest'' </a>,  requires a <a href="#" data-tooltip="Random number between 🂡 1 y 🂭 12" class="textip">''🂠 Contest draw''</a>.
+<div class="box box-shadow"><i class="cor"></i>🂠</div> Solved by comparing the <a href="#" data-tooltip="🂨 Easy: 8. 🂪 Normal: 10. 🂭 Hard: 12." class="textip">''🂭 Difficuly''</a> with the <a href="#" data-tooltip="🃟 = 🂠 + ♠" class="matip">''🃟 Contested''</a>. Hit if the Result is greater or equal to the difficulty.
+<div class="box box-shadow"><i class="cor"></i>☇</div> Means it's a <a href="#" data-tooltip="Contest solved immediately in the same passage" class="textip">''☇ Instant''</a> contest.
+<div class="box box-shadow"><i class="cor"></i><a href="#" data-tooltip="🂡" class="zoom">🂡</a><♠</div> Means it's a <a href="#" data-tooltip="Contest que no requiere de un 🂠 Contest draw" class="textip">''🂡 Natural''</a> contest.
+<div class="box box-shadow"><i class="cor"></i>♟</div> Action you can take because of your personal <a href="#" data-tooltip="Info given in your PSD configuration" class="textip">history</a>.
+
+
+:: rollcp {"position":"48,1128","size":"100,100"}
+<<switch $roll>>\
+<<case 1>><a href="#" data-tooltip="🂡" class="zoom tip-down">🂡</a>\
+<<case 2>><a href="#" data-tooltip="🂢" class="zoom tip-down">🂢</a>\
+<<case 3>><a href="#" data-tooltip="🂣" class="zoom tip-down">🂣</a>\
+<<case 4>><a href="#" data-tooltip="🂤" class="zoom tip-down">🂤</a>\
+<<case 5>><a href="#" data-tooltip="🂥" class="zoom tip-down">🂥</a>\
+<<case 6>><a href="#" data-tooltip="🂦" class="zoom tip-down">🂦</a>\
+<<case 7>><a href="#" data-tooltip="🂧" class="zoom tip-down">🂧</a>\
+<<case 8>><a href="#" data-tooltip="🂨" class="zoom tip-down">🂨</a>\
+<<case 9>><a href="#" data-tooltip="🂩" class="zoom tip-down">🂩</a>\
+<<case 10>><a href="#" data-tooltip="🂪" class="zoom tip-down">🂪</a>\
+<<case 11>><a href="#" data-tooltip="🂫" class="zoom tip-down">🂫</a>\
+<<case 12>><a href="#" data-tooltip="🂭" class="zoom tip-down">🂭</a>\
+<</switch>>\
+
+
+:: rollmn {"position":"176,1116","size":"100,100"}
+<<switch $roll>>\
+<<case 1>><a href="#" data-tooltip="🃁" class="zoom tip-down">🃁</a>\
+<<case 2>><a href="#" data-tooltip="🃂" class="zoom tip-down">🃂</a>\
+<<case 3>><a href="#" data-tooltip="🃃" class="zoom tip-down">🃃</a>\
+<<case 4>><a href="#" data-tooltip="🃄" class="zoom tip-down">🃄</a>\
+<<case 5>><a href="#" data-tooltip="🃅" class="zoom tip-down">🃅</a>\
+<<case 6>><a href="#" data-tooltip="🃆" class="zoom tip-down">🃆</a>\
+<<case 7>><a href="#" data-tooltip="🃇" class="zoom tip-down">🃇</a>\
+<<case 8>><a href="#" data-tooltip="🃈" class="zoom tip-down">🃈</a>\
+<<case 9>><a href="#" data-tooltip="🃉" class="zoom tip-down">🃉</a>\
+<<case 10>><a href="#" data-tooltip="🃊" class="zoom tip-down">🃊</a>\
+<<case 11>><a href="#" data-tooltip="🃋" class="zoom tip-down">🃋</a>\
+<<case 12>><a href="#" data-tooltip="🃍" class="zoom tip-down">🃍</a>\
+<</switch>>\
+
+
+:: rollsp {"position":"309,1125","size":"100,100"}
+<<switch $roll>>\
+<<case 1>><a href="#" data-tooltip="🃑" class="zoom tip-down">🃑</a>\
+<<case 2>><a href="#" data-tooltip="🃒" class="zoom tip-down">🃒</a>\
+<<case 3>><a href="#" data-tooltip="🃓" class="zoom tip-down">🃓</a>\
+<<case 4>><a href="#" data-tooltip="🃔" class="zoom tip-down">🃔</a>\
+<<case 5>><a href="#" data-tooltip="🃕" class="zoom tip-down">🃕</a>\
+<<case 6>><a href="#" data-tooltip="🃖" class="zoom tip-down">🃖</a>\
+<<case 7>><a href="#" data-tooltip="🃗" class="zoom tip-down">🃗</a>\
+<<case 8>><a href="#" data-tooltip="🃘" class="zoom tip-down">🃘</a>\
+<<case 9>><a href="#" data-tooltip="🃙" class="zoom tip-down">🃙</a>\
+<<case 10>><a href="#" data-tooltip="🃚" class="zoom tip-down">🃚</a>\
+<<case 11>><a href="#" data-tooltip="🃛" class="zoom tip-down">🃛</a>\
+<<case 12>><a href="#" data-tooltip="🃝" class="zoom tip-down">🃝
+</a>\
+<</switch>>\
+
+
+:: retadacp {"position":"46,1259","size":"100,100"}
+<<set $retada to $roll + $persona.cp>>\
+<<include "rollcp">> $roll + <a data-tooltip="Body"  class="tip-down">♠</a> $persona.cp = <a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada''
+
+
+:: subidacp {"position":"49,1500","size":"100,100"}
+/* Subida de puntos */\
+<<switch $dif>>\
+<<case 8>>\
+	<<set $caracp.cpp +=1>>\
+	<<notify>>+1★(♠)<</notify>>\
+	You get: +1 \
+<<case 10>>\
+	<<set $caracp.cpp +=2>>\
+	<<notify>>+2★(♠)<</notify>>\
+	You get: +2 \
+<<case 12>>\
+	<<set $caracp.cpp +=3>>\
+	<<notify>>+3★(♠)<</notify>>\
+	You get: +3 \
+<</switch>>\
+<a href="#" data-tooltip="Experience point" class="tip-down">★</a>(<a href="#" data-tooltip="Body"  class="tip-down">♠</a>). <a href="#" data-tooltip="Experience point"  class="tip-down">★</a>(<a href="#" data-tooltip="Body" class="tip-down">♠</a>): $caracp.cpp / 3.\
+
+
+:: guiacaracp {"position":"198,985","size":"100,100"}
+<<dialog "★ Experience points">>Cada vez que ''Aciertas'' un <a href="#" data-tooltip="Hit = 🃟 >= 🂭 " class="matip tip-down">''Contest'' </a> que ''no'' sea <a href="#" data-tooltip="Contest que se resuelve en el mismo pasaje de forma inmediata" class="textip tip-down"> ''☇ Instant''</a> o <a href="#" data-tooltip="Contest que no requiere de un 🂠 Contest draw" class="textip tip-down"> ''🂡 Natural''</a>., obtienes +1 <a href="#" data-tooltip="Experience point" class="tip-down diatip">★</a>, +2 <a href="#" data-tooltip="Experience point" class="tip-down diatip">★</a> o +3 <a href="#" data-tooltip="Experience point"  class="tip-down diatip">★</a> según  la <a href="#" data-tooltip="Resultado necesario para Acertar." class="tip-down">''🂭 Difficuly''</a>. <a href="#" data-tooltip="🂨" class="zoom tip-down">🂨</a> Easy: +1, <a href="#" data-tooltip="🂪" class="zoom tip-down">🂪</a> Normal: +2, <a href="#" data-tooltip="🂭" class="zoom tip-down">🂭</a> Hard: +3. Cada vez que acumulas 3 <a href="#" data-tooltip="Experience point" class="tip-down diatip">★</a> en una misma <a href="#" data-tooltip="♠Body, ♦Mind, ♣Spirit" class="tip-down">''characteristic''</a> subes +1 nivel de la misma. En el caso de la <a href="#" data-tooltip="♥ = [(♠ + ♦ + ♣)/ 3]" class="matip">''♥ Life''</a>, se obtiene mediante una //función parte entera// <a href="#" data-tooltip="Asigna a cada número real su parte entera" class="textip">⨍(x) = [x]</a>, de la sumatoria de las otras <a href="#" data-tooltip="♠Body, ♦Mind, ♣Spirit">''characteristics''</a> entre tres (3).<</dialog>>\
+
+
+:: retadamn {"position":"179,1242","size":"100,100"}
+<<set $retada to $roll + $persona.mn>>\
+<<include "rollmn">> $roll + <a data-tooltip="Mind"  class="tip-down">♦</a> $persona.mn = <a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada''
+
+
+:: subidamn {"position":"174,1506","size":"100,100"}
+/* Subida de puntos */\
+<<switch $dif>>\
+<<case 8>>\
+	<<set $caracp.mnp +=1>>\
+	<<notify>>+1★(♦)<</notify>>\
+	You get: +1 \
+<<case 10>>\
+	<<set $caracp.mnp +=2>>\
+	<<notify>>+2★(♦)<</notify>>\
+	You get: +2 \
+<<case 12>>
+	<<set $caracp.mnp +=3>>\
+	<<notify>>+3★(♦)<</notify>>\
+	You get: +3 \
+<</switch>>\
+<a href="#" data-tooltip="Experience point" class="tip-down">★</a>(<a href="#" data-tooltip="Mind"  class="tip-down">♦</a>). <a href="#" data-tooltip="Experience point"  class="tip-down">★</a>(<a href="#" data-tooltip="Mind" class="tip-down">♦</a>): $caracp.mnp / 3.\
+
+
+:: mnup {"position":"179,1629","size":"100,100"}
+/* Subida de nivel de characteristic */\
+		<<if $caracp.mnp >= 3>>\
+			<<set $persona.mn +=1>>\
+			<<set $caracp.mnp -=3>>\
+			<<set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)>>\
+			<<set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)>>\
+			<<notify>>+♦<</notify>>\
+			Characteristic rise: +<a href="#" data-tooltip="Mind" class="tip-down">♦</a>¡ <a href="#" data-tooltip="Mind" class="tip-down">♦</a>: $persona.mn<</if>>
+
+
+:: cpup {"position":"56,1636","size":"100,100"}
+/* Subida de nivel de characteristic */\
+		<<if $caracp.cpp >= 3>>\
+			<<set $persona.cp +=1>>\
+			<<set $caracp.cpp -=3>>\
+			<<set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)>>\
+			<<set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)>>\
+			<<notify>>+♠<</notify>>\
+			Characteristic rise: +<a href="#" data-tooltip="Body" class="tip-down">♠</a>¡ <a href="#" data-tooltip="Body" class="tip-down">♠</a>: $persona.cp<</if>>\
+
+
+:: retocp {"position":"43,1383","size":"100,100"}
+<<switch $dif>>\
+<<case 8>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🂨" class="zoom tip-down">🂨</a> 8
+<<case 10>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🂪" class="zoom tip-down">🂪</a> 10
+<<case 12>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🂭" class="zoom tip-down">🂭</a> 12
+<</switch>>\
+
+
+:: retomn {"position":"178,1375","size":"100,100"}
+<<switch $dif>>\
+<<case 8>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃈" class="zoom tip-down">🃈</a> 8
+<<case 10>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃊" class="zoom tip-down">🃊</a> 10
+<<case 12>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃍" class="zoom tip-down">🃍</a> 12
+<</switch>>\
+
+
+:: retadasp {"position":"306,1245","size":"100,100"}
+<<set $retada to $roll + $persona.sp>>\
+<<include "rollsp">> $roll + <a data-tooltip="Spirit"  class="tip-down">♣</a> $persona.sp = <a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada''
+
+
+:: retosp {"position":"305,1376","size":"100,100"}
+<<switch $dif>>\
+<<case 8>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃈" class="zoom tip-down">🃘</a> 8
+<<case 10>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃊" class="zoom tip-down">🃚</a> 10
+<<case 12>>\
+<a href="#" data-tooltip="Contested" class="tip-down">🃟</a> ''$retada'' >= <a href="#" data-tooltip="🃍" class="zoom tip-down">🃝</a> 12
+<</switch>>\
+
+
+:: subidasp {"position":"301,1500","size":"100,100"}
+/* Subida de puntos */\
+<<switch $dif>>\
+<<case 8>>\
+	<<set $caracp.spp +=1>>\
+	<<notify>>+1★(♣)<</notify>>\
+	You get: +1 \
+<<case 10>>\
+	<<set $caracp.spp +=2>>\
+	<<notify>>+2★(♣)<</notify>>\
+	You get: +2 \
+<<case 12>>
+	<<set $caracp.spp +=3>>\
+	<<notify>>+3★(♣)<</notify>>\
+	You get: +3 \
+<</switch>>\
+<a href="#" data-tooltip="Experience point" class="tip-down">★</a>(<a href="#" data-tooltip="Spirit" class="tip-down">♣</a>). <a href="#" data-tooltip="Experience point"  class="tip-down">★</a>(<a href="#" data-tooltip="Spirit" class="tip-down">♣</a>): $caracp.spp / 3.\
+
+
+:: spup {"position":"304,1627","size":"100,100"}
+/* Subida de nivel de characteristic */\
+		<<if $caracp.spp >= 3>>\
+			<<set $persona.sp +=1>>\
+			<<set $caracp.spp -=3>>\
+			<<set $persona.pow to ($persona.cp + $persona.mn + $persona.sp)>>\
+			<<set $will to Math.trunc($persona.pow/3), $maxWill to Math.trunc($persona.pow/3)>>\
+			<<notify>>+♣<</notify>>\
+			Characteristic rise: +<a href="#" data-tooltip="Spirit" class="tip-down">♣</a>¡ <a href="#" data-tooltip="Body" class="tip-down">♣</a>: $persona.sp<</if>>
+
+
+:: carlo5 {"position":"1141,1568","size":"100,100"}
+@@.mapShrink;[img[Middle aged man, reddish skin and a few days old unshaven beard, slightly uneven|images/npc/carlo-lumini.gif]]@@
+Carlo: Very well, everything's in order. Let's start from the beginning, so you get an idea as to why this could be the story of the century. Even the millennium! How is your contemporary history? Do you remember the Second Solar War?
+<div class="box box-shadow"><i class="cor"></i>\
+<a href="#" data-tooltip="🃁" class="zoom">🃁</a><Se trató de...
+<<if $persona.mn > 1>>\
+	[[... a military conflict also known as the "Marslunar independence war". It involved ♂ Mars and the ☾ Satellites on one side, and ♀ Venus and ♁ Earth on the other.|carlo6]]
+	<<else>>\
+	[[... the war that came after this first one?|carlo6b]]
+	<</if>></div>\
+<<if $persona.pr is "mlt">>\
+	<div class="box box-shadow"><i class="cor"></i>\
+	[[♟ Military: Of course. It was the war between Mars and the Satellites on one side, Venus and Earth on the other. I worked at the "Deep Space" security contractor, and they kept changing sides until the war was over.|carlo6]]</div>
+	<</if>>\
+	<div class="box box-shadow"><i class="cor"></i>\
+	[[Please refresh my memory|carlo6b]]</div>
+
+
+:: advertencias {"position":"834,309","size":"100,100"}
+<<audio "intro" play>>
+<<fadein 3s>><<fadeout 3s 7s>>\
+<div class="warn center">\
+<div class="icon">♬</div>\
+We recommend using headphones at a reasonable volume
+
+<div class="icon">⛁</div>\
+Games are autosaved in the browser's cache (be careful when cleaning it)
+
+<div class="mobile"><div class="icon">↕</div>\
+Play with your device held vertically
+</div></div><</fadeout>><</fadein>>
+<<timed 10s>><<goto 'utopix'>><</timed>>
+
+
+:: utopix {"position":"982,317","size":"100,100"}
+<div class="center">\
+<<fadein 3s>><<fadeout 3s 3s>>\
+[img[utopix|images/ui/utopix.png]]
+<b>PRESENTS</b>
+<</fadeout>><</fadein>>\
+</div>
+<<timed 6s>><<goto 'title'>><</timed>>
+
+
+:: title {"position":"1157,311.3333333333333","size":"100,100"}
+<<audio "intro" stop>>
+<<audio "title" loop volume 0 fadeoverto 3 1>>\
+<div class="center">\
+<<fadein 3s>><<fadeout 3s 6s>>\@@.title;[img[bella ciao|images/ui/bella-ciao.png]]@@<</fadeout>><</fadein>>
+<<fadein 3s 1s>><<fadeout 3s 6s>>!!SOLAR SAUDADE<</fadeout>><</fadein>>
+</div>
+
+<<timed 10s>><<goto 'inicio'>><</timed>>
+
+
+:: PassageHeader {"position":"1035,13","size":"100,100"}
+<<if $ss == 1>><a href="#" data-tooltip="Life" class="tip-down">♥</a>: <span id="status">$will / ''$maxWill''</span>
+<</if>>\
+
+
+:: historia {"position":"531,158","size":"100,100"}
+!!!''$personadata.orgn''
+<<switch $persona.orgn>>\
+<<case "tr">>You were born on Earth, the "mother planet", home to all intelligent life known until now. The First Solar War left it devastated, but there are still small cities in what used to be continents, connected by high speed trains. ''Governing body:'' Free Cities of New Earth.
+<<case "vn">>You were born in Venus, "the planet of light" as its inhabitants say. Ever since its terraformation, it has been the Solar Systems academic and cultural center. It's institutions emerged from the migration of the Old Earth's international bodies, with all its virtues and vices. ''Governing body:'' Venusian Alliance of Nations Naciste en Venus.
+<<case "mr">>You were born in Mars, called "the land of monsters". Ever since the discovery of animal fossils with biological composition which are still being studied 500 years later, Mars' terraformation gave rise to a planet full of artificial beaches in its inhabitable areas. ''Governing body:'' Planetary Federation of Martian Republics.
+<<case "sat">>You were born in one of the moons colonized by humanity in is quest to inhabit everything. Most other planets consider "lunar people" as lacking unity and organization, but you know that's not true. All the inhabited moons, from Creonte to the Moon, as ports, share nomadic lives. ''Governing body:'' Union of Lunar Communes.
+<</switch>>\
+!!!''$personadata.pr''
+<<switch $persona.pr>>\
+<<case "esc">>Before becoming an investigative journalist you were a fairly successful writer, with a couple of novels and a short story compilation published. Now you're a freelance journalist for several media outlets.
+<<case "mlt">>You served in the Second Solar War, and you don't even want to remember which side you ended up on, as the security contractor you worked for kept changing sides until the war was over. Now you're a freelance journalist for several media outlets.
+<<case "ing">>Your final "Deep Learning" contributions shook the Artificial Intelligence development community, but your work did not give you any motivation. Now you're a freelance journalist for several media outlets.
+<<case "cs">>Academia and social sciences research were your passison for a while. Your thesis was on "The foundational myth of natural satellite societies". Now you're a freelance journalist for several media outlets, including.
+<<case "cn">>Science appears as a universal language before you, and your research in biology and physics is still leading to new results, but you decided to try something else. Now you're a freelance journalist for several media outlets.
+<<case "ap">>Your ability to entertain, charm, delight and even move the audience is renowned, but you no longer wanted to get on stage. Now you're a freelance journalist for several media outlets, including.
+<</switch>>\
+!!!''$personadata.pq''
+<<switch $persona.pq>>\
+<<case "mf">>After struggling against a terminal illness, your motther passed away. You need to change scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "vd">>After spending a month in a retreat in Jupiter's moon Europa. You need a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "tf">>After they stopped calling you in your previous workplace, and your partner asked for some space, you had enough. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "te">>You've just graduated in Cognitive Science, and feel academia has nothing left to offer you. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<<case "tc">>You've just finished some work initiatives in Mars' crop fields. You needed a change in scenery, so you think it should be a good idea to call your friend Carlo at //Mars Media//, to see if he has something for you. You've done a couple of pieces together before.
+<</switch>>
+
+
+:: caracteristicas-crea {"position":"538,33","size":"100,100"}
+<div class="box box-shadow">\
+<<message "♠ Body: ''$persona.cp''">>Character's physical attributes, helps undertake complex physical activities, such as use of strength, speed or stamina.<</message>></div>
+<div class="box box-shadow">\
+<<message "♦ Mind: ''$persona.mn''">>Character's ability to reason and memorize, allows you to meet calculation, interpreting and problem-solving challenges.<</message>></div>
+<div class="box box-shadow">\
+<<message "♣ Spirit: ''$persona.sp''">>Aspect that defines the character's integrity, charisma and personality, reveals your ability to navigate social situations and handle unknown scenarios.<</message>></div>
+<div class="box box-shadow">\
+<<message "♥ Life: ''$maxWill''">>Abiliy and possibility to move forward mentally, physically and spiritually. If it reaches (0) you cannot continue. The <a href="#" data-tooltip="♥ = [(♠ + ♦ + ♣)/ 3]" class="matip">''♥ Life''</a> is obtained with a //integer part function// of the sum of the others <a href="#" data-tooltip="♠Body, ♦Mind, ♣Spirit" class="textip">''characteristics''</a> divided by three (3).<</message>></div>
+
+
+:: PassageDone {"position":"1166,15","size":"100,100"}
+<<if tags().includes("action")>><<replace "#status">>$will / ''$maxWill''<</replace>><</if>>
+
+
