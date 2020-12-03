@@ -871,7 +871,7 @@ a.current=t.toFixed(2),e(a.current)}var n={},a={current:100,rangeMax:100,step:1,
 n.last=a.current,n.start=n.last/a.rangeMax,postdisplay["volume-task"]=function(t){delete postdisplay[t],e(n.start.toFixed(2))},$(document).on("input","input[name=volume]",function(){var t=$("input[name=volume]").val(),o=t/a.rangeMax
 a.current=o.toFixed(2),e(a.current),n.last=t}),Macro.add("volume",{handler:function(){var e=$(document.createElement("span")),t=$(document.createElement("input")),o="macro-"+this.name
 t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,step:a.step,value:n.last}),e.append(t).addClass(o).appendTo(this.output)}}),a.setting&&(Setting&&Setting.addRange&&"function"==typeof Setting.addRange?Setting.addRange("volume",{label:"Volume: ",min:0,max:a.rangeMax,step:a.step,"default":a.current,onInit:t,onChange:t}):console.error("This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube."))}()
-// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="679.6666666666666,302" size="100,100">&lt;div class=&quot;center top&quot;&gt;\
+// end volume slider</script><tw-passagedata pid="1" name="Portada" tags="" position="678,307" size="100,100">&lt;div class=&quot;center top&quot;&gt;\
 [img[bella ciao|images/ui/bella-ciao-min.png]]
 &#39;&#39;SOLAR SAUDADE&#39;&#39;
 &lt;&lt;if (Save.autosave.has())&gt;&gt;
@@ -903,8 +903,8 @@ t.attr({id:"volume-control",type:"range",name:"volume",min:"0",max:a.rangeMax,st
 &lt;&lt;link &#39;SAVED GAMES&#39;&gt;&gt;\
 &lt;&lt;ui &#39;saves&#39;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;div class=&quot;font_preload&quot; style=&quot;opacity: 0&quot;&gt;&lt;span style=&quot;font-family: &quot;Lucida Console&quot;, Monaco, monospace, &quot;DejaVuSans&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-
+&lt;div class=&quot;font_preload&quot; style=&quot;opacity: 0&quot;&gt;
+&lt;span style=&quot;font-family: &quot;DejaVuSans&quot;, Arial, sans-serif&gt;&lt;/span&gt;&lt;/div&gt;
 by [img[logo utopix|images/ui/utopix-logo.png]]&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="732,166" size="100,100">&lt;&lt;if $ss is 1&gt;&gt;\
@@ -974,7 +974,7 @@ Great $persona.nm! Now let me help you with your career profile.  What&#39;s you
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Engeneering|cr4][$persona.pr to &quot;ing&quot;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Social sciences|cr4][$persona.pr to &quot;cs&quot;]]&lt;/div&gt;
 &lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Hard sciences|cr4][$persona.pr to &quot;cn&quot;]]&lt;/div&gt;
-&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Performing arts|cr4][$persona.pr to &quot;ap&quot;]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034,169" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39; &#39;images/ui/bella-ciao-min.png&#39; &#39;images/ui/bella-ciao.png&#39; &#39;images/ui/cursor_hand.png&#39; &#39;images/ui/cursor_pointer3D_shadow.png&#39;&#39;images/ui/utopix-logo.png&#39;&#39;images/utopix.png&#39; &#39;images/npc/hab-marte.png&#39;&gt;&gt;
+&lt;div class=&quot;box box-shadow&quot;&gt;&lt;i class=&quot;cor&quot;&gt;&lt;/i&gt;[[Performing arts|cr4][$persona.pr to &quot;ap&quot;]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="" position="1034,169" size="100,100">&lt;&lt;preload &#39;images/npc/carlo-lumini.gif&#39; &#39;images/npc/carlo-luminiH.png&#39; &#39;images/ui/bella-ciao-min.png&#39; &#39;images/ui/bella-ciao.png&#39; &#39;images/ui/cursor_hand.png&#39; &#39;images/ui/cursor_pointer3D_shadow.png&#39;&#39;images/ui/utopix-logo.png&#39;&#39;images/ui/utopix.png&#39; &#39;images/scenes/hab-marte.png&#39;&gt;&gt;
 /* Creación de personaje completada */
 &lt;&lt;set $ss to 0&gt;&gt;
 /* Decisión de Alignment tomada */
